@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body{
+  font-family: 'Roboto';
+}
+.top{
+  height: 500px;
+}
+.navbar{
+  /* width: 100%; */
+  height: 72px;
+  background-color: #FEDEAB ;
+  display: flex;
+  /* justify-content: center; */
+  gap: 445px;
+  position: relative;
+  bottom: 7px;
+  /* align-items: left; */
+}
+.college{
+  margin-top: 10px;
+  /* width: 95px;
+  height: 16px; */
+  font-size: 14px;
+  font-weight: 500;
+  /* line-height: 260%; */
+  letter-spacing: 0.5px;
+}
+.don_portal{
+  /* width:292px; */
+  /* height: 28px; */
+  font-weight: 600;
+  font-size: 28px;
+  margin-top: 4px;
+  /* line-height: 210%; */
+  color: #362543;
+}
+.intro{
+  margin-left: 8.8em;
+}
+.links{
+  align-items: center;
+  display: flex;
+  gap: 30px;
+}
+.links a{
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.1px;
+  color: #2C1A39;
+}
+.links .login{
+  background-color: #6D4E84;
+  border-radius: 11px;
+  padding: 8px 13px;
+  color: white;
+}
+.left{
+  margin-left: 120px;
+  margin-top: 70px;
+  width: 440px;
+}
+.heading{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 36px; 
+  text-align:left;
+  color: #000000;
+}
+.info{
+  margin-top: 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #000000;
+}
+.browse{
+  margin-top: 60px;
+  background: #6D4E84;
+border-radius: 6px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 8px;
+padding-bottom: 8px;
+color: white;
+}
+.right{
+  position: relative;
+  bottom: 440px;
+  margin-left: 800px;
+  width:450px;
+  /* height: 500px; */
+  display: grid;
+  grid-template-columns: repeat(2,220px);
+  grid-template-rows: repeat(3,160px);
+  gap: 10px 10px;
+  overflow: hidden;
+}
+.img{
+  width: 200px;
+  /* flex-shrink: 0; */
+  min-width: 100%;
+  min-height: 100%;
+  
+  /* height: 50px; */
+}
+.img1{
+  background-image: url('../assets/Rectangle 48.png');
+  background-position:-44px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.img2{
+  background-image: url('../assets/Rectangle 51.png');
+}
+.img3{
+  background-image: url('../assets/Rectangle 49.png');
+  background-position: -40px;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.img4{
+  background-image: url('../assets/Rectangle 50.png');
+  background-position: -20px;
+}
+.boxes{
+  /* margin-top: 100px; */
+  display: flex;
+  justify-content:center;
+  gap:30px;
+}
+.box{
+  background-color: #F3E7FB;
+  width:270px;
+  height:154px;
+  position: relative;
+  top: 80px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.num{
+  font-size: 64px;
+}
+.projects{
+  font-size: 28px;
+}
+.footer{
+  /* width: 1200px; */
+  height: 120px;
+  background-color: #FCFCEC;
+}
+.main-projects{
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.each-project{
+  width: 376px;
+  height: 407px;
+  background-color: #B9B9B4B4;
+}
+.small-box{
+  margin-top: 20px;
+  width: 292px;
+  height: 69px;
+  background-color: #B09B9B;
+  margin-left: 1003px;
+}
+.why-donate{
+  margin-left: 113px;
+  margin-right: 113px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  height: 412px;
+  gap:20px;
+}
+.text{
+    width: 100%;
+  /* height: 412px; */
+}
+.heading{
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  color: #000000;
+}
+.para{
+  margin-top: 40px;
+  color: #000000;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+.tiny-box{
+  margin-top: 43px;
+  width: 292px;
+  height: 69px;
+  background-color: #B09B9B;
+}
+.space{
+  background-color: #c9d2d2;
+  width: 100%;
+  /* height:412px; */
+}
