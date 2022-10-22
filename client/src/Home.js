@@ -76,6 +76,38 @@ Et rutrum urna in tincidunt integer enim lorem. Eget id augue convallis faucibus
                     <div className="tiny-box"></div>
                 </div>
             </div>
+            <p className="stat">Stat</p>
+            <div className="report">
+                <div className="rect29"></div>
+                <div className="rect30"></div>
+                <div className="rect31"></div>
+            </div>
+        <p className="step">Give Me paisa gareeb</p>
+        <div className="steptodonate">
+            <div className="rect34"></div>
+            <div className="rect35"></div>
+            <div className="rect36"></div>
+        </div>
+        <p className="text_testimona">Testimona</p>
+        <div className="testimona">
+            <div className="testimona_comma">''</div>
+            <div className="rect33"></div>
+            <div className="rect32"></div>
+        </div>
+        <div className="contact">
+            <div className="rect39"></div>
+            <div className="rect38"></div>
+        </div>
+        <div className="links-footer">
+            <div className="rect40"></div>
+            <div className="rect41"></div>
+            <div className="rect42"></div>
+            <div className="rect43"></div>
+            <div className="rect44"></div>
+            <div className="rect45"></div>
+            <div className="rect46"></div>
+            <div className="rect47"></div>
+        </div>
         </div>
      );
 }
