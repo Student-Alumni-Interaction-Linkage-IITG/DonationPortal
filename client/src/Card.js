@@ -1,4 +1,5 @@
 import React from "react";
+import imgicon from "./codingclubLogo.png";
 
 function Cards()
 {
@@ -6,9 +7,15 @@ function Cards()
     
       
         <div className="cardp2">
+          <div className="iconhead">
+          <div className="icon">
+            <img src={imgicon} alt="" className="iconimg"/>
+          </div>
+
           <div className="card-img-one">
-           <p className="imageTextp2two">Campus Rush</p>
-           <p className="imagetextp2one">Campus tour Game</p>
+           <h3 className="imageTextp2two">Campus Rush</h3>
+           <h4 className="imagetextp2one">Campus tour Game</h4>
+          </div>
           </div>
           <div className="card-img">
             <img src="" alt="" className="imagep2" />

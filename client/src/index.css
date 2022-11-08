@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open Sans');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Space+Mono&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Open Sans&display=swap'); */
 body{
   font-family: 'Roboto';
 }
@@ -448,7 +449,7 @@ opacity: 0.6;
   gap: 10px;
   width: 98px;
   height: 40px;
-  background: #164B8A;
+  background: #027F9B;
   border-radius: 4px;
   position: relative;
   left: 243px;
@@ -466,7 +467,7 @@ opacity: 0.6;
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #F0F0F0;
+
 
 }
 
@@ -667,6 +668,7 @@ background: #DADADA;
 {
   width: 134px;
 height: 20px;
+/* right: 30px; */
 
 font-family: 'Open Sans';
 font-style: normal;
@@ -675,7 +677,7 @@ font-size: 14px;
 line-height: 20px;
 /* identical to box height, or 143% */
 position: relative;
-left: -10px;
+/* left: -10px; */
 text-align: center;
 letter-spacing: 0.25px;
 
@@ -695,8 +697,10 @@ flex-grow: 0;
 height: 20px; */
 
 font-family: 'Open Sans';
-font-style: bold;
-font-weight: 800;
+/* right: 30px; */
+
+/* font-style: bold; */
+font-weight: 2000;
 font-size: 16px;
 /* line-height: 20px; */
 /* identical to box height, or 125% */
@@ -757,6 +761,8 @@ width: 1440px; */
 height: 72px;
 left: 0px;
 top: 0px;
+margin-top: 0px;
+
 
 background: #C7DDE2;
 }
@@ -1301,3 +1307,15 @@ display: flex;
 
 
 }
+
+.iconhead{
+  display:flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.iconimg{
+  height: 80px;
+  width: 80px;
+}
+
