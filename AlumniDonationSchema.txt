@@ -1,0 +1,84 @@
+const mongoose = require('mongoose')
+
+const projectSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
+    },
+    breif_info: {
+        type: String,
+        required: true
+    },
+    goal: {
+        type: Number,
+        required: true
+    },
+    category: {
+        type: String,
+        required: true
+    },
+    club: {
+        type: String,
+        required: true
+    },
+    money_used_where: {
+        type: String,
+        required: true
+    },
+    donors: {
+        type: Map,
+        of: Number
+    },
+    img:
+    {
+        data: Buffer,
+        contentType: String
+    },
+    video:
+    {
+        data: Buffer,
+        contentType: String
+    }
+
+})
+
+const userSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    profile_photo:{
+        data: Buffer,
+        contentType: String
+    },
+    designation:{
+        type: String,
+        required: true
+    },
+    address: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    phone: {
+        countryCode: Number,
+        mobile: Number,
+    },
+    projects_invested_in:{
+        type: Map,
+        of: Number
+    }
+})
+
+const ProjectModel = mongoose.model('ProjectModel', projectSchema)
+const UserModel = mongoose.model('UserModel', userSchema)
+
+module.exports = ProjectModel
+module.exports = UserModel
