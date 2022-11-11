@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
 import Projects from './projects';
+import Projectdetail from './projectdetail';
 function App() {
   return (
     <Router>
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route exact path="/projects.js">
               <Projects/>
+            </Route>
+            <Route exact path="/projectdetail.js">
+              <Projectdetail/>
             </Route>
 
           </Switch>
