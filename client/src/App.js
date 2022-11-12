@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
 import Projects from './projects';
+import MyProfile from './pages/profile/myProfile';
 function App() {
   return (
     <Router>
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route exact path="/projects.js">
               <Projects/>
+            </Route>
+            <Route exact path="/myprofile.js">
+              <MyProfile/>
             </Route>
 
           </Switch>
