@@ -7,9 +7,7 @@
 
 body,
 html {
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Space+Mono&display=swap');
-/* @import url('https://fonts.googleapis.com/css?family=Open Sans&display=swap'); */
-body{
+
   font-family: 'Roboto';
 }
 
@@ -1576,7 +1574,7 @@ flex-grow: 0;
 
 
 /* CSS for user profile page ends here :) */
-}
+
 
 .iconhead{
   display:flex;

@@ -15,17 +15,18 @@ function App() {
           <Switch>
             <Route exact path="/">
               <header className="App-header">
-                <Navbar/>
+                <Navbar />
               </header>
-              <Home/>
+              <Home />
             </Route>
             <Route exact path="/projects.js">
-              <Projects/>
+              <Projects />
             </Route>
             <Route exact path="/myprofile.js">
-              <MyProfile/>
+              <MyProfile />
+            </Route>
             <Route exact path="/projectdetail.js">
-              <Projectdetail/>
+              <Projectdetail />
             </Route>
 
           </Switch>
