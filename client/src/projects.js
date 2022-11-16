@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Cards from './Card';
 import Navbar1 from './Navbar1p2';
 import Navbar2 from './Navbar2p2';
+// import icon from "./codingclubLogo.png";
 
 const Projects = () => {
     return(
@@ -10,7 +11,7 @@ const Projects = () => {
             <div className="p2">
                 <Navbar1/>
                 <Navbar2/>
-                <div className="Header1p2"><img src="" className="icon"/>Coding Club</div>
+                <div className="Header1p2">Coding Club</div>
                 <div className="Subtitle1p2">I'll give you a subtitle soon</div>
                 <div className="CC1p2">
                     <Cards/>

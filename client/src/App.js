@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Projects from './projects';
 import MyProfile from './pages/profile/myProfile';
+import Projectdetail from './projectdetail';
 function App() {
   return (
     <Router>
@@ -23,6 +24,8 @@ function App() {
             </Route>
             <Route exact path="/myprofile.js">
               <MyProfile/>
+            <Route exact path="/projectdetail.js">
+              <Projectdetail/>
             </Route>
 
           </Switch>
