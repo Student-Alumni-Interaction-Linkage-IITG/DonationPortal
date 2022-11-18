@@ -1,11 +1,11 @@
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar1 from './Navbar1p2';
-import Navbar2 from './Navbar2p2';
-import img1 from "./images/icon.png";
-import img2 from "./images/Vector.png";
-import img3 from "./images/iconpdf.png";
-import Slideshow from './slideshow';
+import Navbar1 from '../Components/Navbar1p2';
+import Navbar2 from '../Components/Navbar2p2';
+import img1 from "../assets/images/icon.png";
+import img2 from "../assets/images/Vector.png";
+import img3 from "../assets/images/iconpdf.png";
+import Slideshow from '../Components/slideshow';
 const Projectdetail = () => {
     return(
         <Router>

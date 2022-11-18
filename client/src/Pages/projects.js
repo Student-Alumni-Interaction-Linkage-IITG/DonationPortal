@@ -1,9 +1,8 @@
 // import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Cards from './Card';
-import Navbar1 from './Navbar1p2';
-import Navbar2 from './Navbar2p2';
-// import icon from "./codingclubLogo.png";
+import Cards from '../Components/Card';
+import Navbar1 from '../Components/Navbar1p2';
+import Navbar2 from '../Components/Navbar2p2';
 
 const Projects = () => {
     return(
