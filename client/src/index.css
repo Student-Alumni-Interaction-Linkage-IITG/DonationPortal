@@ -132,25 +132,25 @@ html {
 }
 
 .img1 {
-  background-image: url('../assets/Rectangle 48.png');
+  background-image: url('./assets/images/Rectangle 48.png');
   background-position: -44px;
   grid-row-start: 1;
   grid-row-end: 3;
 }
 
 .img2 {
-  background-image: url('../assets/Rectangle 51.png');
+  background-image: url('./assets/images/Rectangle 51.png');
 }
 
 .img3 {
-  background-image: url('../assets/Rectangle 49.png');
+  background-image: url('./assets/images/Rectangle 49.png');
   background-position: -40px;
   grid-row-start: 2;
   grid-row-end: 4;
 }
 
 .img4 {
-  background-image: url('../assets/Rectangle 50.png');
+  background-image: url('./assets/images/Rectangle 50.png');
   background-position: -20px;
 }
 
@@ -701,7 +701,7 @@ height: 77px; */
   width: 360px;
   height: 159px;
 
-  background: url('../assets/media.png'), #F0F0F0;
+  background: url('./assets/images/media.png'), #F0F0F0;
 
   /* Inside auto layout */
 

@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './Navbar';
-import Home from './Home';
-import Projects from './projects';
-import MyProfile from './pages/profile/myProfile';
-import Projectdetail from './projectdetail';
+import Navbar from './Components/Navbar';
+import Home from './Pages/Home';
+import Projects from './Pages/projects';
+import Projectdetail from './Pages/projectdetail';
+import MyProfile from './Pages/profile/myProfile';
 function App() {
   return (
     <Router>
@@ -15,18 +15,18 @@ function App() {
           <Switch>
             <Route exact path="/">
               <header className="App-header">
-                <Navbar />
+                <Navbar/>
               </header>
-              <Home />
+              <Home/>
             </Route>
             <Route exact path="/projects.js">
-              <Projects />
+              <Projects/>
             </Route>
             <Route exact path="/myprofile.js">
               <MyProfile />
             </Route>
             <Route exact path="/projectdetail.js">
-              <Projectdetail />
+              <Projectdetail/>
             </Route>
 
           </Switch>

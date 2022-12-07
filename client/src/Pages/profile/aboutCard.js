@@ -1,9 +1,9 @@
 import React from "react";
-import ProfilePic from './profile-images/profilePic.png';
-import PersonIcon from './profile-images/profileicon.png';
-import MailIcon from './profile-images/Mailicon.png';
-import PhoneIcon from './profile-images/phoneicon.png';
-import HomeIcon from './profile-images/homeicon.png';
+import ProfilePic from '../../assets/images/profile-images/profilePic.png';
+import PersonIcon from '../../assets/images/profile-images/profileicon.png';
+import MailIcon from '../../assets/images/profile-images/Mailicon.png';
+import PhoneIcon from '../../assets/images/profile-images/phoneicon.png';
+import HomeIcon from '../../assets/images/profile-images/homeicon.png';
 
 function AboutCard() {
     return (

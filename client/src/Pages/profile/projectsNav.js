@@ -1,5 +1,5 @@
 import React from "react";
-import FilterIcon from './profile-images/filtericon.png';
+import FilterIcon from '../../assets/images/profile-images/filtericon.png';
 
 function ProjectsNav() {
     return (

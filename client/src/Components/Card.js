@@ -1,5 +1,5 @@
 import React from "react";
-import imgicon from "./codingclubLogo.png";
+import imgicon from "../assets/images/codingclubLogo.png";
 
 function Cards()
 {
@@ -33,7 +33,7 @@ function Cards()
               <h2 className="headingp2">Top Donors</h2>
               <p className = "textp2line0">Ritwik Ganguly - 1.2$</p>
               <p className="textp2line1">Ritwik Ganguly - 1.2$</p>
-             <img className="imagep2one" src="../assets/bookmarkone.png" />
+             <img className="imagep2one" src="../assets/photos/bookmarkone.png" />
              {/* <img className="imagep2two" src="../assets/bookmark-white.png" alt=""/> */}
             <button className="Buttonp2">Donate</button>
         </div>
