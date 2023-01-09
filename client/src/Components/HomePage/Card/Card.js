@@ -50,8 +50,12 @@ const Card = () => {
 
             <div className="card-btns">
                 <div className="card-icons">
-                    <img src={save} alt="" style={{width: 14, height:18}}/>
-                    <img src={share} alt="" style={{width: 18, height: 19.92}}/>
+                    <div>
+                        <img src={save} alt="" style={{width: 14, height:18}}/>
+                    </div>
+                    <div>
+                        <img src={share} alt="" style={{width: 18, height: 19.92}}/>
+                    </div>
                 </div>
                 <div className="card-donate"><div>Donate</div></div>
             </div>

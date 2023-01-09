@@ -33,7 +33,7 @@
 .club-info{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
 }
 .club-desc{
     display: flex;
@@ -52,6 +52,13 @@
     font-size: 14px;
     letter-spacing: 0.25px;
     color: #333333;
+}
+.arrow{
+    border-radius: 50%;
+    padding: 10px 10px;
+}
+.arrow:hover{
+    background-color: #E9EAEB;
 }
 .card-desc{
     width: 90%;
