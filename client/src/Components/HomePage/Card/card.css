@@ -1,3 +1,5 @@
+
+
 .card{
     width: 396.33px;
     height: 550px;
@@ -7,7 +9,7 @@
     box-shadow: 0px 4px 16px 4px rgba(13, 7, 46, 0.102);
 
 }
-.proj-name{
+.proj-abt{
     height: 72px;
     display: flex;
     align-items: center;
@@ -39,7 +41,7 @@
     justify-content: center;
     gap: 3px;
 }
-.club-name{
+.proj-name{
     font-weight: 700;
     font-size: 16px;
     letter-spacing: 1%;
@@ -49,7 +51,7 @@
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.25px;
-    color: #1C1B1F;
+    color: #333333;
 }
 .card-desc{
     width: 90%;
@@ -57,7 +59,7 @@
     font-size: 14px;
     letter-spacing: 0.25px;
     margin: 0 auto;
-    color: #49454F;
+    color: #565656;
     margin-top: 3%;
 }
 .goal{
@@ -65,8 +67,7 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 16px;
-    letter-spacing: 0px;
-    color: #1B212D;
+    color: #333333;
     margin: 0 auto;
     margin-top: 6%;
 }
@@ -90,7 +91,7 @@
     font-size: 14px;
     font-weight: 600;
     /* line-height: 20px; */
-    letter-spacing: 0.1px;
+    letter-spacing: 1%;
     /* text-align: center; */
     display: flex;
     justify-content: center;
@@ -111,6 +112,9 @@
 }
 label{
     color: #1B212D;
+    font-family: 'lato';
+    font-size: 14px;
+    font-weight: 600;
 }
 .slider {
     -webkit-appearance: none;
@@ -119,13 +123,12 @@ label{
     border-radius: 2px;  
     background: #BBBCC0;
     outline: none;
-    opacity: 0.7;
     -webkit-transition: .2s;
-    transition: opacity .2s;
+    transition: .2s ease-out;
     cursor: pointer;
   }
   .slider:hover{
-    opacity: 1;
+    background: #8D9096;
   }
   
   .slider::-webkit-slider-thumb {

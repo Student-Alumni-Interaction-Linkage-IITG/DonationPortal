@@ -15,13 +15,13 @@ const Card = () => {
 
     return ( 
         <div className="card">
-            <div className="proj-name">
+            <div className="proj-abt">
                 <div className="club-info">
                     <div className='club-logo'>
                         <img src={logo} alt="" />
                     </div>
                     <div className="club-desc">
-                        <div className="club-name">Campus Rush</div>
+                        <div className="proj-name">Campus Rush</div>
                         <div className="proj-desc">Campus Tour Game</div>
                     </div>
                 </div>

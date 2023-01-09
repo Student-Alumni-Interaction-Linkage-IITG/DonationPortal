@@ -13,7 +13,7 @@ const Navbar = () => {
                 <Link to="/projects.js">Projects & Events</Link>
                 <Link to="#">How to Donate</Link>
                 <Link to="#"> Donors' Report</Link>
-                <Link to="#" className='login'>Enabled</Link>
+                <Link to="#" className='login'>Login</Link>
             </div>
         </nav>
      );
