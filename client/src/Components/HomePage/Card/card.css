@@ -58,6 +58,7 @@
     padding: 10px 10px;
 }
 .arrow:hover{
+    transition: .2s ease-out;
     background-color: #E9EAEB;
 }
 .card-desc{
