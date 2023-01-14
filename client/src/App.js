@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Pages/Home';
-import Projects from './Pages/projects';
+import Projects from './Pages/projects-page/projects';
 import Projectdetail from './Pages/projectdetail';
 import MyProfile from './Pages/profile/myProfile';
 function App() {

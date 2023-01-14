@@ -1,0 +1,150 @@
+.pc_event-card
+{
+  height: 550px;
+  width:  339px ;
+  background: #FCFCFC;
+  box-shadow: 0px 4px 17px 4px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* @media only screen and (max-width: 1400px) {
+    .event-card{
+        padding: 20px;
+    }
+} */
+
+.pc_heading
+{
+    height: 72px;
+    width: max-content;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    font-size: 12px;
+}
+.pc_long-head
+{
+    font-size: 18px;
+    font-weight: 700;
+}
+.pc_short-head
+{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: -15px;
+}
+.pc_donate
+{
+    font-size: 18px;
+    padding-left: 12px;
+    font-weight: 600;
+}
+.pc_para
+{
+   margin-top: 10px;
+    padding-left: 10px;
+}
+.pc_range-container
+{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+.pc_css-1diafny-MuiSlider-root {
+    border-radius: 12px;
+    box-sizing: content-box;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    touch-action: none;
+    color: #9c27b0;
+    -webkit-tap-highlight-color: transparent;
+    height: 4px;
+    width: 239px;
+    padding: 13px 0;
+}
+.pc_small-heading
+{
+    margin-left: -13px;
+}
+#range
+{
+    width: 280px;
+}
+.pc_scroll
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    gap: 5px;
+}
+
+.pc_top-icon
+{
+    height:70px ;
+    width: 70px;
+}
+.pc_main-content{
+      display: flex;
+      flex-direction: row;
+}
+.pc_arrow
+{
+    
+    padding-top: 15px;
+    height: 12px;
+    width: 20px;
+    margin-left: 35px;
+}
+.pc_card-head
+{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+.pc_book
+{
+    width: 18px;
+    height: 19px;
+}
+.pc_share
+{
+    width: 18px;
+    height: 19px;
+}
+.pc_bottom-content
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 15px;
+    padding-left: 15px;
+}
+.pc_bottom-main-content
+{
+    display: flex;
+    flex-direction: column;
+   padding-left: 15px;
+   /* padding-top: 20px; */
+   gap: 10px;
+    
+}
+
+.pc_btn-bottom
+{
+    background: #027F9B;
+  border-radius: 4px;
+  margin-left: 150px;
+  width: 99px;
+  height: 40px;
+  color: #FCFCFC;
+  border: none;
+  position: relative;
+  top: -10px;
+
+  cursor: pointer;
+}
