@@ -6,7 +6,7 @@
 import React from 'react';
 import ProfileNavbar from './profileNavbar';
 import AboutCard from './aboutCard';
-import Cards from '../../Components/Card';
+import Cards from '../../Components/projects-page/Project-Card/Project-Card.jsx';
 import ProjectsNav from './projectsNav';
 
 function myProfile() {
