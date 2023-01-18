@@ -1,0 +1,77 @@
+.linkstab a{
+    font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      color: #333333;
+      text-decoration: none;
+    }
+    .arrowsmall{
+    padding-left: 30px;
+    padding-right: 30px;
+    }
+    .infobarflexgrid{
+    display: flex;
+    flex-direction:row;
+    column-gap: 5%;
+    }
+    .btncontainer2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    row-gap: 20px; 
+    align-items: stretch;
+    justify-content: space-evenly;
+    column-gap: 50px;
+    color: white;
+    font-size: 24px;
+    padding-bottom: 30px;
+    }
+    .donarcontainer{
+    box-sizing: content-box;
+    }
+    .infobarflexgrid{
+    display:flex;
+    padding-top: 100px;
+    
+    }
+    .btncontainerx,.donarcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    }
+    .btncontainerx{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px ;
+    align-items: center;
+    }
+    .btncontainerx a{
+      text-decoration: none;
+    }
+    .main{
+      padding-left: 8%;
+      padding-right: 8%;
+      padding-bottom: 5%;
+    }
+    .slideshow {
+      overflow: hidden;
+      height: 100%;
+    
+    }
+    
+    .slideshowSlider {
+      white-space: nowrap;
+    }
+    
+    .slide {
+      display: inline-block;
+      width: 100%;
+      height: 80vh;
+    
+    }
+    .img3{
+      width: 20px;
+      height: 20px;
+      padding-right: 10px;
+    }

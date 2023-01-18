@@ -1098,6 +1098,7 @@ position: left;
 left: 180px;
 display: flex;
 padding-bottom: 80px;
+color:#2B6EF0;
 
 }
 
@@ -1113,13 +1114,14 @@ padding-bottom: 80px;
 .projectcontainer{
   flex-direction: row;
   align-self: center;
-  margin-top: 7%;
+  margin-top: 150px;
   margin-bottom: 5%;
   column-gap: 10%;
   display: grid;
-  grid-template-columns: 0.3fr 0.7fr;
-  align-items: center;
+  grid-template-columns: 0.6fr 1fr;
   justify-content: center;
+  
+
 }
 
 
@@ -1138,7 +1140,7 @@ padding-bottom: 80px;
   width: 96px;
   height: 40px;
   
-  background: rgba(2, 127, 155, 0.4);
+  background: #D9ECF0;
   border-radius: 29px;
   
   /* Inside auto layout */
@@ -1278,7 +1280,7 @@ padding-bottom: 80px;
   flex-direction: row;
   align-self: center;
   align-items: flex-start;
-  gap: 10px;
+  gap: 30px;
   background:rgb(255, 255, 255)
 }
 
@@ -1294,7 +1296,7 @@ padding-bottom: 80px;
   
   letter-spacing: -0.015em;
   
-  color: #1B1B1B;
+  color: #565656;;
   
   
   /* Inside auto layout */
@@ -1312,10 +1314,11 @@ font-style: normal;
 font-weight: 700;
 font-size: 24px;
 line-height: 100%;
+padding-top: 40px;
 /* identical to box height, or 24px */
 margin-bottom: 2%;
 
-color: #1A1A1A;
+color: #233A3F;
 
 
 /* Inside auto layout */
@@ -1339,7 +1342,7 @@ flex-grow: 0;
   /* identical to box height, or 24px */
   
   
-  color: #1A1A1A;
+  color: #565656;;
   
   
   /* Inside auto layout */
@@ -1374,7 +1377,7 @@ flex-grow: 0;
 
 .donationcontainer{
   margin-top: 40px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   width: 80%;
   gap: 45px;
   align-self: center;
@@ -1503,79 +1506,4 @@ flex-grow: 0;
   padding-bottom: 3%;
   
   
-}
-.linkstab a{
-font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 20px;
-  color: #333333;
-  text-decoration: none;
-}
-.arrowsmall{
-padding-left: 10px;
-padding-right: 10px;
-}
-.infobarflexgrid{
-display: flex;
-flex-direction:row;
-column-gap: 5%;
-}
-.btncontainer2{
-display: flex;
-flex-wrap: wrap;
-flex-direction:row;
-row-gap: 20px; 
-align-items: stretch;
-justify-content: space-evenly; 
-color: white;
-font-size: 24px;
-}
-.donarcontainer{
-box-sizing: content-box;
-}
-.infobarflexgrid{
-display:grid;
-grid-template-columns: 1fr 1fr;
-padding-top: 10%;
-
-}
-.btncontainerx,.donarcontainer{
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-}
-.btncontainerx{
-display: grid;
-grid-template-rows: 0.5fr 0.5fr 0.5fr;
-row-gap: 30px ;
-justify-content: center;
-align-items: center;
-}
-.btncontainerx a{
-  text-decoration: none;
-}
-.main{
-  padding-left: 8%;
-  padding-right: 8%;
-  padding-bottom: 5%;
-}
-.slideshow {
-  overflow: hidden;
-  height: 100%;
-
-}
-
-.slideshowSlider {
-  white-space: nowrap;
-}
-
-.slide {
-  display: inline-block;
-  width: 100%;
-
-}
-.img3{
-  width: 20px;
-  height: 20px;
 }
