@@ -3,16 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+<<<<<<< HEAD
     "draft-js": "^0.11.7",
+=======
+    "framer-motion": "^8.4.0",
+>>>>>>> 2964056d750f4278e966e256cc4a2e2260cdee44
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draft-wysiwyg": "^1.15.0",
     "react-router-dom": "^5.3.3",
     "react-scripts": "5.0.1",
+<<<<<<< HEAD
     "react-select": "^5.7.0",
+=======
+    "styled-components": "^5.3.6",
+>>>>>>> 2964056d750f4278e966e256cc4a2e2260cdee44
     "web-vitals": "^2.1.4"
   },
   "scripts": {
