@@ -1,4 +1,6 @@
-import React, { ChangeEvent,useState } from 'react'
+import React, { ChangeEvent,useState } from 'react';
+import { Editor } from "react-draft-wysiwyg";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import Select from 'react-select';
 import "../gsdashboard/Gsproject_putiing.css"
 export default function Gsproject_putiing() {
@@ -31,10 +33,10 @@ export default function Gsproject_putiing() {
   const [title, setTitle] = useState('');
   const [isSub, setIsSub] = useState(false);
   const [subtitle, setsubTitle] = useState('');
-  const [about, setAbout] = useState('');
+  const [about, setAbout] = useState('fwe');
   // const [filelist , setFilelist] = useState<FileList | null>(null);
   const [donationGoal, setdonationGoal] = useState('');
-  const [utilmoney, setutilmoney] = useState('');
+  const [utilmoney, setutilmoney] = useState('knlkvndlknl');
   const [selectedValue, setSelectedValue] = useState([]);
   const [selectedImages , setSelectedImages] = useState([]);
   const [tags , setTags] = useState([]);
@@ -128,9 +130,9 @@ export default function Gsproject_putiing() {
         </div>
 
         <div className='ff'>
-          <div className="specialhead">
-            <div className='headiing'>How will you use your money?</div>
-            <div className='grp'>
+         
+            <div className='headiing'>About Project</div>
+            {/* <div className='grp'>
               <img className='ico' src={require('../../assets/images/bold.png')} />
               <img className='ico' src={require('../../assets/images/italics.png')} />
               <img className='ico' src={require('../../assets/images/underline.png')} />
@@ -146,11 +148,18 @@ export default function Gsproject_putiing() {
               <img className='ico' src={require('../../assets/images/scan.png')} />
               <img className='ico' src={require('../../assets/images/photo.png')} />
               <img className='ico' src={require('../../assets/images/Video.png')} />
+            </div> */}
+            <br/>
+            <div>
+            <Editor
+         toolbarClassName="toolbarClassName"
+         wrapperClassName="wrapperClassName"
+         editorClassName="editorClassName"
+         wrapperStyle={{ width: 1060, border: "1px solid black", borderRadius: "10px" , padding: "10px"}}
+         value={utilmoney} onChange={e => setutilmoney(e.target.value)}
+              />
             </div>
-
-          </div>
-          <textarea rows={6} cols={100} type="text" id="about" name="about" placeholder='About the Project' className='textarea1 spec' value={about} onChange={e => setAbout(e.target.value)}></textarea>
-          <img src={require('../../assets/images/dust.png')} className="dust2" onClick={() => { setAbout('') }} />
+          <img src={require('../../assets/images/dust.png')} className="dust2" onClick={() => { setutilmoney('') }} />
         </div>
 
         <div className='ff'>
@@ -186,9 +195,9 @@ export default function Gsproject_putiing() {
         </div>
 
         <div className='ff'>
-          <div className="specialhead">
+         
             <div className='headiing'>How will you use your money?</div>
-            <div className='grp'>
+            {/* <div className='grp'>
               <img className='ico' src={require('../../assets/images/bold.png')} />
               <img className='ico' src={require('../../assets/images/italics.png')} />
               <img className='ico' src={require('../../assets/images/underline.png')} />
@@ -204,11 +213,17 @@ export default function Gsproject_putiing() {
               <img className='ico' src={require('../../assets/images/scan.png')} />
               <img className='ico' src={require('../../assets/images/photo.png')} />
               <img className='ico' src={require('../../assets/images/Video.png')} />
+            </div> */}
+            <br/>
+            <div>
+            <Editor
+         toolbarClassName="toolbarClassName"
+         wrapperClassName="wrapperClassName"
+         editorClassName="editorClassName"
+         wrapperStyle={{ width: 1060, border: "1px solid black", borderRadius: "10px" , padding: "10px"}}
+         value={utilmoney} onChange={e => setutilmoney(e.target.value)}
+              />
             </div>
-
-          </div>
-
-          <textarea rows={6} cols={100} type="text" id="utilmoney" name="utilmoney" className='textarea1 spec' value={utilmoney} onChange={e => setutilmoney(e.target.value)}></textarea>
           <img src={require('../../assets/images/dust.png')} className="dust2" onClick={() => { setutilmoney('') }} />
         </div>
 
