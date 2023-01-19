@@ -3,6 +3,8 @@ import Home from './Pages/Home';
 import Projects from './Pages/projects-page/projects';
 import Projectdetail from './Pages/projectdetail';
 import MyProfile from './Pages/profile/myProfile';
+import Login from './Pages/login/login';
+import Signup from './Pages/login/signup';
 function App() {
   return (
     <Router>
@@ -23,6 +25,12 @@ function App() {
             </Route>
             <Route exact path="/projectdetail.js">
               <Projectdetail/>
+            </Route>
+            <Route exact path="/login.js">
+              <Login/>
+            </Route>
+            <Route exact path="/signup.js">
+              <Signup/>
             </Route>
 
           </Switch>
