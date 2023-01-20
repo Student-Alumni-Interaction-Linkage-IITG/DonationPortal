@@ -3,6 +3,7 @@ import Home from './Pages/Home';
 import Projects from './Pages/projects-page/projects';
 import Projectdetail from './Pages/projectdetail';
 import MyProfile from './Pages/profile/myProfile';
+import Gsproject_putiing from './Pages/gsdashboard/Gsproject_putiing';
 function App() {
   return (
     <Router>
@@ -24,7 +25,9 @@ function App() {
             <Route exact path="/projectdetail.js">
               <Projectdetail/>
             </Route>
-
+            <Route exact path="/abcd">
+              <Gsproject_putiing/>
+            </Route>
           </Switch>
         </div>
       </div>
