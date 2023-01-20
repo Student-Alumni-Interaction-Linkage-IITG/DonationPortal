@@ -148,39 +148,3 @@
 
   cursor: pointer;
 }
-
-
-.range-container2
-{
-  display: flex;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  position: relative;
-  left: 20px;
-
-
-}
-
-.sliderletters {
-  width: 60px;
-height: 20px;
-
-font-family: 'Lato';
-font-style: normal;
-font-weight: 600;
-font-size: 25px;
-line-height: 20px;
-/* identical to box height, or 62% */
-
-
-/* Grey palette / Grey190 */
-
-color: #1B212D;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 2;
-flex-grow: 0;
-}
