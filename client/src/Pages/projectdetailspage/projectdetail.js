@@ -7,10 +7,13 @@ import img2 from "../../assets/images/Vector.png";
 import './projectdetail.css';
 import img3 from "../../assets/images/iconpdf.png";
 import Slideshow from '../../Components/slideshow';
+import NextNavbar from '../../Components/projects-page/Projects-Navbar/NextNavbar.js';
+// import Slider from '../../Components/ProjectDetailPage/Slider.js';
+// import Slider2 from '../../Components/ProjectDetailPage/slider2.jsx';
 const Projectdetail = () => {
     return(
         <Router>
-                <Navbar1 />
+                <NextNavbar />
                 
                 <div className="main">
                 <div className="navigatorBar">
@@ -42,9 +45,9 @@ const Projectdetail = () => {
 
                     <div className="range-container2">
                         <label htmlFor="rangestart"><div className='sliderletters'>0 </div></label>
-                        <input type="range" id="range" min="0" max="100" value="66" class="slider" valueLabelDisplay="on"/>
+                        <input type="range" id="range" min="0" max="100" value="67" class="slider" valueLabelDisplay="on" />
                         <label htmlFor="range"><div className='sliderletters'> 3 Cr</div></label>
-
+                        {/* <Slider2 /> */}
 
                     </div>
                     <div className='donationinfo'>
