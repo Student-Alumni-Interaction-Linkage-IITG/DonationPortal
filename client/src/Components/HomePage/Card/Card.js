@@ -14,26 +14,26 @@ const Card = () => {
       };
 
     return ( 
-        <div className="card">
-            <div className="proj-abt">
-                <div className="club-info">
-                    <div className='club-logo'>
+        <div className="home-card">
+            <div className="home-proj-abt">
+                <div className="home-club-info">
+                    <div className='home-club-logo'>
                         <img src={logo} alt="" />
                     </div>
-                    <div className="club-desc">
-                        <div className="proj-name">Campus Rush</div>
-                        <div className="proj-desc">Campus Tour Game</div>
+                    <div className="home-club-desc">
+                        <div className="home-proj-name">Campus Rush</div>
+                        <div className="home-proj-desc">Campus Tour Game</div>
                     </div>
                 </div>
-                <div className="arrow">
+                <div className="home-arrow">
                     <img src={arrow} alt="" />
                 </div>
             </div>
             <div className="card-img"><img src={card} alt="" /></div>
-            <div className="card-desc"><div>Campus Rush is a virtual recreation of the entire campus for freshers and other to roam around and experience the rush</div></div>
-            <div className="goal">Donation Goal</div>
+            <div className="home-card-desc"><div>Campus Rush is a virtual recreation of the entire campus for freshers and other to roam around and experience the rush</div></div>
+            <div className="home-goal">Donation Goal</div>
 
-            <div className="slider-cont">
+            <div className="home-slider-cont">
                 <label htmlFor="slider">0</label>
                 <input
                     type='range'
@@ -42,14 +42,14 @@ const Card = () => {
                     max={400}
                     step={1}
                     value={value}
-                    className='slider'
+                    className='home-slider'
                     id='slider'
                 ></input>
                 <label htmlFor="slider">3 Cr</label>
             </div>
 
-            <div className="card-btns">
-                <div className="card-icons">
+            <div className="home-card-btns">
+                <div className="home-card-icons">
                     <div>
                         <img src={save} alt="" style={{width: 14, height:18}}/>
                     </div>
@@ -57,7 +57,7 @@ const Card = () => {
                         <img src={share} alt="" style={{width: 18, height: 19.92}}/>
                     </div>
                 </div>
-                <div className="card-donate"><div>Donate</div></div>
+                <div className="home-card-donate"><div>Donate</div></div>
             </div>
             
         </div>

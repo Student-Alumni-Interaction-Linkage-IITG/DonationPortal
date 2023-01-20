@@ -1,6 +1,6 @@
 
 
-.card{
+.home-card{
     width: 396.33px;
     height: 550px;
     background-color: #F9FAFA;
@@ -9,7 +9,7 @@
     box-shadow: 0px 4px 16px 4px rgba(13, 7, 46, 0.102);
 
 }
-.proj-abt{
+.home-proj-abt{
     height: 72px;
     display: flex;
     align-items: center;
@@ -17,7 +17,7 @@
     width: 90%;
     margin: 0px auto;
 }
-.club-logo{
+.home-club-logo{
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -26,42 +26,42 @@
     justify-content: center;
     align-items: center;
 }
-.club-logo img{
+.home-club-logo img{
     width: 20px;
     height: 26px;
 }
-.club-info{
+.home-club-info{
     display: flex;
     align-items: center;
     gap: 16px;
 }
-.club-desc{
+.home-club-desc{
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 3px;
 }
-.proj-name{
+.home-proj-name{
     font-weight: 700;
     font-size: 16px;
     letter-spacing: 1%;
     color: #1B1B1B;
 }
-.proj-desc{
+.home-proj-desc{
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.25px;
     color: #333333;
 }
-.arrow{
+.home-arrow{
     border-radius: 50%;
     padding: 10px 10px;
 }
-.arrow:hover{
+.home-arrow:hover{
     transition: .2s ease-out;
     background-color: #E9EAEB;
 }
-.card-desc{
+.home-card-desc{
     width: 90%;
     font-weight: 400;
     font-size: 14px;
@@ -70,7 +70,7 @@
     color: #565656;
     margin-top: 3%;
 }
-.goal{
+.home-goal{
     width: 90%;
     font-size: 16px;
     font-weight: 600;
@@ -79,18 +79,18 @@
     margin: 0 auto;
     margin-top: 6%;
 }
-.card-btns{
+.home-card-btns{
     display: flex;
     width: 90%;
     justify-content: space-between;
     margin: 0px auto;
 }
-.card-icons{
+.home-card-icons{
     display: flex;
     gap: 16px;
     align-items: center;
 }
-.card-donate{
+.home-card-donate{
     width: 98px;
     height: 40px;
     border-radius: 4px;
@@ -105,11 +105,11 @@
     justify-content: center;
     align-items: center;
 }
-.card-donate:hover{
+.home-card-donate:hover{
     background-color: #025466;
     transition: .2s ease-out;
 }
-.slider-cont{
+.home-slider-cont{
     width: 90%;
     margin: 0px auto;
     display: flex;
@@ -124,7 +124,7 @@ label{
     font-size: 14px;
     font-weight: 600;
 }
-.slider {
+.home-slider {
     -webkit-appearance: none;
     width: 80%;
     height: 4px;
@@ -135,11 +135,11 @@ label{
     transition: .2s ease-out;
     cursor: pointer;
   }
-  .slider:hover{
+  .home-slider:hover{
     background: #8D9096;
   }
   
-  .slider::-webkit-slider-thumb {
+  .home-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 16px;
@@ -150,7 +150,7 @@ label{
     cursor: pointer;
   }
   
-  .slider::-moz-range-thumb {
+  .home-slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -163,6 +163,6 @@ label{
     border: none;
     background: #8D9096;
   } */
-  .arrow, .card-icons img, .card-donate{
+  .home-arrow, .home-card-icons img, .home-card-donate{
     cursor: pointer;
   }
