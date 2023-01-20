@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Pages/Home';
 import Projects from './Pages/projects-page/projects';
-import Projectdetail from './Pages/projectdetail';
+import Projectdetail from './Pages/projectdetailspage/projectdetail';
 import MyProfile from './Pages/profile/myProfile';
 import Gsproject_putiing from './Pages/gsdashboard/Gsproject_putiing';
 function App() {
