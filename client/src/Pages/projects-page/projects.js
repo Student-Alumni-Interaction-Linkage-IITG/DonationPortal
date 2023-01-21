@@ -29,18 +29,18 @@ const item = {
 
 const Projects = () => {
     return(
-       <div className="mainbody">
+       <div className="projects_mainbody">
             <NextNavbar/>
-            <div className="innerpage">
+            <div className="projects_innerpage">
                 <ProfileCard/>
                 <hr></hr>
                 <ProjectsFilter/>
-                <div className="projectsmenu">
-                    <div className="clubprojects">
-                        <div className="header">
+                <div className="projects_projectsmenu">
+                    <div className="projects_clubprojects">
+                        <div className="projects_header">
                             Technical Board
                         </div>
-                        <motion.div className="projectlist"
+                        <motion.div className="projects_projectlist"
                             variants={container}
                             initial="hidden"
                             animate="visible"
@@ -49,13 +49,13 @@ const Projects = () => {
                             <Cardone/>
                             <Cardone/>
                         </motion.div>
-                        <motion.a href="#" className="button" whileHover={{scale: 1.03}}>See all projects</motion.a>
+                        <motion.a href="#" className="projects_button" whileHover={{scale: 1.03}}>See all projects</motion.a>
                     </div>
-                    <div className="clubprojects">
-                        <div className="header">
+                    <div className="projects_clubprojects">
+                        <div className="projects_header">
                             Cultural Board
                         </div>
-                        <div className="projectlist"
+                        <div className="projects_projectlist"
                             variants={container}
                             initial="hidden"
                             animate="visible"
@@ -64,13 +64,13 @@ const Projects = () => {
                             <Cardone/>
                             <Cardone/>
                         </div>
-                        <motion.a href="#" className="button" whileHover={{scale: 1.03}}>See all projects</motion.a>
+                        <motion.a href="#" className="projects_button" whileHover={{scale: 1.03}}>See all projects</motion.a>
                     </div>
-                    <div className="clubprojects">
-                        <div className="header">
+                    <div className="projects_clubprojects">
+                        <div className="projects_header">
                             Sports Board
                         </div>
-                        <div className="projectlist"
+                        <div className="projects_projectlist"
                             variants={container}
                             initial="hidden"
                             animate="visible"
@@ -79,7 +79,7 @@ const Projects = () => {
                             <Cardone/>
                             <Cardone/>
                         </div>
-                        <motion.a href="#" className="button" whileHover={{scale: 1.03}}>See all projects</motion.a>
+                        <motion.a href="#" className="projects_button" whileHover={{scale: 1.03}}>See all projects</motion.a>
                     </div>
                 </div>
             </div>

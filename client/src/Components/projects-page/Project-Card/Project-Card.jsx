@@ -59,6 +59,7 @@ function Cardone()
               <div><span>3 Cr</span></div>      
             </div>
          </div>
+         <br></br>
          <div className="pc_bottom-main-content" >
             <div className="pc_small-heading" ><h1 className="pc_donate">Top Donors</h1></div>
             <div>Ritwik Ganguli - ₹ 1.2 Cr</div>

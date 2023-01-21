@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
-.mainbody{
+.projects_mainbody{
     display: flex;
     flex-direction: column;
     gap: 56px;
     font-family: "Open-Sans" , sans-serif;
 }
 
-.mainbody .innerpage{
+.projects_mainbody .projects_innerpage{
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -15,7 +15,7 @@
     padding-right: 148px;
 }
 
-.innerpage .projectsmenu{
+.projects_innerpage .projects_projectsmenu{
     background-color: #f6f2f2;
     display: flex;
     flex-direction: column;
@@ -23,21 +23,21 @@
     border-radius: 6px;
 }
 
-.clubprojects{
+.projects_clubprojects{
     padding: 32px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.clubprojects .header{
+.projects_clubprojects .projects_header{
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 30px;
 }
 
-.projectlist{
+.projects_projectlist{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -45,13 +45,13 @@
 }
 
 @media only screen and (max-width: 1436px) {
-  .projectlist{
+  .projects_projectlist{
     gap: 20px;
   }
 }
 
 @media only screen and (max-width:1128px){
-  .projectlist{
+  .projects_projectlist{
     flex-direction: column;
     gap: 20px;
     justify-content: center;
@@ -59,7 +59,7 @@
   }    
 }
 
-.button {
+.projects_button {
     display: inline-block;
     padding: 0.75rem 1.25rem;
     border-radius: 10rem;
@@ -74,7 +74,7 @@
     z-index: 1;
     width: fit-content;
   }
-  .button:after {
+  .projects_button:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -85,7 +85,7 @@
     border-radius: 10rem;
     z-index: -2;
   }
-  .button:before {
+  .projects_button:before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -97,9 +97,9 @@
     border-radius: 10rem;
     z-index: -1;
   }
-  .button:hover {
+  .projects_button:hover {
     color: #fff;
   }
-  .button:hover:before {
+  .projects_button:hover:before {
     width: 100%;
   }
