@@ -1,3 +1,5 @@
+//the cllass names are in the form of {projects_classname}
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import Cardone from '../../Components/projects-page/Project-Card/Project-Card.jsx';
