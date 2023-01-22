@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
-.main-cont
+.nn_main-cont
 {
     margin-top: 30px;
     margin-left: 200px;
@@ -10,12 +10,12 @@
     
 }
 
-.cont
+.nn_cont
 {
     display: flex;
     flex-direction: row;
 }
-.small
+.nn_small
 {
     display: flex;
     flex-direction: row;
@@ -23,7 +23,7 @@
     gap: 12px;
     font-weight: 550;
 }
-.btn-small
+.nn_btn-small
 {
     width: 98px;
     height: 40px;
@@ -34,7 +34,7 @@
     text-decoration: none;
     color: #100000;
 }
-.side-cont
+.nn_side-cont
 {
     display: flex;
     flex-direction: row;
@@ -46,15 +46,16 @@
     margin-top: -30px;
 
 }
-.link
+.nn_link
 {
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
     color: #333333;
 }
-.navbar
+.nn_navbar
 {
     width: 100%;
+    /* width: 1920px; */
     height: 76px;
     background-color: #D9ECF0;
     display: flex;
@@ -62,7 +63,7 @@
     gap: 120px;
 }
 
-.bell-img{
+.nn_bell-img{
     width: 25px;
     height: 30px;
 }
