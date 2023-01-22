@@ -1,4 +1,4 @@
-.navbar {
+.home-navbar {
     /* width: 100%; */
     height: 88px;
     background-color:#E9EAEB;
@@ -13,7 +13,7 @@
   
   
   
-  .don_portal {
+  .home-don_portal {
     /* width:292px; */
     /* height: 100%; */
     /* font-weight: 600; */
@@ -29,20 +29,20 @@
     color: #333333;
   }
   
-  .intro {
+  .home-intro {
     /* margin-left: 8.8em; */
     height: 100%;
     display: flex;
     align-items: center;
   }
   
-  .links {
+  .home-links {
     align-items: center;
     display: flex;
     gap: 50px;
   }
   
-  .links a {
+  .home-links a {
     font-family: 'open sans';
     text-decoration: none;
     /* font-style: normal; */
@@ -54,7 +54,7 @@
     font-size: 14px;
     line-height: 20px;
   }
-  .links a:hover{
+  .home-links a:hover{
     text-decoration: underline;
     text-underline-offset: 12px;
     color: #233A3F;
@@ -63,7 +63,7 @@
   }
 
 
-  .links a:nth-child(1){
+  .home-links a:nth-child(1){
     color: #233A3F;
     font-weight: 700;
     font-size: 14px;
@@ -72,7 +72,7 @@
     /* text-underline-position: below; */
   }
   
-  .links a.login {
+  .home-links a.login {
     background-color: #027F9B;
     border-radius: 4px;
     padding: 10px 24px;
@@ -80,7 +80,7 @@
     font-size: 14px;
     color: #ffffff;
   }
-  .links a.login:hover{
+  .home-links a.login:hover{
     text-decoration: none;
     background-color: #025466;
   }

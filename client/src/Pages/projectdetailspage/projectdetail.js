@@ -1,15 +1,19 @@
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar1 from '../Components/Navbar1p2';
-import Navbar2 from '../Components/Navbar2p2';
-import img1 from "../assets/images/icon.png";
-import img2 from "../assets/images/Vector.png";
-import img3 from "../assets/images/iconpdf.png";
-import Slideshow from '../Components/slideshow';
+import Navbar1 from '../../Components/Navbar1p2';
+import Navbar2 from '../../Components/Navbar2p2';
+import img1 from "../../assets/images/icon.png";
+import img2 from "../../assets/images/Vector.png";
+import './projectdetail.css';
+import img3 from "../../assets/images/iconpdf.png";
+import Slideshow from '../../Components/slideshow';
+import NextNavbar from '../../Components/projects-page/Projects-Navbar/NextNavbar.js';
+// import Slider from '../../Components/ProjectDetailPage/Slider.js';
+// import Slider2 from '../../Components/ProjectDetailPage/slider2.jsx';
 const Projectdetail = () => {
     return(
         <Router>
-                <Navbar1/>
+                <NextNavbar />
                 
                 <div className="main">
                 <div className="navigatorBar">
@@ -41,9 +45,9 @@ const Projectdetail = () => {
 
                     <div className="range-container2">
                         <label htmlFor="rangestart"><div className='sliderletters'>0 </div></label>
-                        <input type="range" id="range" min="0" max="100" value="66" class="slider" valueLabelDisplay="on"/>
+                        <input type="range" id="range" min="0" max="100" value="67" class="slider" valueLabelDisplay="on" />
                         <label htmlFor="range"><div className='sliderletters'> 3 Cr</div></label>
-
+                        {/* <Slider2 /> */}
 
                     </div>
                     <div className='donationinfo'>
@@ -71,7 +75,7 @@ const Projectdetail = () => {
                             }}>Ritwik Ganguli</p>
                         </btn>
                     </div>
-                    <div><p><a href="#" className="anchor4p2">See more</a></p></div>
+                    <div><p><a href="#" className="anchor4p2" style={{color:'#2B6EF0',paddingBottom:'0px'}}>See more</a></p></div>
                 </div>
 
                 <div className="videobar" style={{
@@ -84,23 +88,23 @@ const Projectdetail = () => {
                 </div>
                 <div className="infobarflexgrid">
                     <div>
-                        <p className="Header5p2">How will we use your money</p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur. Nunc et tincidunt dui vitae facilisi sed sed etiam. Vestibulum vel urna id vel nulla ullamcorper interdum viverra dictum. Facilisi urna gravida 
-                            eget pretium a mi. Consectetur non dignissim in nam. Pharetra lectus purus cras dui magnis egestas leo quam adipiscing. Volutpat n
-                            ascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condim
-                            entum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo 
-                        </p>
+                        <p className="Header5p2" style={{paddingTop:'0'}}>How will we use your money</p>
+                        <ul style={{color:'#233A3F',lineHeight:'24px'}}>
+                            <li>Lorem ipsum dolor sit amet consectetur. Nunc et tincidunt dui vitae facilisi sed sed etiam. Vestibulum vel urna id vel nulla ullamcorper interdum viverra dictum. Facilisi urna gravida </li>
+                            <li>eget pretium a mi. Consectetur non dignissim in nam. Pharetra lectus purus cras dui magnis egestas leo quam adipiscing. Volutpat n</li>
+                            <li>ascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condim</li>
+                            <li>entum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo </li>
+                        </ul>
                         <a href="#" className="anchor4p2">See more</a>
                     </div>
                     <div className="btncontainerx">
-                        <btn className="Buttonp4">
+                        <btn className="Buttonp4" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
                             <a href="#"><img src={img3} className="img3"/>   Details.pdf</a>
                         </btn>
-                        <btn className="Buttonp4">
+                        <btn className="Buttonp4" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
                             <a href="#"><img src={img3} className="img3"/>   Details.pdf</a>
                         </btn>
-                        <btn className="Buttonp4">
+                        <btn className="Buttonp4" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
                             <a href="#"><img src={img3} className="img3"/>   Details.pdf</a>
                         </btn> 
                     </div>
