@@ -3,6 +3,9 @@ import Home from './Pages/Home';
 import Projects from './Pages/projects-page/projects';
 import Projectdetail from './Pages/projectdetailspage/projectdetail';
 import MyProfile from './Pages/profile/myProfile';
+import Error from'./Pages/Error/Error'
+// updates
+
 import Gsproject_putiing from './Pages/gsdashboard/Gsproject_putiing';
 import GSProjectdetail from './Pages/gsprojectdetailpage/gsprojectdetail';
 import Login from './Pages/login/login';
@@ -38,6 +41,10 @@ function App() {
             <Route exact path="/abcd">
               <Gsproject_putiing/>
             </Route>
+            <Route exact path="*">
+              <Error/>
+            </Route>
+{/* updates */}
             <Route exact path="/gsprojectdetail.js" >
               <GSProjectdetail />
             </Route>
