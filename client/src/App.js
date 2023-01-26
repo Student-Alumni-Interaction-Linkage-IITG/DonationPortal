@@ -7,6 +7,7 @@ import Gsproject_putiing from './Pages/gsdashboard/Gsproject_putiing';
 import GSProjectdetail from './Pages/gsprojectdetailpage/gsprojectdetail';
 import Login from './Pages/login/login';
 import Signup from './Pages/login/signup';
+
 function App() {
   return (
     <Router>
@@ -28,7 +29,6 @@ function App() {
             <Route exact path="/projectdetail.js">
               <Projectdetail/>
             </Route>
-
             <Route exact path="/login.js">
               <Login/>
             </Route>

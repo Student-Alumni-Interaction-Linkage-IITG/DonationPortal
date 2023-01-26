@@ -1,0 +1,106 @@
+.MR {
+    padding-left: 10vw;
+    width: 80vw;
+    max-width: 1024px;
+    padding-bottom: 40vh;
+}
+
+.MR_head {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    margin-bottom: 24px;
+}
+
+.MR_content {
+    background-image: url(../../../assets/Home/Making\ An\ Impact.png);
+    width: 80vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20vh;
+    height: 50vh;
+}
+
+.MR_c_head {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.01em;
+
+    color: #FFFFFF;
+}
+
+.MR_c_head_b {
+    display: inline;
+    font-weight: 1000;
+}
+
+.MR_cards {
+    max-width: 333px;
+    width: 20vw;
+    /* max-height: 420px; */
+    padding-top: 0;
+    background-color: white;
+}
+
+.MR_cards img{
+    width: inherit;
+    max-width: inherit;
+}
+
+.MR_cards_head {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16.3997px;
+    line-height: 20px;
+    margin: 20px;
+    /* or 120% */
+    letter-spacing: 0.204997px;
+
+    /* green */
+    color: #025F74;
+}
+
+.MR_cards_content {
+    font-family: 'Open Sans';
+    margin: 20px;
+    /* padding-top: 20px; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13.1198px;
+    line-height: 20px;
+    /* or 150% */
+    letter-spacing: 0.122998px;
+}
+
+.MR_cards_link {
+    text-decoration: none;
+    margin: 0 0 0 20px;
+    /* padding-top: 20px; */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11.4798px;
+    line-height: 33px;
+
+    /* identical to box height, or 286% */
+    letter-spacing: 0.122998px;
+
+    color: #2B6EF0;
+
+}
+
+.MR_cards_show{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    transform: translateY(184px);
+}
