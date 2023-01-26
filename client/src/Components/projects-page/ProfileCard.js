@@ -103,6 +103,7 @@ const Image = styled(motion.div)`
     .img{
         display: block;
         width: 100%;
+        height: 100%;
     }
 
     .overlay{
