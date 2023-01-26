@@ -5,10 +5,12 @@ import Projectdetail from './Pages/projectdetailspage/projectdetail';
 import MyProfile from './Pages/profile/myProfile';
 import Error from'./Pages/Error/Error'
 // updates
+
 import Gsproject_putiing from './Pages/gsdashboard/Gsproject_putiing';
+import GSProjectdetail from './Pages/gsprojectdetailpage/gsprojectdetail';
 import Login from './Pages/login/login';
 import Signup from './Pages/login/signup';
-// updates
+
 function App() {
   return (
     <Router>
@@ -30,7 +32,6 @@ function App() {
             <Route exact path="/projectdetail.js">
               <Projectdetail/>
             </Route>
-{/* updates */}
             <Route exact path="/login.js">
               <Login/>
             </Route>
@@ -44,6 +45,9 @@ function App() {
               <Error/>
             </Route>
 {/* updates */}
+            <Route exact path="/gsprojectdetail.js" >
+              <GSProjectdetail />
+            </Route>
           </Switch>
         </div>
       </div>
