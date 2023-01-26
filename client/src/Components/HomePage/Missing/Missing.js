@@ -1,5 +1,5 @@
 import './missing.css'
-import Card from '../Card/Card'
+import Card from '../Card/Card.js'
 
 const Missing = () => {
     return ( 

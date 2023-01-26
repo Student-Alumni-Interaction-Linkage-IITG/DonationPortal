@@ -9,9 +9,9 @@ import share from '../../../assets/Home/share.png'
 const Card = () => {
     const [value, setValue] = useState(100);
 
-    const changeValue = (event) => {
-        setValue(event.target.value);
-      };
+    // const changeValue = (event) => {
+    //     setValue(event.target.value);
+    //   };
 
     return ( 
         <div className="home-card">
@@ -37,7 +37,7 @@ const Card = () => {
                 <label htmlFor="slider">0</label>
                 <input
                     type='range'
-                    onChange={changeValue}
+                    // onChange={changeValue}
                     min={1}
                     max={400}
                     step={1}
