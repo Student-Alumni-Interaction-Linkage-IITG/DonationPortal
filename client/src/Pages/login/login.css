@@ -1,0 +1,190 @@
+.signbody{
+    display: flex;
+    flex-direction: column;
+}
+.loginbody{
+display:flex;
+width: 100%;
+height: 1024px;
+}
+.loginleft{
+    position: relative;
+width: 50%;
+height: 1024px;
+background: url(../../assets/images/login/loginback.png);
+background-size:100% 100%;
+background-repeat: no-repeat;
+}
+.loginbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    justify-content: center;
+position: relative;
+width: 100%;
+height: 326px;
+top: 335px;
+background: rgba(102, 102, 102, 0.58);
+font-family: 'Open Sans';
+}
+.ltext1{
+font-weight: 700;
+font-size: 3vw;
+line-height: 100%;
+letter-spacing: -0.015em;
+color: #FFFFFF;
+}
+.ltext2{
+    width: 40%;
+font-weight: 600;
+font-size: 1.5vw;
+line-height: 100%;
+text-align: center;
+color: #FFFFFF;
+}
+.lbutton1{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 16px 24px;
+gap: 10px;
+width: 23vw;
+height: 60px;
+border: 2px solid #FFFFFF;
+border-radius: 4px;
+cursor: pointer;
+}
+.lbutton1:hover {
+    transform: scale(1.1);
+  }
+.loginright{
+width: 50%;
+height: 1024px;
+display: flex;
+flex-direction: column;
+gap:2vh;
+justify-content: center;
+align-items: center;
+}
+.ltext3{
+font-weight: 700;
+font-size: 3vw;
+line-height: 100%;
+letter-spacing: 0.02em;
+color: #333333;
+}
+.formlogininput{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:7px;
+}
+.lfield1{
+display: flex;
+align-items: center;
+    padding-left: 45px;
+    background:no-repeat 5% 50%;
+    justify-content: space-around;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    font-size: larger;
+width: 25vw;
+height: 60px;
+border: 2px solid #027F9B;
+border-radius: 4px;
+}  
+.ltextinside{
+justify-self: baseline;
+padding: 2px;
+align-self: flex-start;
+font-weight: 600;
+font-size: 1vw;
+line-height: 20px;
+letter-spacing: 0.01em;
+color: #333333;
+}
+.lcontainer{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-weight: 600;
+font-size: 14px;
+line-height: 100%;
+}
+.loptions{
+    display: flex;
+    width:10%;
+    gap:1vw;
+    font-size: 20vw;
+    font-weight: 600;
+font-size: 14px;
+line-height: 100%;
+}
+.loginbutton{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+color: #fff;
+align-items: center;
+padding: 16px 24px;
+gap: 10px;
+position: relative;
+width: 25vw;
+height: 60px;
+background: #027F9B;
+box-shadow: inset 1px 1px 2px rgba(64, 99, 147, 0.24), inset -1px -1px 2px rgba(16, 25, 37, 0.12);
+border-radius: 4px;
+cursor: pointer;
+}
+.loginbutton:hover {
+      transform: scale(1.1);
+    }
+.lremember{
+    position: relative;
+    left: 6vw;
+}
+.ldivider{
+    display: flex;
+    gap:20px;
+    padding: 20px;
+    justify-items: center;
+    align-items: center;
+}
+.ldivide{
+    width: 8vw;
+height: 3px;
+background: #DCDFE0;
+}
+.lsocials{
+    display: flex;
+    gap:30px;    
+}
+.lsmallsocials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lsmallsocials:hover {
+    box-shadow: 0 0 5px #333333;
+    text-shadow: 0 0 5px #333333;
+  }
+.signtermncon{
+    display: flex;
+    width: 22vw;
+    gap:8px;
+    padding-bottom: 20px;
+}
+.signtext{
+    font-weight: 600;
+    font-size: 1vw;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+}
+.signoptions{
+    display: flex;
+    gap:0.2vw;
+}
