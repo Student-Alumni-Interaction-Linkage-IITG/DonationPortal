@@ -10,7 +10,21 @@ import Slideshow from '../../Components/slideshow';
 import NextNavbar from '../../Components/projects-page/Projects-Navbar/NextNavbar.js';
 // import Slider from '../../Components/ProjectDetailPage/Slider.js';
 // import Slider2 from '../../Components/ProjectDetailPage/slider2.jsx';
+import { useRef,useState } from 'react';
 const Projectdetail = () => {
+    const ref1= useRef()
+    const [see,setSee]=useState("more")
+    const clickhandle=()=>{
+        if(ref1.current.style.height=='40vh'|| ref1.current.style.height==""){
+            ref1.current.style.height='100%'
+            setSee("less")
+        }
+        else{
+            ref1.current.style.height='40vh'
+            setSee("more")
+        }
+            
+    }
     return(
         <Router>
                 <NextNavbar />
@@ -34,8 +48,12 @@ const Projectdetail = () => {
                         <div className="Header4p2">Campus Rush</div>
                         <div className="Subtitle4p2">I'll give you a subtitle soon</div>
                         <div className="Header5p2"><p>About Project</p></div>
-                        <div className="para3p2">Lorem ipsum dolor sit amet consectetur. Nunc et tincidunt dui vitae facilisi sed sed etiam. Vestibulum vel urna id vel nulla ullamcorper interdum viverra dictum. Facilisi urna gravida eget pretium a mi. Consectetur non dignissim in nam. Pharetra lectus purus cras dui magnis egestas leo quam adipiscing. Volutpat nascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condimentum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo</div>
-                        <a href="#" className="anchor4p2">See more</a>
+                        <div style={{display:'flex', flexDirection:'column'}}>
+                        <div className="para3p2" ref={ref1}>Lorem ipsum dolor sit amet consectetur. Nunc et tincidunt dui vitae facilisi sed sed etiam. Vestibulum vel urna id vel nulla ullamcorper interdum viverra dictum. Facilisi urna gravida eget pretium a mi. Consectetur non dignissim in nam. Pharetra lectus purus cras dui magnis egestas leo quam adipiscing. Volutpat nascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condimentum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo  Volutpat nascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condimentum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo  Volutpat nascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condimentum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo </div>
+                        <div>
+                        <button className="seemorebtn" onClick={clickhandle}>See {see}</button>
+                        </div> 
+                        </div>
                         <button  className="Buttonp5"><a href="#" style={{textDecoration: 'none'}}>Donate Now</a></button>
                     </div>
                     <div className="projectimage"><Slideshow/></div>
@@ -95,7 +113,6 @@ const Projectdetail = () => {
                             <li>ascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condim</li>
                             <li>entum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo </li>
                         </ul>
-                        <a href="#" className="anchor4p2">See more</a>
                     </div>
                     <div className="btncontainerx">
                         <btn className="Buttonp4" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
