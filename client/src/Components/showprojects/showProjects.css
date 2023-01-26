@@ -1,0 +1,21 @@
+* {
+  margin: 0%;
+}
+
+.allprojects {
+  width: 80vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  padding: 5%;
+  background: #f6f7f7;
+  border-radius: 8px;
+}
+
+.techcards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4%;
+}

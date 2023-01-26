@@ -1,0 +1,493 @@
+{
+  "Investedrojects": [
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "false",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "false",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "board": "technical",
+      "subTitle": "Projectname",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "false",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "cultural",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "false",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "cultural",
+
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "false",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "sports",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "false",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "false",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    }
+  ],
+  "ongoingProjects": [
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "false",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "false",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "false",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "false",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "false",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "false",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "false",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    }
+  ],
+  "bookmarkedProjects": [
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "true",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "true",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "true",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "true",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "true",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "true",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "true",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subTitle": "Projectname",
+      "board": "technical",
+      "status": "ongoing",
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "isBookmarked": "true",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    }
+  ]
+}

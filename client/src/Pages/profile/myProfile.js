@@ -6,16 +6,33 @@ import React from "react";
 import ProfileNavbar from "./profileNavbar";
 import AboutCard from "./aboutCard";
 import Cards from "../../Components/Card";
-import ProjectsNav from "./projectsNav";
+// import ProjectsNav from "./projectsNav";
 import "./myprofile.css";
 import { useState } from "react";
 import NoDonationImg from "../../assets/images/profile-images/nodonation.svg";
+import FilterIcon from "../../assets/images/profile-images/filtericon.png";
+import ShowInvested from "../../Components/showprojects/showInvestedProjects";
+import ShowBookmarked from "../../Components/showprojects/showInvestedProjects";
+import ShowOngoing from "../../Components/showprojects/showInvestedProjects";
 
 function MyProfile() {
   const [TotalAmount, setTotalAmount] = useState(0);
+  const [Invested, setInvested] = useState(false);
+  const [Bookmarked, setBookmarked] = useState(false);
+  const [Ongoing, setOngoing] = useState(false);
 
+  const handleInvested = () => {
+    setInvested(true);
+  };
 
-  
+  const handleBookmarked = () => {
+    setBookmarked(true);
+  };
+
+  const handleOngoing = () => {
+    setOngoing(true);
+  };
+
   return (
     <div className="myProfile" id="myProfile">
       <div className="pp-header">
@@ -29,7 +46,27 @@ function MyProfile() {
 
       <div className="pp-projectsbody">
         <div className="projectOptions">
-          <ProjectsNav />
+          {/* <ProjectsNav /> */}
+          <div className="pp-projectnav">
+            <div className="pp-projectnav1">
+              <div className="pp-navelement" onClick={() => handleInvested()}>
+                Invested Projects
+              </div>
+              <div className="pp-navelement" onClick={() => handleBookmarked()}>
+                Bookmarked Projects
+              </div>
+              <div className="pp-navelement" onClick={() => handleOngoing()}>
+                Ongoing Projects
+              </div>
+              <div className="pp-navelement">Recommended Projects</div>
+            </div>
+            <div id="pp-projectnav2">
+              <div className="pp-navelement filter">
+                <img src={FilterIcon} alt="" style={{ padding: 5 }} />
+                Filter
+              </div>
+            </div>
+          </div>
         </div>
         {!TotalAmount && (
           <div className="pp-nodonation">
@@ -43,33 +80,22 @@ function MyProfile() {
             </button>
           </div>
         )}
+        {Invested &&
+          Invested[0].map(({ data }) => {
+            // <Cards details={data} />;
+            <ShowInvested details={data} />
+          })}
+        {Bookmarked &&
+          Invested[1].map(({ data }) => {
+            // <Cards details={data} />;
+            <ShowBookmarked details={data} />
+          })}
+        {Ongoing &&
+          Invested[2].map(({ data }) => {
+            // <Cards details={data} />;
+            <ShowOngoing details={data} />
+          })}
       </div>
-      {/* <div className='pprightbody'>
-
-          <div className='pprightbody1'>
-            <div className='projectOptions'>
-              <ProjectsNav />
-            </div>
-          </div>
-          <div className='pprightbody2'>
-            
-            <h2 style={{margin: 30}}>Technical Board</h2>
-            <div className='pp-techprojects'>
-              <Cards />
-              <Cards />
-              <div className='pp-cards'></div>
-              <div className='pp-cards'></div> 
-            </div>
-            <h2 style={{margin: 30}}>Cultural Board</h2>
-            <div className='pp-cultprojects'>
-              <Cards className="pp-cards"/>
-              <Cards className="pp-cards"/>
-              <div className='pp-cards'></div>
-              <div className='pp-cards'></div> 
-            </div>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }
