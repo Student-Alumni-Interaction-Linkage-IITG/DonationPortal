@@ -15,6 +15,9 @@ import { Bar } from "react-chartjs-2";
 import { useState } from "react";
 import { UserData } from "../../Components/gsprojectdetail/barchartdata.js";
 import DatatablePage from "../../Components/gsprojectdetail/table.js";
+import { PieChartgs } from './piechartgs';
+import img4 from "../../assets/images/iconpdf2.png";
+import { useRef } from 'react';
 //import faker from "faker";
 
 
@@ -64,7 +67,8 @@ function GSProjectdetail() {
          }}
     }
 
-
+    const ref1= useRef()
+    const [see,setSee]=useState("more")
     const [userData, setUserData] = useState({
       labels: UserData.map((data) => data.year),
       datasets: [
@@ -79,7 +83,17 @@ function GSProjectdetail() {
         },
       ],
     });
-  
+    const clickhandle=()=>{
+        if(ref1.current.style.height=='40vh'|| ref1.current.style.height==""){
+            ref1.current.style.height='100%'
+            setSee("less")
+        }
+        else{
+            ref1.current.style.height='40vh'
+            setSee("more")
+        }
+            
+    }
     return (
         <Router>
                 <NextNavbar />
@@ -103,8 +117,13 @@ function GSProjectdetail() {
                         <div className="Header4p2">Campus Rush</div>
                         <div className="Subtitle4p2">I'll give you a subtitle soon</div>
                         <div className="Header5p2"><p>About Project</p></div>
-                        <div className="para3p2">Lorem ipsum dolor sit amet consectetur. Nunc et tincidunt dui vitae facilisi sed sed etiam. Vestibulum vel urna id vel nulla ullamcorper interdum viverra dictum. Facilisi urna gravida eget pretium a mi. Consectetur non dignissim in nam. Pharetra lectus purus cras dui magnis egestas leo quam adipiscing. Volutpat nascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condimentum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo  Volutpat nascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condimentum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo  Volutpat nascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condimentum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo </div>
-                        <a href="#" className="anchor4p2">See more</a>
+                        <div style={{display:'flex', flexDirection:'column'}}>
+                        <div className="para3p2" ref={ref1}>Lorem ipsum dolor sit amet consectetur. Nunc et tincidunt dui vitae facilisi sed sed etiam. Vestibulum vel urna id vel nulla ullamcorper interdum viverra dictum. Facilisi urna gravida eget pretium a mi. Consectetur non dignissim in nam. Pharetra lectus purus cras dui magnis egestas leo quam adipiscing. Volutpat nascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condimentum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo  Volutpat nascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condimentum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo  Volutpat nascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condimentum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo </div>
+                        <div>
+                        <button className="seemorebtn" onClick={clickhandle}>See {see}</button>
+                        </div>
+                        
+                        </div>
                         {/* <button  className="Buttonp5"><a href="#" style={{textDecoration: 'none'}}>Donate Now</a></button> */}
                     </div>
                     <div className="projectimage"><Slideshow/></div>
@@ -119,32 +138,44 @@ function GSProjectdetail() {
                         <div className='elementbox' ><DatatablePage/></div>
                         <div className='Header4p2'>Outflow Graph</div>
                         <div className='elementbox' ><div style={{ width: "100%" }}><Bar data={userData} options={chartOptions}/></div></div>
-
                     </div>
                     <div className='summary'>
                         <div className='elementbox'>
-                            <div className="btncontainerx">
+                            <div className="btncontainerx2">
+                                <div>
                                 <div className='Header5p2'>Donation Goal</div>
                                 <btn className="Buttonp4" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
                                     <a href="#"><img src={img3} className="img3"/>   Details.pdf</a>
                                 </btn>
+                                </div>
+                                <div>
                                 <div className='Header5p2'>Total Inflow</div>
                                 <btn className="Buttonp4" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
                                     <a href="#"><img src={img3} className="img3"/>   Details.pdf</a>
                                 </btn>
+                                </div>
+                                <div>
                                 <div className='Header5p2'>Total Outflow</div>
                                 <btn className="Buttonp4" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
                                     <a href="#"><img src={img3} className="img3"/>   Details.pdf</a>
-                                </btn> 
+                                </btn>
+                                </div> 
+                                <div>
                                 <div className='Header5p2'>Required Amount</div>
                                 <btn className="Buttonp4" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
                                     <a href="#"><img src={img3} className="img3"/>   Details.pdf</a>
                                 </btn> 
+                                </div>
+                                <div>
                                 <div className='Header5p2'>Top Donor</div>
                                 <btn className="Buttonp4" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
                                     <a href="#"><img src={img3} className="img3"/>   Details.pdf</a>
-                                </btn> 
+                                </btn>
+                                </div> 
                             </div>
+                        </div>
+                        <div style={{marginTop:'15vh'}}>
+                                <PieChartgs />
                         </div>
                     </div>
                 </div>
@@ -153,42 +184,7 @@ function GSProjectdetail() {
 
 
 
-                <div className='donationcontainer'>
-                    <div className="Header5p2">Donation Goal</div>
-
-                    <div className="range-container2">
-                        <label htmlFor="rangestart"><div className='sliderletters'>0 </div></label>
-                        <input type="range" id="range" min="0" max="100" value="67" class="slider" valueLabelDisplay="on" />
-                        <label htmlFor="range"><div className='sliderletters'> 3 Cr</div></label>
-
-                    </div>
-                    <div className='donationinfo'>
-                        <div className='donationleft'>Lorem ipsum dolor sit amet consectetur. Nunc et tincidunt dui vitae facilisi sed sed etiam. Vestibulum vel urna id vel nulla ullamcorper interdum viverra dictum. Facilisi urna gravida eget pretium a mi. Consectetur non dignissim in</div>
-                        <div className='donationright'>nam. Pharetra lectus purus cras dui magnis egestas leo quam adipiscing. Volutpat nascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condimentum et in quam pulvinar. Donec purus nisi tellus felis montes libero</div>
-                    </div>
-
-                </div>
-                <div className="donarcontainer">
-                    <div className="Header5p2">Top Donar</div>
-                    <div className="btncontainer2">
-                        <btn className="Buttonp4">
-                            <h1>2 Cr.</h1> <p style={{
-                                paddingTop: "15px"
-                            }}>Ritwik Ganguli</p>
-                        </btn>
-                        <btn className="Buttonp4">
-                            <h1>2 Cr.</h1> <p style={{
-                                paddingTop: "15px"
-                            }}>Ritwik Ganguli</p>
-                        </btn>
-                        <btn className="Buttonp4">
-                            <h1>2 Cr.</h1> <p style={{
-                                paddingTop: "15px"
-                            }}>Ritwik Ganguli</p>
-                        </btn>
-                    </div>
-                    <div><p><a href="#" className="anchor4p2" style={{color:'#2B6EF0',paddingBottom:'0px'}}>See more</a></p></div>
-                </div>
+                
 
                 <div className="videobar" style={{
                     height:"750px",
@@ -207,17 +203,13 @@ function GSProjectdetail() {
                             <li>ascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condim</li>
                             <li>entum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo </li>
                         </ul>
-                        <a href="#" className="anchor4p2">See more</a>
                     </div>
                     <div className="btncontainerx">
-                        <btn className="Buttonp4" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
-                            <a href="#"><img src={img3} className="img3"/>   Details.pdf</a>
+                        <btn className="Buttonp15" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
+                            <a href="#"><img src={img4} className="img3"/>   Details.pdf</a>
                         </btn>
                         <btn className="Buttonp4" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
-                            <a href="#"><img src={img3} className="img3"/>   Details.pdf</a>
-                        </btn>
-                        <btn className="Buttonp4" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
-                            <a href="#"><img src={img3} className="img3"/>   Details.pdf</a>
+                            <a href="#">Close Event</a>
                         </btn> 
                     </div>
                 </div> 
