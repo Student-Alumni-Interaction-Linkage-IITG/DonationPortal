@@ -9,6 +9,7 @@ import Away from '../Components/HomePage/Away/Away';
 import WeAre from '../Components/HomePage/WeAre/WeAre';
 import SayAboutUs from '../Components/HomePage/SayAboutUS/SayAboutUs';
 import MediaRelease from '../Components/HomePage/MediaRelease/MediaRelease';
+import Footer from '../Components/HomePage/Footer/Footer'
 
 const Home = () => {
     return ( 
@@ -24,6 +25,7 @@ const Home = () => {
             <WeAre/>
             <SayAboutUs/>
             <MediaRelease/>
+            <Footer/>
         </div>
      );
 }

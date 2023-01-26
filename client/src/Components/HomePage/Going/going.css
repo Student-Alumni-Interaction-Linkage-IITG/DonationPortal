@@ -1,8 +1,10 @@
 .going {
-    padding-left: 10vw;
-    width: 80vw;
-    max-width: 1024px;
-    padding-top: 10vw;
+    /* padding-left: 10vw; */
+    /* width: 80vw; */
+    /* max-width: 1024px; */
+    width: 90%;
+    margin: 0 auto;
+    /* padding-top: 10vw; */
 }
 
 .going_head {
@@ -22,7 +24,7 @@
 
 .going_body {
     height: 48px;
-
+    width: 1024px;
     /* Landing Body */
     font-family: 'Open Sans';
     font-style: normal;
@@ -50,8 +52,10 @@
     height: 564.29px;
 
     background: #FFFFFF;
-    position: relative;
-    left: calc(40vw - 475px);
+    position: relative; 
+    left: 50%;
+    transform: translateX(-50%);
+    /* left: calc(40vw - 475px); */
     /* Sub Text */
     border: 12px solid #565656;
     border-radius: 33px;
@@ -167,8 +171,8 @@
     height: 50px;
     border-radius: 4px;
     background-color: #027F9B;
-
-    margin-left: calc(40vw - 100px);
+    margin: 0 auto;
+    /* margin-left: calc(40vw - 100px); */
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 600;
@@ -180,4 +184,9 @@
     align-items: center;
     margin-top: 50px;
     cursor: pointer;
+}
+.going_down:hover{
+    background-color: #025466;
+    transition: .2s ease-out;
+
 }

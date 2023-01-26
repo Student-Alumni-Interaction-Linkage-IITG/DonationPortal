@@ -151,10 +151,11 @@ label{
   }
   
   .home-slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #04AA6D;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%; 
+    background: #FFFFFF;
+    border: 2px #8D9096 solid;
     cursor: pointer;
   }
   /* input[type=range]::-webkit-slider-runnable-track  {

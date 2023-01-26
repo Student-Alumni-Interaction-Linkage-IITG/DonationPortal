@@ -1,7 +1,9 @@
 .WeAre {
-    padding-left: 10vw;
+    /* padding-left: 10vw;
     width: 80vw;
-    max-width: 1024px;
+    max-width: 1024px; */
+    width: 90%;
+    margin: 0 auto;
     padding-bottom: 10vw;
 }
 
@@ -26,7 +28,7 @@
 
 .WeAre_body {
     height: 48px;
-
+    width: 1024px;
     /* Landing Body */
     font-family: 'Open Sans';
     font-style: normal;
@@ -46,16 +48,16 @@
     order: 1;
     flex-grow: 0;
     margin-bottom: 50px;
-    margin-top: 38vw;
+    margin-top: 32px;
 }
 
 .W_img {
-    position: absolute;
+    /* position: absolute; */
 }
 
 .W_img1 {
-    top: -128px;
-    width: 87vw;
+    /* top: -128px;
+    width: 87vw; */
 }
 
 @media only screen and (max-width: 1600px) {
@@ -66,5 +68,6 @@
 }
 
 .WeAre_img {
-    position: relative;
+    display: flex;
+    justify-content: center;
 }
