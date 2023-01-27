@@ -1,0 +1,232 @@
+.HFooter {
+    background: #205B68;
+    height: fit-content;
+    padding-bottom: 1vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    position: relative;
+}
+
+.HP_u {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    /* height: 80%; */
+    padding-top: 10%;
+}
+
+.HP_u_1 {
+
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+
+    /* or 100% */
+    letter-spacing: 0.01em;
+    width: 0px;
+    /* White */
+    color: #FFFFFF;
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+.HP_u_3d {
+    padding-top: 20px;
+}
+.HP_u_3d img{
+    cursor: pointer;
+    padding: 6px 6px;
+    border-radius: 50%;
+}
+.HP_u_3d img:hover{
+    outline: 1px solid #fff;
+    transition: .2s ease-out;
+}
+
+.HP_u_21 {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+
+    /* identical to box height */
+
+    /* White */
+    color: #FFFFFF;
+}
+
+.HP_u_22 {
+    margin-top: 20px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+
+    /* or 214% */
+
+    /* White */
+    color: #FFFFFF;
+    list-style-type: none;
+}
+.HP_u_22 a{
+    cursor: pointer;
+}
+.HP_u_22 a:hover{
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: .2s ease-out;
+}
+
+.HP_u_3a {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+
+    /* identical to box height */
+
+    /* White */
+    color: #FFFFFF;
+}
+
+.HP_u_3b {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    margin-top: 20px;
+    /* identical to box height, or 214% */
+
+    /* White */
+    color: #FFFFFF;
+    opacity: 1;
+    mix-blend-mode: normal;
+}
+
+.HP_u_3abaa,
+.HP_u_3abba {
+    opacity: 0.7;
+    display: inline;
+}
+
+.HP_u_3ba {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+
+    /* identical to box height */
+
+    /* White */
+    color: #FFFFFF;
+    padding-top: 40px;
+}
+
+.HP_u_4a {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 26px;
+    /* identical to box height */
+
+    /* White */
+    color: #FFFFFF;
+}
+
+.HP_u_4aa input {
+    height: 50px;
+    padding-left: 5px;
+    width: 200px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 124, 0.2);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 4px 0px 0 4px;
+}
+.HP_u_4aa input:focus{
+    outline: none;
+}
+
+.HP_u_4aa button {
+    height: 56px;
+    width: 56px;
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+    background: #027F9B;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 0px 4px 4px 0px;
+    border: 0;
+}
+
+.HFooter hr {
+    margin-top: 20px;
+    opacity: 0.4;
+    margin-bottom: 20px;
+}
+
+.HP_d img {
+    margin-top: 20px;
+}
+
+.HP_d {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.HP_d1 {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+    /* identical to box height */
+    letter-spacing: 0.035em;
+
+    /* White */
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.HP_d2 {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+    /* identical to box height */
+    text-align: center;
+
+    /* White */
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+    opacity: 0.75;
+}
+
+.HP_u_3d img {
+    width: 20px;
+    margin-right: 10px;
+}
+.HP-image-cont{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
