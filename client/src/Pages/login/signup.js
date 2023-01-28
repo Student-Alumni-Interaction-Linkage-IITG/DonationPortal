@@ -1,6 +1,6 @@
 import './login.css';
-import Navbar from '../../Components/Navbar1p2';
-import password from '../../assets/images/login/password.png';
+import passclosed from '../../assets/images/login/passclosed.png';
+import passopen from '../../assets/images/login/passopen.png';
 import login from '../../assets/images/login/login.png'
 import name from '../../assets/images/login/name.png'
 import { BrowserRouter as Router} from 'react-router-dom';
@@ -12,6 +12,8 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Checkbox from '@mui/material/Checkbox';
 import { useHistory } from "react-router-dom";
+import {useState} from "react";
+import Loginnavbar from './Loginnavbar';
 const BpIcon = styled('span')(({ theme }) => ({
   borderRadius: 3,
   width: 25,
@@ -74,10 +76,17 @@ function BpCheckbox() {
 
 const Signup=()=>{
   const history = useHistory();
+  const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+    const [imageSrc, setImageSrc] = useState(passclosed);
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+        setImageSrc(prevSrc => prevSrc === passclosed ? passopen : passclosed)
+    };
     return(
     <Router>
       <div className='signbody'>
-        <Navbar/>
+        <Loginnavbar/>
         <div className="loginbody">
             <div className='loginright'>
                 <p className='ltext3'>Create Account</p>
@@ -93,7 +102,25 @@ const Signup=()=>{
                         </div>
                         <div className='lcontainer'>
                             <p className='ltextinside'>Password</p>
-                            <input type="text" className='lfield1' id="lpassword" style={{backgroundImage:`url(${password})`}}></input>
+                            <div style={{ position: 'relative' }}>
+                            <img src={imageSrc} className="loginpasswordimg"
+                                    style={{
+                                    position: 'absolute',
+                                    left: '15px',
+                                    top: '50%',
+                                    transform: 'translateY(-50%)',
+                                    cursor: 'pointer'
+                                    }}
+                                    onClick={togglePasswordVisibility}
+                                />
+                                <input 
+                                    type={showPassword ? 'text' : 'password'} 
+                                    value={password} 
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    className='lfieldpass' id="lpassword" 
+                                />
+                                
+                            </div>
                         </div>
                         <div className='lcontainer'>
                             <p className='ltextoutside'>You are?</p>
