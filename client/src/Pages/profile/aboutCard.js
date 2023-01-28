@@ -6,19 +6,15 @@ import PhoneIcon from "../../assets/images/profile-images/phoneicon.svg";
 import HomeIcon from "../../assets/images/profile-images/homeicon.svg";
 import Cross from "../../assets/images/profile-images/Cross.png";
 import UploadpicBG from "../../assets/images/profile-images/uploadpicbg.png";
-import VIP from "../../assets/images/profile-images/VIP.svg";
+import AmountCard from "../../assets/images/profile-images/Test1.png";
+import SVIPBadge from "../../assets/images/profile-card/SVIPBadge.png";
+import SVIPLine from "../../assets/images/profile-card/SVIPLine.png";
 
 function AboutCard() {
   const [Uploaddp, setUploaddp] = useState(false);
-  const [BgFilter, setBgFilter] = useState(false);
+  // const [BgFilter, setBgFilter] = useState(false);
   const uploadProfilePic = () => {
     setUploaddp(true);
-    // document.
-    // BgFilter ? {
-
-    // } : {
-
-    // };
   };
 
   return (
@@ -49,19 +45,26 @@ function AboutCard() {
               <img src={MailIcon} alt="" className="cardicons" />
               <span className="pp-mydetailtext">virus@threeidiots.com</span>
             </div>
-            <div
-              style={{ marginTop: "1.2vw", width: "19vw", textAlign: "center" }}
-            >
+            <div style={{ marginTop: "1.2vw", width: "19vw" }}>
               <img src={HomeIcon} alt="" className="cardicons" />
               <span className="pp-mydetailtext">
-                Faculty Quarters, Indian Institute of Technology, Amingaon,
-                North Guwahati, Assam.
+                Faculty Quarters, Indian
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Institute of
+                Technology, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amingaon,
+                North Guwahati, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assam.
               </span>
             </div>
           </div>
         </div>
 
-        <img src={VIP} alt="" className="VIPCard" />
+        <div className="amountdetailscard">
+          <img src={AmountCard} alt="" className="VIPCard" />
+          <h1 className="amount">&#8377; 000</h1>
+          <div className="amountpara">Total Investment</div>
+          <img src={SVIPLine} alt="" className="svipline" />
+          <img src={SVIPBadge} alt="" className="svipbadge" />
+          <div className="badgepara">Donate to unlock your badge</div>
+        </div>
       </div>
       <div className="borderline" />
       {Uploaddp && (
@@ -97,7 +100,6 @@ function AboutCard() {
                 CANCEL
               </button>
             </div>
-          
           </div>
         </>
       )}
