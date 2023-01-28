@@ -26,7 +26,7 @@ function Footer() {
             <li><a>Donor's report</a></li>
             <li><a>Privacy Policy</a></li>
             <li><a>FAQs</a></li>
-            <li><a>Contact Us</a></li>
+            {/* <li><a>Contact Us</a></li> */}
           </div>
         </div>
         <div className='HP_u_3'>

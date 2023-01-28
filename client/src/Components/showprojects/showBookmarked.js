@@ -1,53 +1,72 @@
-import Bookmarked from "../../Databases/projects.json";
-import React, { useState } from "react";
-import Card from "../Card";
+// import Projects from "../../Databases/projects.json";
+import Projects from "../../Databases/testprojects.json";
+import React, { useEffect, useState } from "react";
+import Card from "../HomePage/Card/Card.js";
+import "./showProjects.css";
 
-function ShowBookmarkedProjects() {
+function Bookmarked(allprojects) {
+  const Projects = allprojects.projects;
   const [TechProj, setTechProj] = useState(false);
   const [CultProj, setCultProj] = useState(false);
   const [SportsProj, setSportsProj] = useState(false);
 
-  Bookmarked[1].map(({ data }) => {
-    if(data.board === "technical")
-      setTechProj(true);
-    if(data.board === "cultural")
-      setCultProj(true);
-    if(data.board === "sports")
-      setSportsProj(true);
-  });
+  useEffect(() => {
+    Projects.map((data) => {
+      if (data.board === "technical") setTechProj(true);
+      if (data.board === "cultural") setCultProj(true);
+      if (data.board === "sports") setSportsProj(true);
+    });
+  }, [Projects]);
 
   return (
     <div className="allprojects">
       {TechProj && (
         <div className="techprojects">
-          <h2>Technical Board</h2>
+          <h1 className="techboardheading">Technical Board</h1>
           <div className="techcards">
-            {Bookmarked &&
-              Bookmarked.map(({ data }) => {
-                <Card details={data} />;
-              })}
+            {Projects.map((data) => {
+              if (data.board === "technical") {
+                return (
+                  <div className="singlecard">
+                    <Card details={data} />
+                  </div>
+                );
+              }
+            })}
           </div>
         </div>
       )}
       {CultProj && (
         <div className="cultprojects">
-          <h2>Cultural Board</h2>
+          <h1 className="cultboardheading">Cultural Board</h1>
           <div className="cultcards">
-            {Bookmarked &&
-              Bookmarked.map(({ data }) => {
-                <Card details={data} />;
-              })}
+            {Projects.map((data) => {
+              if (data.board === "cultural") {
+                return (
+                  <div className="singlecard">
+                    <Card details={data} />
+                  </div>
+                );
+              }
+            })}
           </div>
         </div>
       )}
       {SportsProj && (
         <div className="sportsprojects">
-          <h2>Sports Board</h2>
+          <h1 className="sportsboardheading">Sports Board</h1>
           <div className="sportscards">
-            {Bookmarked &&
-              Bookmarked.map(({ data }) => {
-                <Card details={data} />;
-              })}
+            {Projects.map((data) => {
+              if (data.board === "sports") {
+                return (
+                  <div className="singlecard">
+                    <Card details={data} />
+                  </div>
+                );
+              } else {
+                return <></>;
+              }
+            })}
           </div>
         </div>
       )}
@@ -55,4 +74,4 @@ function ShowBookmarkedProjects() {
   );
 }
 
-export default ShowInvestedProjects;
+export default ShowBookmarked;

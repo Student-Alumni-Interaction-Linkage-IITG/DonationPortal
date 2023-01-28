@@ -3,19 +3,51 @@
 }
 
 .allprojects {
-  width: 80vw;
+  width: 73vw;
   height: fit-content;
   display: flex;
   flex-direction: column;
-  justify-self: center;
   align-items: center;
-  padding: 5%;
+  padding: 4%;
   background: #f6f7f7;
-  border-radius: 8px;
+  border-radius: 10px;
+  margin-left: 10%;
+}
+.techboardheading {
+  margin-bottom: 3%;
+  margin-left: 1%;
+}
+
+.cultboardheading {
+  margin: 4% 0% 3% 1%;
+}
+.sportsboardheading {
+  margin: 4% 0% 3% 1%;
+
 }
 
 .techcards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4%;
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 5%; */
+  justify-content: space-between;
+}
+
+.cultcards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  justify-content: space-between;
+}
+
+.sportscards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  justify-content: space-between;
+}
+
+.singlecard {
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
