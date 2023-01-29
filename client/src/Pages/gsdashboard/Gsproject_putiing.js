@@ -62,7 +62,8 @@ export default function Gsproject_putiing() {
   }
   const renderTags = (source) =>{
     return source.map((tag)=>{
-      return <div className='tag' key={tag}>{tag}</div>
+      return <div className='tag' key={tag}>
+        {tag.slice(0,10)}</div>
     })
   }
   const renderPhotos = (source) =>{
@@ -155,7 +156,13 @@ export default function Gsproject_putiing() {
          toolbarClassName="toolbarClassName"
          wrapperClassName="wrapperClassName"
          editorClassName="editorClassName"
-         wrapperStyle={{ width: 1060, border: "1px solid black", borderRadius: "10px" , padding: "10px"}}
+         toolbar={{
+          options: ['inline',  'fontSize', 'fontFamily', 'history'],
+          inline: {
+            options: ['bold', 'italic', 'underline','superscript','subscript'],
+          }
+        }}
+        wrapperStyle={{ height: 160,width: "73vw", border: "1px solid black", borderRadius: "10px" , padding: "10px",overflow: "hidden"}}
          value={utilmoney} onChange={e => setutilmoney(e.target.value)}
               />
             </div>
@@ -220,7 +227,13 @@ export default function Gsproject_putiing() {
          toolbarClassName="toolbarClassName"
          wrapperClassName="wrapperClassName"
          editorClassName="editorClassName"
-         wrapperStyle={{ width: 1060, border: "1px solid black", borderRadius: "10px" , padding: "10px"}}
+         wrapperStyle={{ height: 160,width: "73vw", border: "1px solid black", borderRadius: "10px" , padding: "10px",overflow: "hidden"}}
+         toolbar={{
+          options: ['inline', 'fontSize', 'fontFamily', 'history'],
+          inline: {
+            options: ['bold', 'italic', 'underline','superscript','subscript'],
+          }
+        }}
          value={utilmoney} onChange={e => setutilmoney(e.target.value)}
               />
             </div>
@@ -230,8 +243,10 @@ export default function Gsproject_putiing() {
         <div className="ff">
         <label htmlFor="attach_files" className='headiing'>Attach Files</label><br />
         <div className="subtitle">
-        <input type="file" multiple id="file" onChange={tagHandleChange}/>
-        <br/>
+        
+        <input type="file" multiple id="file1" onChange={tagHandleChange} hidden/>
+        <label htmlFor='file1' className='dec'>Add File</label>
+        <br/><br/>
         <div className='kk'>
         {renderTags(tags)}
         </div>
@@ -243,7 +258,7 @@ export default function Gsproject_putiing() {
           <button className='bt'>Preview</button>
           <button className='bt'>Save Draft</button>
           <button className='bt'>Approval Request</button>
-          <button className='bt'>Post</button>
+          <button className='bt1'>Post</button>
         </div>
 
 
