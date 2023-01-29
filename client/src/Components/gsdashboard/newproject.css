@@ -1,0 +1,146 @@
+
+.form{
+    margin-top: 4.722vw;
+    margin-left: 10.764vw;
+    margin-right: 10.764vw ;
+}
+.headiing{
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+
+
+}
+.textarea1{
+   margin-top: 10px;
+    width: 65vw;
+    min-height: 60px;
+    border: solid rgb(164, 165, 165);
+    border-radius: 7px;
+    padding-left: 1.5vw;
+    padding-right: 8.5vw;
+}
+.ff{
+    border: solid rgba(220, 223, 224, 1);
+    border-radius: 7px;
+    padding: 20px;
+    width: 75vw;
+    position: relative;
+    margin-bottom: 20px;
+}
+.dust{
+    position: absolute;
+    top : 80px;
+    right: 35px;
+}
+.dust1{
+    position: absolute;
+    top: 178px;
+    right: 2.788vw;
+}
+.dust:hover{
+    cursor: pointer;
+}
+.subtitle{
+    margin-top: 10px;
+    width: 74vw;
+    height: 60px;
+    border: solid rgba(220, 223, 224, 1);
+    border-radius: 7px;
+    padding-left: 1.35vw;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+color: #8f8c8c;
+display: flex;
+align-items: center;
+}
+.subtitle:hover{
+    cursor: pointer;
+}
+.add{
+    background-color: #C4C4C4;
+    color: white;
+    font-size: 30px;
+    border-radius: 1000px;
+    padding: 5px;
+    margin-right: 10px;
+}
+.document{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .spec{
+    padding-top: 10px;
+}
+.buttons1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 4vw ;
+    margin-bottom: 8vw ;
+}
+.bt{
+    background: rgba(218, 230, 240, 1);
+    border: none;
+    height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-left: 11px;
+    color:  rgba(51, 51, 51, 1);
+    border-radius: 5px;
+}
+.bt:hover{
+    cursor: pointer;
+}
+
+.specialhead{
+    display: grid;
+    grid-template-columns: 3.4fr 1fr 1.2fr 1fr;
+}
+.grp{
+    margin-left: 20px;
+}
+.ico{
+    margin-left: 1.2vw;
+    padding-bottom: 5px;
+}
+.dust2{
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+}
+.ico:hover{
+    cursor: pointer;
+}
+.dropdown{
+    
+    font-size: 15px;
+}
+.uploaded_image{
+    height: 123px;
+    width: 110px;
+}
+.result img{
+    height: 200px;
+    width: 150px;
+    margin: 10px;
+}
+.kk{
+    display: flex;
+    
+}
+
+.tag{
+
+    margin : 10px;
+    background-color: #8f8c8c;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}

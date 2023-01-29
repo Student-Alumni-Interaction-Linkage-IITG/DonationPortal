@@ -1,0 +1,220 @@
+.SayAboutUs {
+    padding-left: 10vw;
+    width: 80vw;
+    max-width: 1024px;
+    padding-bottom: 10vw;
+}
+
+.SayAboutUs_head {
+    width: 500px;
+    height: 32px;
+
+    /* Landing Subtitle */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+
+    /* identical to box height, or 32px */
+    letter-spacing: -0.015em;
+
+    /* Text */
+    margin-bottom: 25px;
+    color: #333333;
+}
+
+.SayAboutUs_body {
+    height: 48px;
+
+    /* Landing Body */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+
+    /* or 24px */
+    letter-spacing: 0.1px;
+
+    /* Text */
+    color: #333333;
+
+
+}
+
+.SayAboutUs_SlideShow {
+    width: 100vw;
+    margin-top: 80px;
+    margin-left: -10vw;
+    height: 500px;
+    position: relative;
+}
+
+@keyframes pos1 {
+    0% {
+        transform: scale(1.2);
+        left: calc(50vw - 500px);
+        z-index: 5;
+        filter: blur(0);
+    }
+
+    3% {
+        transform: scale(0.8);
+        filter: blur(5px);
+        left: 0vw;
+        z-index: 1;
+        opacity: 0.5;
+    }
+    25%{
+        transform: scale(0.8);
+        filter: blur(5px);
+        left: 0vw;
+        opacity: 0.5;
+    }
+    28%{
+        left: calc(50vw - 500px);
+        filter: blur(5px);
+        opacity: 0.5;
+        transform: scale(0.6);
+    }
+    50%{
+        left: calc(50vw - 500px);
+        filter: blur(5px);
+        opacity: 0.5;
+        transform: scale(0.6);
+    }
+    53%{
+        left: calc(70vw - 500px);
+        opacity: 0.5;
+        filter: blur(5px);
+        transform: scale(0.8);
+    }
+    75%{
+        left: calc(70vw - 500px);
+        filter: blur(5px);
+        opacity: 0.5;
+        transform: scale(0.8);
+        z-index: 1;
+    }
+    78%{
+        transform: scale(1.2);
+        filter: blur(0);
+        left: calc(50vw - 500px);
+        z-index: 5;
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.2);
+        left: calc(50vw - 500px);
+        z-index: 5;
+        opacity: 1;
+    }
+
+}
+
+.SAUposition1 {
+    animation: pos1 20s linear;
+    animation-iteration-count: infinite;
+}
+
+.SAUposition2 {
+    animation: pos1 20s linear;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+}
+
+.SAUposition3 {
+    animation: pos1 20s linear;
+    animation-delay: 10s;
+    animation-iteration-count: infinite;
+}
+
+.SAUposition4 {
+    animation: pos1 20s linear;
+    animation-iteration-count: infinite;
+    animation-delay: 15s;
+}
+
+.SayAboutUs_card {
+    transform: scale(1.2);
+    left: calc(50vw - 500px);
+    z-index: 5;
+    width: 1001px;
+    height: 421px;
+    background-color: white;
+    position: absolute;
+}
+
+.SayAboutUs_card_a,
+.SayAboutUs_card_b,
+.SayAboutUs_card_c,
+.SayAboutUs_card_d {
+    position: absolute;
+    left: 441px;
+}
+
+.SayAboutUs_card_img {
+    position: absolute;
+}
+
+.SayAboutUs_card_a {
+    top: 64px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+
+    /* identical to box height, or 21px */
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.SayAboutUs_card_b {
+    top: 117px;
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+
+    /* identical to box height, or 48px */
+    letter-spacing: -0.015em;
+
+    /* Text */
+    color: #333333;
+}
+
+.SayAboutUs_card_c {
+    top: 181px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+
+    /* or 24px */
+    color: #333333;
+    letter-spacing: 0.1px;
+    padding-right: 60px;
+}
+
+.SayAboutUs_card_d {
+    top: 333px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    /* identical to box height, or 24px */
+    text-align: right;
+    letter-spacing: 0.1px;
+
+    /* Active */
+    color: #233A3F;
+    right: 50px;
+
+}

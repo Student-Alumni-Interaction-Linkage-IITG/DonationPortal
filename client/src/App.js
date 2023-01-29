@@ -3,11 +3,19 @@ import Home from './Pages/Home';
 import Projects from './Pages/projects-page/projects';
 import Projectdetail from './Pages/projectdetailspage/projectdetail';
 import MyProfile from './Pages/profile/myProfile';
+// <<<<<<< HEAD
 
 import Gsproject_putiing from './Pages/gsdashboard/Gsproject_putiing';
 import Login from './Pages/login/login';
 import Signup from './Pages/login/signup';
 
+// =======
+// updates
+// import Gsproject_putiing from './Pages/gsdashboard/Gsproject_putiing';
+// import Login from './Pages/login/login';
+// import Signup from './Pages/login/signup';
+// updates
+// >>>>>>> 87920aa3a508dcb05d88a20e1ee14c889c84e250
 function App() {
   return (
     <Router>
@@ -29,7 +37,11 @@ function App() {
             <Route exact path="/projectdetail.js">
               <Projectdetail/>
             </Route>
+{/* <<<<<<< HEAD */}
 
+{/* ======= */}
+{/* updates */}
+{/* >>>>>>> 87920aa3a508dcb05d88a20e1ee14c889c84e250 */}
             <Route exact path="/login.js">
               <Login/>
             </Route>
@@ -39,7 +51,11 @@ function App() {
             <Route exact path="/abcd">
               <Gsproject_putiing/>
             </Route>
+{/* <<<<<<< HEAD */}
 
+{/* ======= */}
+{/* updates */}
+{/* >>>>>>> 87920aa3a508dcb05d88a20e1ee14c889c84e250 */}
           </Switch>
         </div>
       </div>
