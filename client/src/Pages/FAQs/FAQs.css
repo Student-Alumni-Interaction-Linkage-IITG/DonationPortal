@@ -1,0 +1,178 @@
+button{
+    cursor: pointer;
+}
+.path_faq{
+    display: flex;
+    margin-top: 3vh;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    text-align: right;
+    margin-left: 62vw;
+}
+
+.path_foot, .path_learn{
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+.path_f{
+    margin-left: 2vw;
+}
+.categories_faq{
+    display: flex;
+    margin-top: 9vh;
+    margin-left: 10vw;
+}
+.faq_right{
+    display: flex;
+    margin-left: 14.5vw;
+    
+}
+.general_button{
+    border: none;
+    background: #F6F7F7;
+    height: 6vh;
+    width: 9vw;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 2vh;
+    color: #333333;
+    font-weight: 500;
+}
+.general_button:hover{
+    background: #cad4d4;
+}
+.general_button_after{
+    border: none;
+    background: white;
+    height: 6vh;
+    width: 9vw;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 2vh;
+    color: #333333;
+    font-weight: 700;
+    border-bottom: 1px solid #333333;
+}
+.search{ 
+    border-radius: 4px;
+    background: #FFFFFF;
+}
+.search_ques{
+    background: url("../../assets/FAQs/search.png");
+    background-position-y: 2vh;
+    background-position-x: 0.8vw;
+    background-repeat: no-repeat;
+    padding-left: 4vw;
+    height: 6vh;
+    width: 20vw;
+    font-family: 'Inter';
+    font-style: normal;
+    color: rgba(51, 51, 51, 0.5);
+    font-weight: 500;
+    font-size: 2.7vh;
+    border-color: #D9ECF0;
+}
+.search_ques:focus{
+    outline: none;
+}
+.filter_button{
+    font-family: 'Open Sans';
+    font-style: normal;
+    margin-left: 2vw;
+    width: 7vw;
+    font-weight: 600;
+    font-size: 2.2vh;
+    color: #333333;
+    border: none;
+    background: #F6F7F7;
+    border-radius: 4px;
+}
+.filter_button:hover{
+    background: #cad4d4;
+}
+.filter_icon{
+    margin-right: 1vw;
+}
+.content_faq{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 8vh;
+}
+.qs{
+    color: #025F74;
+    display: flex;
+    gap: 3vw;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 2.7vh;
+    font-weight: 600;
+}
+.ques{
+    width: 60vw;
+    margin-bottom: 6vh;
+}
+.general_faq, .lorem_faq, .payment_faq{
+    height: auto;
+    border-bottom: 2px solid #D9ECF0;
+    margin-top: 6vh;
+    width: 75vw;
+}
+.show_ans{
+    height: 1.3vh;
+    cursor: pointer;
+    margin-top: 1.1vh;
+}
+.ans{
+    margin-bottom: 5vh;
+    color: #333333;
+    margin-left: 4vw;
+    margin-right: 8vw;
+    font-size: 2.5vh;
+}
+.email_faq{
+    display: flex;
+    width: 100%;
+    height: 25vh;
+    margin-top: 20vh;
+    background: #94A2AD;
+    gap: 35vw;
+}
+.email_left{
+    margin-left: 10vw;
+    margin-top: 9vh;
+}
+.p1_faq{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.5vh;
+    color: #FFFFFF;
+}
+.p2_faq{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5vh;
+    color: #333333;
+}
+.email_button_faq{
+    margin-top: 9vh;
+    height: 8vh;
+    width: 13vw;
+    background: white;
+    border: none;
+    border-radius: 11px;
+    color: #025F74;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2vh;
+}
+.email_button_faq:hover{
+    background: rgba(255, 255, 255, 0.734);
+    transform: scale(1.1);
+}

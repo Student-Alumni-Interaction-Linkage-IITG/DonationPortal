@@ -4,6 +4,7 @@ import Projects from './Pages/projects-page/projects';
 import Projectdetail from './Pages/projectdetailspage/projectdetail';
 import MyProfile from './Pages/profile/myProfile';
 import Error from'./Pages/Error/Error'
+import FAQs from'./Pages/FAQs/FAQs'
 // updates
 
 import Gsproject_putiing from './Pages/gsdashboard/Gsproject_putiing';
@@ -46,6 +47,9 @@ function App() {
             <Route exact path="/close_events">
               <Close_project/>
               </Route>
+            <Route exact path="/FAQs.js">
+              <FAQs/>
+            </Route>
             <Route exact path="*">
               <Error/>
             </Route>
