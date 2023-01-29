@@ -7,6 +7,7 @@ import MyProfile from './Pages/profile/myProfile';
 import Gsproject_putiing from './Pages/gsdashboard/Gsproject_putiing';
 import Login from './Pages/login/login';
 import Signup from './Pages/login/signup';
+import Close_project from './Pages/gsdashboard/Close_project';
 // updates
 function App() {
   return (
@@ -36,8 +37,11 @@ function App() {
             <Route exact path="/signup.js">
               <Signup/>
             </Route>
-            <Route exact path="/abcd">
+            <Route exact path="/dashboard">
               <Gsproject_putiing/>
+            </Route>
+            <Route exact path="/close_events">
+              <Close_project/>
             </Route>
 {/* updates */}
           </Switch>

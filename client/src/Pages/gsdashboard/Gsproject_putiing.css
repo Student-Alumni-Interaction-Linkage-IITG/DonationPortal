@@ -299,6 +299,10 @@ align-items: center;
     position: absolute;
     bottom: 35px;
     right: 35px;
+
+}
+.dust2:hover{
+    cursor: pointer;
 }
 .ico:hover{
     cursor: pointer;
@@ -322,10 +326,75 @@ align-items: center;
 }
 
 .tag{
-
-    margin : 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+    margin: 4px;
     background-color: #8f8c8c;
     color: white;
     border-radius: 5px;
     padding: 5px;
+    height: 10px;
+}
+.bt1{
+    background: #027F9B;
+    border: none;
+    height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-left: 11px;
+    color:  rgb(255, 255, 255);
+    border-radius: 5px;
+    
+}
+.ntag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 18px;
+}
+.cross{
+    font-size: 13px;
+}
+.dec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #027F9B;
+    border: none;
+    height: 25px;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-left: 11px;
+    margin-right: 20px;
+    color:  rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.slides{
+    margin-left: 10vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    color: #565656;
+}
+.sl{
+    margin: 1vw;
+}
+.sl1{
+    margin: 1vw;
+}
+.sl1:hover{
+    cursor: pointer;
+}
+.emails{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    width: 60vw;
+    flex-flow: row wrap;
 }
