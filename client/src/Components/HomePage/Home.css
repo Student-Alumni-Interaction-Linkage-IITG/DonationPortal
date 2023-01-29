@@ -10,6 +10,7 @@
 }
 .purpose{
     /* width: fit-content; */
+    max-width: 100%;
 }
 .home-campus{
     /* width: fit-content; */

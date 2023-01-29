@@ -352,12 +352,10 @@ letter-spacing: 0.01em;
   gap: 30px;
   /* position: absolute;
 width: 1440px; */
-  height: 72px;
+  height: 5%;
   left: 0px;
   top: 0px;
-height: 72px;
-left: 0px;
-top: 0px;
+
 margin-top: 0px;
 
 
@@ -910,7 +908,7 @@ flex-grow: 0;
 
 /* CSS for user profile page starts here :  */
 
-.myProfile {
+/* .myProfile {
   width: 100%;
   padding-bottom: 5%;
   font-family: 'Open Sans';
@@ -1073,7 +1071,7 @@ flex-grow: 0;
   padding: 1vw 3vw 2vw 2vw;
   justify-content: space-around;
   align-items: center;
-}
+} */
 
 
 

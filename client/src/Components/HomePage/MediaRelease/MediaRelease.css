@@ -1,7 +1,9 @@
 .MR {
-    padding-left: 10vw;
-    width: 80vw;
-    max-width: 1024px;
+    /* padding-left: 10vw; */
+    /* width: 80vw;
+    max-width: 1024px; */
+    width: 90%;
+    margin: 0 auto;
     padding-bottom: 40vh;
 }
 
@@ -16,7 +18,7 @@
 
 .MR_content {
     background-image: url(../../../assets/Home/Making\ An\ Impact.png);
-    width: 80vw;
+    /* width: 80vw; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -95,6 +97,10 @@
 
     color: #2B6EF0;
 
+}
+.MR_cards_link:hover{
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .MR_cards_show{
