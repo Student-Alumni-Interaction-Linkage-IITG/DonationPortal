@@ -10,9 +10,8 @@
 }
 .purpose{
     /* width: fit-content; */
-    padding-left: 40px;
+    max-width: 100%;
 }
 .home-campus{
     /* width: fit-content; */
-    padding-left: 30px;
 }

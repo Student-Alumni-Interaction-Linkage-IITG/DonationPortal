@@ -1,7 +1,9 @@
 .SayAboutUs {
-    padding-left: 10vw;
+    /* padding-left: 10vw;
     width: 80vw;
-    max-width: 1024px;
+    max-width: 1024px; */
+    width: 90%;
+    margin: 0 auto;
     padding-bottom: 10vw;
 }
 
@@ -26,7 +28,7 @@
 
 .SayAboutUs_body {
     height: 48px;
-
+    width: 1024px;
     /* Landing Body */
     font-family: 'Open Sans';
     font-style: normal;
@@ -49,6 +51,8 @@
     margin-left: -10vw;
     height: 500px;
     position: relative;
+    /* display: flex;
+    justify-content: center; */
 }
 
 @keyframes pos1 {
@@ -138,7 +142,7 @@
 
 .SayAboutUs_card {
     transform: scale(1.2);
-    left: calc(50vw - 500px);
+    /* left: calc(50vw - 500px); */
     z-index: 5;
     width: 1001px;
     height: 421px;
