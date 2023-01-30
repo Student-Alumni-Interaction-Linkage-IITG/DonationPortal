@@ -1,83 +1,30 @@
-import React, { ChangeEvent,useState } from 'react';
+import React, { ChangeEvent,useState,useEffect } from 'react';
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import Select from 'react-select';
-import "../gsdashboard/Gsproject_putiing.css"
-export default function Gsproject_putiing() {
-  const data = [
-    {
-      value: 1,
-      label: "cerulean"
-    },
-    {
-      value: 2,
-      label: "fuchsia rose"
-    },
-    {
-      value: 3,
-      label: "true red"
-    },
-    {
-      value: 4,
-      label: "aqua sky"
-    },
-    {
-      value: 5,
-      label: "tigerlily"
-    },
-    {
-      value: 6,
-      label: "blue turquoise"
-    }
-  ];
-  const [title, setTitle] = useState('');
-  const [isSub, setIsSub] = useState(false);
-  const [subtitle, setsubTitle] = useState('');
-  const [about, setAbout] = useState('fwe');
-  // const [filelist , setFilelist] = useState<FileList | null>(null);
-  const [donationGoal, setdonationGoal] = useState('');
-  const [utilmoney, setutilmoney] = useState('knlkvndlknl');
-  const [selectedValue, setSelectedValue] = useState([]);
-  const [selectedImages , setSelectedImages] = useState([]);
-  const [tags , setTags] = useState([]);
-  const tagHandleChange = (e)=>{
-    if(e.target.files){
-      console.log(e.target.files)
-      const fileArray1 = Array.from(e.target.files).map((file)=>file.name)
-      setTags((prevTags)=>prevTags.concat(fileArray1))
-      console.log(fileArray1)
-    }
-  }
-  const imageHandleChange= (e) =>{
-       
-      if(e.target.files){
-        const fileArray = Array.from(e.target.files).map((file)=>URL.createObjectURL(file));
-        
+import "../gsdashboard/Gsproject_putiing.css";
+import NewProject from '../../Components/gsdashboard/newproject';
+import Ongoingprojectspage from '../../Components/gsdashboard/Ongoingprojectspage';
+import ApprovalPendingpage from '../../Components/gsdashboard/ApprovalPendingpage';
 
-        setSelectedImages((prevImages)=>prevImages.concat(fileArray))
-        Array.from(e.target.files).map(
-          (file)=>URL.revokeObjectURL(file)
-        )
-      }
-  }
-  const renderTags = (source) =>{
-    return source.map((tag)=>{
-      return <div className='tag' key={tag}>
-        {tag.slice(0,10)}</div>
-    })
-  }
-  const renderPhotos = (source) =>{
-    return source.map((photo)=>{
-      return <img src={photo} key={photo}/> 
-    })
-  }
-  const handleChange = (e) => {
-    setSelectedValue(Array.isArray(e) ? e.map(x => x.value) : []);
-  }
-  // const handleChange1 = (e) =>{
-  //   setFilelist(URL.createObjectURL(e.target.files));
-  // }
-  // const FIles = filelist? [...filelist] : [];
+export default function Gsproject_putiing() {
+
+const [type, setType] = useState(1);
+
+var show = <NewProject/>
+
+if(type==1){
+  show=<NewProject/>
+}
+
+else if(type==2){
+  show=<Ongoingprojectspage/>
+}
+
+else if(type==3){
+  show=<ApprovalPendingpage/>
+}
+
   return (
     <div>
       <div className="nav">
@@ -100,169 +47,20 @@ export default function Gsproject_putiing() {
 
         </div>
       </div>
-      <div className="buttons"><div className="but1">
+      <div className="buttons"><div className={type==1 ? "but1":"but2"} onClick={()=>{setType(1)}}>
         Create New Project
       </div>
-        <div className="but2">
+        <div className={type==2 ? "but1":"but2"} onClick={()=>{setType(2)}}>
           Ongoing Projects
         </div>
+        <div className={type==3 ? "but1":"but2"} onClick={()=>{setType(3)}}>
+          Approval Pending
+        </div>
+        <div className={type==4 ? "but1":"but2"}>
+          Approved
+        </div>
       </div>
-      <form className='form'>
-        <div className='ff'>
-          <label htmlFor="Title" className='headiing'>Title</label><br />
-          <input type="text" id="Title" name="Title" placeholder='Project 1' className='textarea1' value={title} onChange={e => setTitle(e.target.value)} />
-          <img src={require('../../assets/images/dust.png')} className="dust" onClick={() => { setTitle('') }} />
-          {isSub && <><label htmlFor="subTitle" className='headiing'>Sub-Title</label><br />
-
-            <input type="text" id="subTitle" name="subTitle" placeholder='Project 1' className='textarea1' value={subtitle} onChange={e => setsubTitle(e.target.value)} />
-            <img src={require('../../assets/images/dust.png')} className="dust1" onClick={() => { setsubTitle('') }} /></>}
-          {isSub == false && <div className='subtitle' onClick={() => { setIsSub(true) }}>
-            <p className='add'>+</p>
-            <p> Add Sub title</p>
-          </div>}
-        </div>
-
-        <div className='ff'>
-          <div className="headiing">Project Approval Document*</div><br />
-          <div className='subtitle'>
-            <label htmlFor="document"></label>
-            <input type="file" id="document" name="document"></input>
-          </div>
-        </div>
-
-        <div className='ff'>
-         
-            <div className='headiing'>About Project</div>
-            {/* <div className='grp'>
-              <img className='ico' src={require('../../assets/images/bold.png')} />
-              <img className='ico' src={require('../../assets/images/italics.png')} />
-              <img className='ico' src={require('../../assets/images/underline.png')} />
-              <img className='ico' src={require('../../assets/images/aA.png')} />
-            </div>
-            <div className='grp'>
-              <img className='ico' src={require('../../assets/images/table.png')} />
-              <img className='ico' src={require('../../assets/images/list.png')} />
-              <img className='ico' src={require('../../assets/images/lisst2.png')} />
-              <img className='ico' src={require('../../assets/images/quotes.png')} />
-            </div>
-            <div className='grp'>
-              <img className='ico' src={require('../../assets/images/scan.png')} />
-              <img className='ico' src={require('../../assets/images/photo.png')} />
-              <img className='ico' src={require('../../assets/images/Video.png')} />
-            </div> */}
-            <br/>
-            <div>
-            <Editor
-         toolbarClassName="toolbarClassName"
-         wrapperClassName="wrapperClassName"
-         editorClassName="editorClassName"
-         toolbar={{
-          options: ['inline',  'fontSize', 'fontFamily', 'history'],
-          inline: {
-            options: ['bold', 'italic', 'underline','superscript','subscript'],
-          }
-        }}
-        wrapperStyle={{ height: 160,width: "73vw", border: "1px solid black", borderRadius: "10px" , padding: "10px",overflow: "hidden"}}
-         value={utilmoney} onChange={e => setutilmoney(e.target.value)}
-              />
-            </div>
-          <img src={require('../../assets/images/dust.png')} className="dust2" onClick={() => { setutilmoney('') }} />
-        </div>
-
-        <div className='ff'>
-          <div className="headiing">Attach Images</div><br />
-          <div>
-                <input type="file" multiple id="file" onChange={imageHandleChange}/>
-                <div className="result">
-                {renderPhotos(selectedImages)}
-                </div>
-          </div>
-        </div>
-
-{/* //<img src={file} className="uploaded_image" key={i}></img> */}
-        <div className="ff">
-        <div className="headiing">Add Tags</div><br/>
-        <div className="selection">
-          <Select
-            className="dropdown"
-            placeholder="Select Option"
-            value={data.filter(obj => selectedValue.includes(obj.value))} // set selected values
-            options={data} // set list of the data
-            onChange={handleChange} // assign onChange function
-            isMulti
-            isClearable
-          />
-          </div>
-        </div>
-
-        <div className='ff'>
-          <label htmlFor="donation" className='headiing'>Donation Goal</label><br />
-          <input type="text" id="donation" name="donation" placeholder='000 $' className='textarea1' value={donationGoal} onChange={e => setdonationGoal(e.target.value)} />
-          <img src={require('../../assets/images/dust.png')} className="dust" onClick={() => { setdonationGoal('') }} />
-        </div>
-
-        <div className='ff'>
-         
-            <div className='headiing'>How will you use your money?</div>
-            {/* <div className='grp'>
-              <img className='ico' src={require('../../assets/images/bold.png')} />
-              <img className='ico' src={require('../../assets/images/italics.png')} />
-              <img className='ico' src={require('../../assets/images/underline.png')} />
-              <img className='ico' src={require('../../assets/images/aA.png')} />
-            </div>
-            <div className='grp'>
-              <img className='ico' src={require('../../assets/images/table.png')} />
-              <img className='ico' src={require('../../assets/images/list.png')} />
-              <img className='ico' src={require('../../assets/images/lisst2.png')} />
-              <img className='ico' src={require('../../assets/images/quotes.png')} />
-            </div>
-            <div className='grp'>
-              <img className='ico' src={require('../../assets/images/scan.png')} />
-              <img className='ico' src={require('../../assets/images/photo.png')} />
-              <img className='ico' src={require('../../assets/images/Video.png')} />
-            </div> */}
-            <br/>
-            <div>
-            <Editor
-         toolbarClassName="toolbarClassName"
-         wrapperClassName="wrapperClassName"
-         editorClassName="editorClassName"
-         wrapperStyle={{ height: 160,width: "73vw", border: "1px solid black", borderRadius: "10px" , padding: "10px",overflow: "hidden"}}
-         toolbar={{
-          options: ['inline', 'fontSize', 'fontFamily', 'history'],
-          inline: {
-            options: ['bold', 'italic', 'underline','superscript','subscript'],
-          }
-        }}
-         value={utilmoney} onChange={e => setutilmoney(e.target.value)}
-              />
-            </div>
-          <img src={require('../../assets/images/dust.png')} className="dust2" onClick={() => { setutilmoney('') }} />
-        </div>
-
-        <div className="ff">
-        <label htmlFor="attach_files" className='headiing'>Attach Files</label><br />
-        <div className="subtitle">
-        
-        <input type="file" multiple id="file1" onChange={tagHandleChange} hidden/>
-        <label htmlFor='file1' className='dec'>Add File</label>
-        <br/><br/>
-        <div className='kk'>
-        {renderTags(tags)}
-        </div>
-        
-        </div>
-        </div>
-
-        <div className='buttons1'>
-          <button className='bt'>Preview</button>
-          <button className='bt'>Save Draft</button>
-          <button className='bt'>Approval Request</button>
-          <button className='bt1'>Post</button>
-        </div>
-
-
-      </form>
+      {show}
 
     </div>
   )
