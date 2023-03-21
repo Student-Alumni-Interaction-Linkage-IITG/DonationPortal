@@ -4,20 +4,17 @@ import Projects from './Pages/projects-page/projects';
 import Projectdetail from './Pages/projectdetailspage/projectdetail';
 import MyProfile from './Pages/profile/myProfile';
 import Error from'./Pages/Error/Error'
-// updates
-
+import FAQs from'./Pages/FAQs/FAQs'
 import Gsproject_putiing from './Pages/gsdashboard/Gsproject_putiing';
 import GSProjectdetail from './Pages/gsprojectdetailpage/gsprojectdetail';
 import Login from './Pages/login/login';
 import Signup from './Pages/login/signup';
+import Close_project from './Pages/gsdashboard/Close_project';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        {/* <header className="App-header">
-          <Navbar/>
-        </header> */}
         <div className="content">
           <Switch>
             <Route exact path="/">
@@ -38,13 +35,18 @@ function App() {
             <Route exact path="/signup.js">
               <Signup/>
             </Route>
-            <Route exact path="/abcd">
+            <Route exact path="/dashboard">
               <Gsproject_putiing/>
+            </Route>
+            <Route exact path="/close_events">
+              <Close_project/>
+              </Route>
+            <Route exact path="/FAQs.js">
+              <FAQs/>
             </Route>
             <Route exact path="*">
               <Error/>
             </Route>
-{/* updates */}
             <Route exact path="/gsprojectdetail.js" >
               <GSProjectdetail />
             </Route>

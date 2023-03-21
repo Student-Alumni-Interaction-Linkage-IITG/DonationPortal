@@ -127,8 +127,50 @@
   width: 18vw;
 }
 
+.amountdetailscard {
+  position: relative;
+  box-sizing: content-box;
+}
+.amount{
+  position: absolute;
+  top: 8%;
+  left: 6%;
+  font-size: 2vw;
+  font-weight: 700;
+  color: #EBEBEB;
+}
+.amountpara{
+  position: absolute;
+  top: 23%;
+  left: 6%;
+  font-size: 1.2vw;
+  font-weight: 400;
+  color: #EBEBEB;
+}
+.svipbadge {
+  position: absolute;
+  width: 20%;
+  bottom: 30%;
+  right: 10%;
+}
+.svipline {
+  position: absolute;
+  bottom: 40%;
+  left: 0%;
+  width: 100%;
+}
+
 .VIPCard {
   height: 16.5vw;
+  border-radius: 6px;
+}
+.badgepara {
+  position: absolute;
+  bottom: 30%;
+  left: 6%;
+  font-size: 1.06vw;
+  font-weight: 400;
+  color: #EBEBEB;
 }
 
 .borderline {
@@ -174,6 +216,13 @@
 }
 
 .pp-navelement:hover {
+  cursor: pointer;
+  background-color: #fcfcfc;
+  color: #000000;
+  border-bottom: 2.5px solid #000000;
+}
+
+.active {
   cursor: pointer;
   background-color: #fcfcfc;
   color: #000000;

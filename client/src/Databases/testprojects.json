@@ -1,0 +1,340 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitletitle",
+      "board": "technical",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitle",
+      "board": "technical",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitle",
+      "board": "technical",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitle",
+      "board": "technical",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitle",
+      "board": "technical",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitle",
+      "board": "cultural",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitle",
+      "board": "cultural",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitle",
+      "board": "cultural",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitle",
+      "board": "cultural",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitle",
+      "board": "cultural",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitle",
+      "board": "cultural",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitle",
+      "board": "sports",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitle",
+      "board": "sports",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitle",
+      "board": "sports",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitle",
+      "board": "sports",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Projectname",
+      "subtitle": "Project Subtitle",
+      "board": "sports",
+      "status": ["ongoing", "bookmarked", "invested"],
+      "images": ["", "", ""],
+      "video": "",
+      "tags": ["tag", "tag", "tag", "tag"],
+      "aboutProject": "lorem ipsum dolor siter",
+      "goalAmount": "200000",
+      "currentAmount": "10000",
+      "howMoneyUsed": ["", ""],
+      "topDonors": [
+        {
+          "name": "Ayush",
+          "amount": "2000"
+        },
+        {}
+      ]
+    }
+  ]
+}
