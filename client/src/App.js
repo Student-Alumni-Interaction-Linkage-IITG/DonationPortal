@@ -44,11 +44,11 @@ function App() {
             <Route exact path="/FAQs.js">
               <FAQs/>
             </Route>
-            <Route exact path="*">
-              <Error/>
-            </Route>
             <Route exact path="/gsprojectdetail.js" >
               <GSProjectdetail />
+            </Route>
+            <Route exact path="*">
+              <Error/>
             </Route>
           </Switch>
         </div>
