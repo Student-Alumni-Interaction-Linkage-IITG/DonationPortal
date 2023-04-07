@@ -6,9 +6,15 @@ import { Link } from "react-router-dom";
 import NavProfileImg from "../../assets/images/profile-images/navprofilepic.png";
 import NotifsIcon from "../../assets/images/profile-images/notifsicon.png";
 import UnreadDot from "../../assets/images/profile-images/unreadnotifs.png";
+import { useLogout } from "../../hooks/useLogout";
 
 const ProfileNavbar = () => {
   const [Unread, setUnread] = useState(true);
+  const {logout} = useLogout();
+
+  const handleClick = () => {
+    logout();
+  }
 
   return (
     <nav className="pp-Navbar">
@@ -39,7 +45,7 @@ const ProfileNavbar = () => {
         {Unread && <img src={UnreadDot} alt="" className="pp-unreadnotifs" />}
         <img src={NavProfileImg} alt="" className="pp-navprofilepic" />
         <span>Virushastra</span>
-        <button type="button" className="pp-logoutbtn">
+        <button type="button" className="pp-logoutbtn" onClick={handleClick}>
           LogOut
         </button>
       </div>
