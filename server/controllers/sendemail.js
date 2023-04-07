@@ -20,7 +20,7 @@ const sendMail = async (req, res) => {
         <div style="padding: 2vw,border-style: solid>
         <h3>Donation Portal</h3>
         <ul>
-            <li>${subject}</li>
+            <li><b>${subject}</b></li>
             <li>${text}</li>
         </ul>
         <h4>Thank you</h4>
