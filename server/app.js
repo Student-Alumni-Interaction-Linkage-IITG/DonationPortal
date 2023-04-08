@@ -3,6 +3,7 @@ require('dotenv').config()
 const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/authRoutes');
+const sendMail = require('./controllers/sendemail');
 
 const app = express();
 const cors = require('cors');
@@ -22,3 +23,6 @@ mongoose.connect(dbURI)
 
 //routes
 app.use('/api/user', userRoutes);
+
+//send email
+app.get('/sendmail',sendMail);
