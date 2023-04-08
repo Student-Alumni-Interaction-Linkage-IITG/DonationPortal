@@ -3,6 +3,8 @@ require('dotenv').config()
 const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/authRoutes');
+const indexRoutes = require('./routes/index');
+
 const sendMail = require('./controllers/sendemail');
 
 const app = express();
@@ -13,7 +15,7 @@ app.use(cors());
 app.use(express.json())
 
 //db connection
-const dbURI = 'mongodb://localhost:27017/donation_portal';
+const dbURI = 'mongodb+srv://devjyoti598:54KOMu51DRKd5KAS@donationdata.y1cbqqs.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(dbURI)
     .then((result) => {
         app.listen(8000);
@@ -24,5 +26,11 @@ mongoose.connect(dbURI)
 //routes
 app.use('/api/user', userRoutes);
 
+app.use('',indexRoutes.ProjectCreationRoute);
+app.use('',indexRoutes.allProjectsRouter);
+app.use('',indexRoutes.gsProjectRoute);
+app.use('',indexRoutes.ongoingProjectsRoute);
+
+//send email
 //send email
 app.get('/sendmail',sendMail);
