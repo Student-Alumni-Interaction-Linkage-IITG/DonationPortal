@@ -3,6 +3,7 @@ require('dotenv').config()
 const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/authRoutes');
+const profileRoutes = require('./routes/profileRoutes');
 const indexRoutes = require('./routes/index');
 
 const sendMail = require('./controllers/sendemail');
@@ -25,6 +26,7 @@ mongoose.connect(dbURI)
 
 //routes
 app.use('/api/user', userRoutes);
+app.use('/api/profile', profileRoutes);
 
 app.use('',indexRoutes.ProjectCreationRoute);
 app.use('',indexRoutes.allProjectsRouter);
