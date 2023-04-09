@@ -1,5 +1,5 @@
 import Navbar from '../Components/HomePage/Navbar/Navbar';
-import purpose from '../assets/Home/home.png'
+import purpose from '../assets/Home/home.svg'
 import campus from '../assets/Home/campus.png'
 import '../Components/HomePage/Home.css'
 import Missing from '../Components/HomePage/Missing/Missing'
@@ -10,11 +10,15 @@ import WeAre from '../Components/HomePage/WeAre/WeAre';
 import SayAboutUs from '../Components/HomePage/SayAboutUS/SayAboutUs';
 import MediaRelease from '../Components/HomePage/MediaRelease/MediaRelease';
 import Footer from '../Components/HomePage/Footer/Footer'
+import NextNavbar from '../Components/projects-page/Projects-Navbar/NextNavbar';
 
 const Home = () => {
+    const user = JSON.parse(localStorage.getItem('user'));
+
+
     return ( 
         <div className="home">
-            <Navbar/>
+            {   user?<NextNavbar/>:<Navbar/>   }
             <img src={purpose} alt="" className='purpose'/>
             <img src={campus} alt="" className='home-campus'/>
             <Missing/>

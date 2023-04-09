@@ -1,22 +1,24 @@
 import { Link } from 'react-router-dom';
-import "./loginnavbar.css";
-const Loginnavbar = () =>{
-    return(
-        <nav className="loginnavbar">
-            <div className="loginlink">
-                <Link to='/'>Projects and Events</Link>
+import './loginnavbar.css';
+
+const Navbar = () => {
+
+    return ( 
+        <nav className="login-navbar">
+            <div className="login-intro">
+                    <div className="login-don_portal">
+                        {/* Alumni Donation Portal */}
+                    </div>
             </div>
-            <div className="loginlink">
+            <div className="login-links">
+                <Link to="/projects.js">Projects & Events</Link>
                 <Link to="#">How to Donate</Link>
-            </div>
-            <div className="loginlink">
-                <Link to="#">Donor's Report</Link>
-            </div>
-            <div className="lognav">
-                <button className='loginnavbutton' type="Login">Log In</button>
+                <Link to="#"> Donors' Report</Link>
+                <Link to="/login.js" className='login'>Login</Link>
             </div>
         </nav>
-    );
+     );
 }
+ 
+export default Navbar;
 
-export default Loginnavbar;
