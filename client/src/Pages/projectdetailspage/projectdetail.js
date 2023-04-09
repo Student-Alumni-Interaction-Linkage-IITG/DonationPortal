@@ -11,7 +11,9 @@ import NextNavbar from '../../Components/projects-page/Projects-Navbar/NextNavba
 // import Slider from '../../Components/ProjectDetailPage/Slider.js';
 // import Slider2 from '../../Components/ProjectDetailPage/slider2.jsx';
 import { useRef,useState } from 'react';
+import Navbar from '../../Components/HomePage/Navbar/Navbar';
 const Projectdetail = () => {
+    const user = JSON.parse(localStorage.getItem('user'));
     const ref1= useRef()
     const [see,setSee]=useState("more")
     const clickhandle=()=>{
@@ -27,7 +29,7 @@ const Projectdetail = () => {
     }
     return(
         <Router>
-                <NextNavbar />
+            {user? <NextNavbar/>:<Navbar/>}
                 
                 <div className="main">
                 <div className="navigatorBar">
