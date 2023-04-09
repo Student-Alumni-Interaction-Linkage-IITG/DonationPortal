@@ -22,6 +22,7 @@ function MyProfile() {
   const [Bookmarked, setBookmarked] = useState(false);
   const [Ongoing, setOngoing] = useState(false);
   const [active, setActive] = useState(false);
+  const id = 3;
   // const ongoing = document.getElementById('nav-ongoing');
   // const invested = document.getElementById('nav-invested');
   // const bookmarked = document.getElementById('nav-bookmarked');
@@ -48,23 +49,23 @@ function MyProfile() {
     setTotalAmount(1);
   };
 
-  useEffect(() => {
-    fetch("http://localhost:8000/projects")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        const newData = data.map((projects) => {
-          console.log(projects.board);
-          let size = AllProjects.push(projects);
-        });
-        // setAllProjects(data);
-      })
-      .catch((err) => {
-        console.log("Could Not fetch data!");
-        console.log(err);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:8000/projects")
+  //     .then((res) => {
+  //       return res.json();
+  //     })
+  //     .then((data) => {
+  //       const newData = data.map((projects) => {
+  //         console.log(projects.board);
+  //         let size = AllProjects.push(projects);
+  //       });
+  //       // setAllProjects(data);
+  //     })
+  //     .catch((err) => {
+  //       console.log("Could Not fetch projects data !");
+  //       console.log(err);
+  //     });
+  // }, []);
 
   return (
     <div className="myProfile" id="myProfile">
@@ -73,7 +74,7 @@ function MyProfile() {
       </div>
       <div className="ppbody">
         <div className="ppabout">
-          <AboutCard />
+          <AboutCard id={id}/>
         </div>
       </div>
 
