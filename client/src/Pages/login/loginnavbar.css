@@ -68,14 +68,13 @@
 }
 
 
-.login-links a:nth-child(1){
+/* .login-links a:nth-child(1){
   color: #233A3F;
   font-weight: 700;
   font-size: 14px;
   text-decoration: underline;
   text-underline-offset: 12px;
-  /* text-underline-position: below; */
-}
+} */
 
 .login-links a.login {
   background-color: #F3B257;
@@ -87,5 +86,5 @@
 }
 .login-links a.login:hover{
   text-decoration: none;
-  background-color: #f1991e;
+  background-color: #fbbf6b;
 }
