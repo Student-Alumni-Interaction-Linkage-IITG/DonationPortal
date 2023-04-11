@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { useAuthContext } from "./useAuthContext"
+import { useHistory } from "react-router-dom";
+
 
 export const useLogin = () => {
     const [error, setError] = useState(null)
     const [isLoading, setIsLoading] = useState(null)
     const { dispatch } = useAuthContext()
+    const history = useHistory()
 
     const login = async (email,password) => {
         setIsLoading(true)
@@ -27,7 +30,7 @@ export const useLogin = () => {
 
             //update the auth context
             dispatch({type: 'LOGIN', payload: json})
-
+            history.push('/')
             setIsLoading(false)
         }
     }

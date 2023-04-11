@@ -5,9 +5,16 @@ import img from "../../../assets/images/projects-page/sort.png";
 import bell from "../../../assets/images/projects-page/bell.png";
 import emoji from "../../../assets/images/projects-page/emoji.png";
 import "./Next.css"
+import { useLogout } from '../../../hooks/useLogout';
 
 function NextNavbar()
 {
+    const {logout} = useLogout();
+
+    const handleClick = () => {
+        logout();
+    }
+
     return(
         <div className='nn_navbar'>
             <nav>
@@ -22,7 +29,7 @@ function NextNavbar()
                         <img className='nn_cont' src={emoji} />
                         <span>Virushastra</span>
                     </div>
-                    <div><button className='nn_btn-small'>Log Out</button></div>
+                    <div><button className='nn_btn-small' onClick={handleClick}>Log Out</button></div>
                 </div>
             </nav>
         </div>

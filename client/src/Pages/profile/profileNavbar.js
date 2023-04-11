@@ -1,20 +1,30 @@
 // All classNames assigned to various elements contain "pp-" in the beginning , which stands for "profile page"
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import NavProfileImg from "../../assets/images/profile-images/navprofilepic.png";
 import NotifsIcon from "../../assets/images/profile-images/notifsicon.png";
 import UnreadDot from "../../assets/images/profile-images/unreadnotifs.png";
-import { useLogout } from "../../hooks/useLogout";
 
 const ProfileNavbar = () => {
+  // const id = props.userId;
   const [Unread, setUnread] = useState(true);
-  const {logout} = useLogout();
+  const [userData, setUserData] = useState({});
+  
+  const { token, user } = JSON.parse(localStorage.getItem('user'));
 
-  const handleClick = () => {
-    logout();
-  }
+  useEffect(() => {
+    fetch(`http://localhost:8000/api/profile/${user._id}`, {
+      method: "GET"
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setUserData(data);
+      });
+  },[])
 
   return (
     <nav className="pp-Navbar">
@@ -44,8 +54,8 @@ const ProfileNavbar = () => {
         <img src={NotifsIcon} alt="" className="pp-notifsicon"/>
         {Unread && <img src={UnreadDot} alt="" className="pp-unreadnotifs" />}
         <img src={NavProfileImg} alt="" className="pp-navprofilepic" />
-        <span>Virushastra</span>
-        <button type="button" className="pp-logoutbtn" onClick={handleClick}>
+        <span>{userData.name}</span>
+        <button type="button" className="pp-logoutbtn">
           LogOut
         </button>
       </div>
