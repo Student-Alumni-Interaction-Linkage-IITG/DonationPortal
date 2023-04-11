@@ -4,6 +4,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/authRoutes');
 const sendMail = require('./controllers/sendemail');
+const {close_project} = require('./controllers/Close_Projects.js');
+
+// mongoose.connect('mongodb+srv://devjyoti598:54KOMu51DRKd5KAS@donationdata.y1cbqqs.mongodb.net/?retryWrites=true&w=majority');
 
 const app = express();
 const cors = require('cors');
@@ -13,7 +16,7 @@ app.use(cors());
 app.use(express.json())
 
 //db connection
-const dbURI = 'mongodb://localhost:27017/donation_portal';
+const dbURI = 'mongodb+srv://devjyoti598:54KOMu51DRKd5KAS@donationdata.y1cbqqs.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(dbURI)
     .then((result) => {
         app.listen(8000);
@@ -21,8 +24,13 @@ mongoose.connect(dbURI)
     })
     .catch((err) => console.log(err));
 
+    const dbName = 'myproject';
+
 //routes
 app.use('/api/user', userRoutes);
 
 //send email
 app.get('/sendmail',sendMail);
+
+//close_project
+app.put('/projects/:id/closed',close_project);
