@@ -17,7 +17,7 @@
 }
 
 .MR_content {
-    background-image: url(../../../assets/Home/Making\ An\ Impact.png);
+    background-image: url(../../../assets/Home/Making\ An\ Impact.svg);
     /* width: 80vw; */
     background-position: center;
     background-repeat: no-repeat;
@@ -49,6 +49,10 @@
     /* max-height: 420px; */
     padding-top: 0;
     background-color: white;
+}
+.MR_cards:hover{
+    transform: scale(1.02);
+    transition: .2s ease-out;
 }
 
 .MR_cards img{

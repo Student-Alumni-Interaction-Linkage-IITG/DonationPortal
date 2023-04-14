@@ -5,6 +5,7 @@ import circle from "../../assets/images/Ellipse 58.png";
 import details from "../../assets/images/details.png";
 import { useHistory } from "react-router-dom";
 import Pin from "../../assets/images/Pin.png";
+import Slider from '@mui/material/Slider';
 
 function valuetext(value) {
     return `${value}°C`;
@@ -64,6 +65,10 @@ const Heading=styled.div`
     font-size: 20px;
     line-height: 124%;
     color: #21252F;
+
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
 `
 
 const Paragraph=styled.div`
@@ -100,7 +105,7 @@ const Details_text=styled.div`
     align-items: center;
 `
 
-const Ongoingprojects = (props) => {
+const GsProjectCard = (props) => {
     const history=useHistory();
   return (
     <Main_Container>
@@ -111,6 +116,7 @@ const Ongoingprojects = (props) => {
             <Project>
                 <Heading>
                     {props.title?props.title:"Project Title"}
+                    {props.pending?"Pending":null}
                 </Heading>
                 <Subtitles>
                     <Subtitles_text>
@@ -132,8 +138,14 @@ const Ongoingprojects = (props) => {
             <Details>
                 <div style={{display:"flex" , gap:"6px"}}>
                 <div onClick={()=>history.push('./projectdetail.js')}><img src={details} alt="" style={{cursor:"pointer"}}/></div>
-                <Details_text>{props.details?props.details:"Details"}</Details_text>
+                <Details_text>Details</Details_text>
                 </div>
+                <Slider
+                    disabled
+                    defaultValue={props.raisedAmount*100/props.targetvalue}
+                    aria-label="Disabled slider"
+                    valueLabelDisplay="on"
+                />
                 <Details_text> <img src={Pin} alt="" /> Pin</Details_text>
             </Details>
         </Text_Box>
@@ -141,4 +153,4 @@ const Ongoingprojects = (props) => {
   )
 }
 
-export default Ongoingprojects;
+export default GsProjectCard;

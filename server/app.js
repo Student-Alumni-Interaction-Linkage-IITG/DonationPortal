@@ -4,6 +4,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/authRoutes');
 const projectDetailsRoutes = require('./routes/projects.js');
+const profileRoutes = require('./routes/profileRoutes');
+const userProjectRoutes = require('./routes/userProjectRoutes');
+const indexRoutes = require('./routes/index');
+
+const sendMail = require('./controllers/sendemail');
+const {close_project} = require('./controllers/Close_Projects.js');
+
+// mongoose.connect('mongodb+srv://devjyoti598:54KOMu51DRKd5KAS@donationdata.y1cbqqs.mongodb.net/?retryWrites=true&w=majority');
 
 const app = express();
 const cors = require('cors');
@@ -13,7 +21,7 @@ app.use(cors());
 app.use(express.json())
 
 //db connection
-const dbURI = `mongodb+srv://admin:Enterpassword@crude-app.mpvvulz.mongodb.net/?retryWrites=true&w=majority`;
+const dbURI = 'mongodb+srv://devjyoti598:54KOMu51DRKd5KAS@donationdata.y1cbqqs.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(dbURI)
     .then((result) => {
         app.listen(8000);
@@ -21,6 +29,22 @@ mongoose.connect(dbURI)
     })
     .catch((err) => console.log(err));
 
+    const dbName = 'myproject';
+
 //routes
 app.use('/api/user', userRoutes);
 app.use('/api/project',projectDetailsRoutes);
+app.use('/api/profile', profileRoutes);
+app.use('/api/projects', profileRoutes);
+
+app.use('',indexRoutes.ProjectCreationRoute);
+app.use('',indexRoutes.allProjectsRouter);
+app.use('',indexRoutes.gsProjectRoute);
+app.use('',indexRoutes.ongoingProjectsRoute);
+
+//send email
+//send email
+app.get('/sendmail',sendMail);
+
+//close_project
+app.put('/projects/:id/closed',close_project);

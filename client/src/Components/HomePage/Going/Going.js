@@ -1,8 +1,8 @@
 import React from 'react'
 import './going.css'
-import img1 from '../../../assets/Home/gcard.png'
-import img2 from '../../../assets/Home/gcard_cc.png'
-import img3 from '../../../assets/Home/gcard_sail.png'
+import img1 from '../../../assets/Home/gcard.svg'
+import img2 from '../../../assets/Home/gcard_cc.svg'
+import img3 from '../../../assets/Home/gcard_sail.svg'
 
 
 

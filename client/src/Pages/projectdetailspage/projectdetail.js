@@ -15,49 +15,9 @@ import axios from 'axios';
 import {getProjectDetails,getProject} from '../../hooks/api';
 
 
-// const defaultValue={
-//     name:'',
-//     subtitle:'',
-//     club:'',
-//     desc:'',
-//     image:'',
-//     video:''
-// }
 
 const Projectdetail = () => {
-    // const [project, setProject]=useState([]);
-    // // const [projectDetail,setProjectDetail]=useState([]);
-    // // const navigate=useNavigate();
-    // const {id}=useParams();
-    // useEffect(()=>{
-    //     loadDetails();
-    // },[])
-    // const loadDetails=async ()=>{
-    //     const response=await ProjectdetailsApi(id)
-    //     setProject(response.data);
-    // }
-//     const [project, setProject] = useState(null);
-//     const { projectID } = useParams();
 
-//      useEffect(() => {
-//         const fetchProject = async () => {
-//         const res = await axios.get(`/api/projects/${projectID}`);
-//         setProject(res.data.project);
-//     };
-//     fetchProject();
-//   }, [projectId]);
-// const [project, setProject] = useState({});
-//   const [projectDetails, setProjectDetails] = useState({});
-
-//   const handleClick = async (id) => {
-//     try {
-//       const response = await axios.get(`/api/projects/${id}`);
-//       setProject(response.data.project);
-//       setProjectDetails(response.data.projectDetails);
-//     } catch (error) {
-//       console.error(error.message);
-//     }
-//   };
 const { id } = useParams();
   const [project, setProject] = useState(null);
   const [projectDetails, setProjectDetails] = useState(null);
@@ -73,6 +33,10 @@ const { id } = useParams();
   }, [id]);
 
 
+//import { useRef,useState } from 'react';
+//import Navbar from '../../Components/HomePage/Navbar/Navbar';
+//const Projectdetail = () => {
+  //  const user = JSON.parse(localStorage.getItem('user'));
     const ref1= useRef()
     const [see,setSee]=useState("more")
     const clickhandle=()=>{
@@ -88,7 +52,7 @@ const { id } = useParams();
     }
     return(
         <Router>
-                <NextNavbar />
+            {user? <NextNavbar/>:<Navbar/>}
                 
                 <div className="main">
                 <div className="navigatorBar">

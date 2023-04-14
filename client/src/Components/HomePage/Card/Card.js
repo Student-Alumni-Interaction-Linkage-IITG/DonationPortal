@@ -1,5 +1,5 @@
 import "./card.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Link } from "react";
 import card from "../../../assets/Home/card.png";
 import logo from "../../../assets/Home/logo.png";
 import arrow from "../../../assets/Home/arrow.png";
@@ -42,18 +42,22 @@ const Card = (data) => {
             </div>
           </div>
           <div className="card-img">
-            <img src={card} alt="" />
+            <Link to={`/projectdetail.js/${project.id}`}>
+              <img src={card} alt="" />
+            </Link>
           </div>
           <div className="home-card-desc">
-            <div>
-              {/* Campus Rush is a virtual recreation of the entire campus for
-              freshers and other to roam around and experience the rush */}
-              {project.aboutProject}
-              <br />
-              {project.aboutProject}
-              <br />
-              {project.aboutProject}
-            </div>
+            <Link to={`/projectdetail.js/${project.id}`}>
+              <div>
+                {/* Campus Rush is a virtual recreation of the entire campus for
+                freshers and other to roam around and experience the rush */}
+                {project.aboutProject}
+                <br />
+                {project.aboutProject}
+                <br />
+                {project.aboutProject}
+              </div>
+            </Link>
           </div>
           <div className="home-goal">Donation Goal</div>
           <div className="home-slider-cont">
