@@ -45,9 +45,9 @@ const Login = () => {
         <div className="loginbody">
           <div className="loginleft">
             <div className="loginbox">
-              <p className="ltext1">Hello!</p>
+              <p className="ltext1">Hello !</p>
               <p className="ltext2">
-                Enter your personal details and start journey with us
+                Enter your personal details and start your journey with us
               </p>
               <br></br>
               <button

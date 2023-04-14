@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 .nn_main-cont
 {
-    margin-top: 30px;
-    margin-left: 200px;
+    
     display: flex;
     flex-direction: row;
     gap: 60px;
     text-decoration: none;
     
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 417px;
 }
 
 .nn_cont
@@ -40,10 +46,9 @@
     flex-direction: row;
     /* align-content: center; */
     align-items: center;
-    margin-left: 1049px;
+    
     gap: 48px;
-    padding-bottom: 25px;
-    margin-top: -30px;
+    
 
 }
 .nn_link
@@ -54,13 +59,14 @@
 }
 .nn_link:hover{
     text-decoration: underline;
+    text-underline-offset: 12px;
 }
 
 .nn_navbar
 {
     width: 100%;
     /* width: 1920px; */
-    height: 76px;
+    height: 88px;
     background-color: #D9ECF0;
     display: flex;
     flex-direction: row;

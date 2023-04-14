@@ -231,7 +231,7 @@ const Signup = () => {
           </div>
           <div className="loginleft">
             <div className="loginbox">
-              <p className="ltext1">Welcome Back!</p>
+              <p className="ltext1">Welcome Back !</p>
               <p className="ltext2">
                 To keep connected with us please login with your details
               </p>
