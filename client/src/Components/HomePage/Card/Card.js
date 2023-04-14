@@ -11,21 +11,35 @@ import tw from "../../../assets/Home/tw.png";
 import yt from "../../../assets/Home/yt.png";
 import Cross from "../../../assets/images/profile-images/Cross.png";
 
-const Card = (data) => {
+const Card = ({props:card}) => {
+  const data = card
+  console.log(data)
   const [value, setValue] = useState(100);
   const [Share, setShare] = useState(false);
   const handleShare = () => {
     setShare(true);
   };
-  const project = data.details;
+  const project = data;
 
   useEffect(() => {}, [Share]);
-
+  const image = project.imgs
+  console.log(project.imgs)
   // if (project != undefined) console.log(project.title);
-
+  var amount = project.Goal_Amt
+  if(amount>1000 && amount < 100000){
+    amount=amount/1000;
+    amount+='K';
+  }else{
+    if(amount>100000){
+      amount=amount/100000;
+      amount+=' Lks';
+    }else{
+      amount=amount/10000000;
+      amount+=' Crs';  
+    }  
+  }
   return (
     <div className="home-card">
-      {project && (
         <>
           <div className="home-proj-abt">
             <div className="home-club-info">
@@ -33,31 +47,25 @@ const Card = (data) => {
                 <img src={logo} alt="" />
               </div>
               <div className="home-club-desc">
-                <div className="home-proj-name">{project.title}</div>
-                <div className="home-proj-desc">{project.subtitle}</div>
+                <div className="home-proj-name">{project.name}</div>
+                <div className="home-proj-desc">{project.Subtitle}</div>
               </div>
             </div>
             <div className="home-arrow">
-              <img src={arrow} alt="" />
+              <img src={arrow} alt=""/>
             </div>
           </div>
           <div className="card-img">
-            <Link to={`/projectdetail.js/${project.id}`}>
-              <img src={card} alt="" />
-            </Link>
+            {/* <Link to={`/projectdetail.js/${project.id}`}> */}
+              <img src={image} alt=""  width={"396.33px"}  height={"200px"}  />
+            {/* </Link> */}
           </div>
           <div className="home-card-desc">
-            <Link to={`/projectdetail.js/${project.id}`}>
-              <div>
+            {/* <Link to={`/projectdetail.js/${project.id}`}> */}
                 {/* Campus Rush is a virtual recreation of the entire campus for
                 freshers and other to roam around and experience the rush */}
-                {project.aboutProject}
-                <br />
-                {project.aboutProject}
-                <br />
-                {project.aboutProject}
-              </div>
-            </Link>
+                {project.desc}
+            {/* </Link> */}
           </div>
           <div className="home-goal">Donation Goal</div>
           <div className="home-slider-cont">
@@ -66,14 +74,14 @@ const Card = (data) => {
               type="range"
               // onChange={changeValue}
               min={1}
-              max={400}
+              max={project.Goal_Amt}
               step={1}
-              value={300}
+              value={project.Collected_Amt}
               className="home-slider"
               id="slider"
               disabled
             ></input>
-            <label htmlFor="slider">3 Cr</label>
+            <label htmlFor="slider">{amount}</label>
           </div>
           <div className="home-card-btns">
             <div className="home-card-icons">
@@ -89,7 +97,7 @@ const Card = (data) => {
             </div>
           </div>
         </>
-      )}
+
       {Share && (
         <>
           <div className="sharemaskdiv"></div>
