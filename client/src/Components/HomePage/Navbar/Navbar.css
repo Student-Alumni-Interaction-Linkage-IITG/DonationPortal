@@ -59,7 +59,7 @@
   }
   .home-links a:hover{
     text-decoration: underline;
-    text-underline-offset: 12px;
+    text-underline-offset: 10px;
     color: #233A3F;
     /* font-weight: 700; */
     transition: .2s ease-out;
@@ -71,7 +71,7 @@
     font-weight: 700;
     font-size: 14px;
     text-decoration: underline;
-    text-underline-offset: 12px;
+    text-underline-offset: 10px;
     /* text-underline-position: below; */
   }
   

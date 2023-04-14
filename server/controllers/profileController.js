@@ -4,9 +4,7 @@ const jwt = require("jsonwebtoken");
 const getProfile = async (req, res) => {
   try {
     const userId = req.params.id;
-    console.log(userId);
     const user = await User.findById(userId);
-    // console.log(user);
     if (!user) {
       return res.status(404).json({ message: "User data not found" });
     }
@@ -19,21 +17,33 @@ const getProfile = async (req, res) => {
 
 const updateProfile = async (req, res) => {
   try {
-    // Get user ID from URL parameter
-    const userId = req.params.id;
-
-    // Find the user by ID and update the data
-    const user = await User.findByIdAndUpdate(userId, req.body, { new: true });
-
+    const id = req.params.id;
+    const user = await User.findById(id);
     if (!user) {
-      return res.status(404).send({ message: "User not found" });
+      return res.status(404).send("User not found");
     }
 
-    // Return the updated user data
-    res.send(user);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "An error occurred" });
+    const updateFields = {
+      ...req.body,
+    };
+
+    // Update only the non-empty fields in the userModel
+    Object.keys(updateFields).forEach((field) => {
+      if (updateFields[field] !== "") {
+        user[field] = updateFields[field];
+      }
+    });
+
+    await user.save();
+    const response = {
+      message: "User updated successfully",
+      data: user
+    }
+    
+    res.status(200).json(response);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ message: "Server Error" });
   }
 };
 
