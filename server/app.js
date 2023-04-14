@@ -8,6 +8,10 @@ const indexRoutes = require('./routes/index');
 const protectedRoutes = require('./routes/protectedRoutes')
 
 
+const {close_project} = require('./controllers/Close_Projects.js');
+
+// mongoose.connect('mongodb+srv://devjyoti598:54KOMu51DRKd5KAS@donationdata.y1cbqqs.mongodb.net/?retryWrites=true&w=majority');
+
 const app = express();
 const cors = require('cors');
 
@@ -25,7 +29,12 @@ mongoose.connect(dbURI)
     })
     .catch((err) => console.log(err));
 
+    const dbName = 'myproject';
+
 //routes
 app.use('/api/user', userRoutes);
 app.use('',indexRoutes.allProjectsRouter);
 app.use('/api/protected', protectedRoutes);
+
+//close_project
+app.put('/projects/:id/closed',close_project);

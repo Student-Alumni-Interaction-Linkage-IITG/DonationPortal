@@ -7,24 +7,16 @@ import NavProfileImg from "../../assets/images/profile-images/navprofilepic.png"
 import NotifsIcon from "../../assets/images/profile-images/notifsicon.png";
 import UnreadDot from "../../assets/images/profile-images/unreadnotifs.png";
 
-const ProfileNavbar = () => {
-  // const id = props.userId;
-  const [Unread, setUnread] = useState(true);
-  const [userData, setUserData] = useState({});
-  
-  const { token, user } = JSON.parse(localStorage.getItem('user'));
+const ProfileNavbar = (props) => {
+  const [Unread, setUnread] = useState(false);
+  const [username, setUsername] = useState("");
+  // const [username2, setUsername2] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/protected/profile/${user._id}`, {
-      method: "GET"
-    })
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setUserData(data);
-      });
-  },[])
+    if(props) {
+      setUsername(props.username);
+    }
+  },[props]);
 
   return (
     <nav className="pp-Navbar">
@@ -51,10 +43,10 @@ const ProfileNavbar = () => {
         </div> */}
       </div>
       <div className="ppNavbar-me">
-        <img src={NotifsIcon} alt="" className="pp-notifsicon"/>
+        <img src={NotifsIcon} alt="" className="pp-notifsicon" />
         {Unread && <img src={UnreadDot} alt="" className="pp-unreadnotifs" />}
         <img src={NavProfileImg} alt="" className="pp-navprofilepic" />
-        <span>{userData.name}</span>
+        <span>{username}</span>
         <button type="button" className="pp-logoutbtn">
           LogOut
         </button>

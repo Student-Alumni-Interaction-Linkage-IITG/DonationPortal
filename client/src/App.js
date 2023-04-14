@@ -12,8 +12,28 @@ import Signup from './Pages/login/signup';
 import Close_project from './Pages/gsdashboard/Close_project';
 
 function App() {
-  const user = JSON.parse(localStorage.getItem('user'))
-  if(user && user.designation=='GS'){
+  const user = JSON.parse(localStorage.getItem('user'));
+  if(!user) {
+    return (
+      <Router>
+        <div className="App">
+          <div className="content">
+            <Switch>
+              <Route exact path='/'>
+              <Home/>
+              </Route>
+              <Route exact path='/login'>
+                <Login />
+              </Route>
+              <Route exact path='/signup'>
+                <Signup/>
+              </Route>
+            </Switch>
+          </div>
+        </div>
+      </Router>
+    )
+  }else if(user && user.designation=='GS'){
     return (
       <Router>
         <div className="App">
@@ -22,7 +42,7 @@ function App() {
               <Route exact path='/'>
                 <Gsproject_putiing/>
               </Route>
-              <Route exact path='/gsprojectdetail.js'>
+              <Route exact path='/gsprojectdetail/:projectId'>
                 <GSProjectdetail />
               </Route>
               <Route exact path='/close_events'>
@@ -43,22 +63,22 @@ function App() {
               <Route exact path="/">
                 <Home/>
               </Route>
-              <Route exact path="/projects.js">
+              <Route exact path="/projects">
                 <Projects/>
               </Route>
-              <Route exact path="/myprofile.js">
+              <Route exact path="/myprofile">
                 <MyProfile />
               </Route>
-              <Route exact path="/projectdetail.js">
+              <Route exact path="/projectdetail">
                 <Projectdetail/>
               </Route>
-              <Route exact path="/login.js">
+              <Route exact path="/login">
                 <Login/>
               </Route>
-              <Route exact path="/signup.js">
+              <Route exact path="/signup">
                 <Signup/>
               </Route>
-              <Route exact path="/FAQs.js">
+              <Route exact path="/FAQs">
                 <FAQs/>
               </Route>
               <Route exact path="*">

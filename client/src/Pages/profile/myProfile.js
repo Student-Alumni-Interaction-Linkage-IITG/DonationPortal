@@ -2,7 +2,8 @@
 // tb ---> technical board .
 // cb ---> cultural board .
 
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+// import { AuthContext } from "../../context/AuthContext";
 import ProfileNavbar from "./profileNavbar";
 import AboutCard from "./aboutCard";
 import Cards from "../../Components/Card";
@@ -26,7 +27,7 @@ function MyProfile() {
   // const ongoing = document.getElementById('nav-ongoing');
   // const invested = document.getElementById('nav-invested');
   // const bookmarked = document.getElementById('nav-bookmarked');
-  
+
   const handleInvested = () => {
     setInvested(true);
     setOngoing(false);
@@ -35,7 +36,6 @@ function MyProfile() {
   };
 
   const handleBookmarked = () => {
-
     setBookmarked(true);
     setOngoing(false);
     setInvested(false);
@@ -49,32 +49,23 @@ function MyProfile() {
     setTotalAmount(1);
   };
 
-  // useEffect(() => {
-  //   fetch("http://localhost:8000/projects")
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((data) => {
-  //       const newData = data.map((projects) => {
-  //         console.log(projects.board);
-  //         let size = AllProjects.push(projects);
-  //       });
-  //       // setAllProjects(data);
-  //     })
-  //     .catch((err) => {
-  //       console.log("Could Not fetch projects data !");
-  //       console.log(err);
-  //     });
-  // }, []);
+  const [userData, setUserData] = useState({});
+
+  const { token, user } = JSON.parse(localStorage.getItem("user"));
+
+  useEffect(() => {
+    if (user) setUserData(user);
+
+  }, []);
 
   return (
     <div className="myProfile" id="myProfile">
       <div className="pp-header">
-        <ProfileNavbar />
+        <ProfileNavbar username={userData.name} />
       </div>
       <div className="ppbody">
         <div className="ppabout">
-          <AboutCard id={id}/>
+          <AboutCard userData={userData} />
         </div>
       </div>
 
@@ -83,13 +74,25 @@ function MyProfile() {
           {/* <ProjectsNav /> */}
           <div className="pp-projectnav">
             <div className="pp-projectnav1">
-              <div className="pp-navelement" id="nav-invested" onClick={() => handleInvested()}>
+              <div
+                className="pp-navelement"
+                id="nav-invested"
+                onClick={() => handleInvested()}
+              >
                 Invested Projects
               </div>
-              <div className="pp-navelement" id="nav-bookmarked" onClick={() => handleBookmarked()}>
+              <div
+                className="pp-navelement"
+                id="nav-bookmarked"
+                onClick={() => handleBookmarked()}
+              >
                 Bookmarked Projects
               </div>
-              <div className="pp-navelement" id="nav-ongoing" onClick={() => handleOngoing()}>
+              <div
+                className="pp-navelement"
+                id="nav-ongoing"
+                onClick={() => handleOngoing()}
+              >
                 Ongoing Projects
               </div>
               <div className="pp-navelement">Recommended Projects</div>
