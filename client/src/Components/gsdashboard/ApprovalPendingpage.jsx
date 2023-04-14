@@ -1,5 +1,5 @@
 import React from 'react';
-import Ongoingprojects from './Ongoingprojectscard';
+import ApprovalPendingCards from './GsProjectCard';
 import styled from 'styled-components';
 
 const projects2=[
@@ -171,7 +171,7 @@ const ApprovalPendingpage = () => {
     <MainElement>
         {
             projects2.map((element,index)=>
-                <><Ongoingprojects {...element} key={element.id} /><hr width="110%"></hr></>
+                <><ApprovalPendingCards {...element} key={element.id} /><hr width="110%"></hr></>
             )
         }
     </MainElement>
