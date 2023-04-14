@@ -1,0 +1,91 @@
+.login-navbar {
+  width: 100%;
+  height: 88px;
+  background-color:#D9ECF0;
+  
+  display: flex;
+  justify-content: center;
+  gap: 365px;
+  /* position: relative; */
+  /* bottom: 7px; */
+  /* align-items: left; */
+}
+
+
+
+.login-don_portal {
+  /* width:292px; */
+  /* height: 100%; */
+  /* font-weight: 600; */
+  /* font-size: 28px; */
+  /* margin-top: 4px; */
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  /* line-height: 210%; */
+  width: 261.62px;
+  height: 28px;
+  font-family: 'Fraunces';
+  font-weight: 700;
+  font-size: 22px;
+  color: #333333;
+}
+
+.login-intro {
+  /* margin-left: 8.8em; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.login-intro a{
+  text-decoration: none;
+}
+
+.login-links {
+  align-items: center;
+  display: flex;
+  gap: 50px;
+}
+
+.login-links a {
+  font-family: 'open sans';
+  text-decoration: none;
+  /* font-style: normal; */
+  /* font-weight: 500; */
+  /* font-size: 16px; */
+  letter-spacing: 1%;
+  color: #333333;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+.login-links a:hover{
+  text-decoration: underline;
+  text-underline-offset: 12px;
+  color: #233A3F;
+  /* font-weight: 700; */
+  transition: .2s ease-out;
+}
+
+
+.login-links a:nth-child(1){
+  color: #233A3F;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 12px;
+  /* text-underline-position: below; */
+}
+
+.login-links a.login {
+  background-color: #F3B257;
+  border-radius: 4px;
+  padding: 10px 24px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000000;
+}
+.login-links a.login:hover{
+  text-decoration: none;
+  background-color: #f1991e;
+}

@@ -1,0 +1,73 @@
+.WeAre {
+    /* padding-left: 10vw;
+    width: 80vw;
+    max-width: 1024px; */
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 10vw;
+}
+
+.WeAre_head {
+    width: 400px;
+    height: 32px;
+
+    /* Landing Subtitle */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+
+    /* identical to box height, or 32px */
+    letter-spacing: -0.015em;
+
+    /* Text */
+    margin-bottom: 25px;
+    color: #333333;
+}
+
+.WeAre_body {
+    height: 48px;
+    width: 1024px;
+    /* Landing Body */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+
+    /* or 24px */
+    letter-spacing: 0.1px;
+
+    /* Text */
+    color: #333333;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-bottom: 50px;
+    margin-top: 32px;
+}
+
+.W_img {
+    /* position: absolute; */
+}
+
+.W_img1 {
+    /* top: -128px;
+    width: 87vw; */
+}
+
+@media only screen and (max-width: 1600px) {
+    .W_img1 {
+        top: -100px;
+        width: 87vw;
+    }
+}
+
+.WeAre_img {
+    display: flex;
+    justify-content: center;
+}

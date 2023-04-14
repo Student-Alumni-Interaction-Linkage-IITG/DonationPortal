@@ -1,0 +1,192 @@
+.going {
+    /* padding-left: 10vw; */
+    /* width: 80vw; */
+    /* max-width: 1024px; */
+    width: 90%;
+    margin: 0 auto;
+    /* padding-top: 10vw; */
+}
+
+.going_head {
+    width: 437px;
+    height: 32px;
+
+    /* Landing Subtitle */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    /* identical to box height, or 32px */
+    letter-spacing: -0.015em;
+    margin-bottom: 25px;
+}
+
+.going_body {
+    height: 48px;
+    width: 1024px;
+    /* Landing Body */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+
+    /* or 24px */
+    letter-spacing: 0.1px;
+
+    /* Text */
+    color: #333333;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-bottom: 50px;
+}
+
+.going_card {
+
+    width: 948.17px;
+    height: 564.29px;
+
+    background: #FFFFFF;
+    position: relative; 
+    left: 50%;
+    transform: translateX(-50%);
+    /* left: calc(40vw - 475px); */
+    /* Sub Text */
+    border: 12px solid #565656;
+    border-radius: 33px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.gc_Alum {
+    position: absolute;
+    left: 7.92%;
+    right: 50.9%;
+    top: 12.37%;
+    bottom: 39.25%;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 84.282px;
+    line-height: 108.2%;
+
+    /* or 91px */
+    letter-spacing: -0.03em;
+
+    /* gold */
+    color: #F3B257;
+}
+
+.gc_rest {
+    position: absolute;
+    left: 7%;
+    right: 50.9%;
+    top: 27.37%;
+    bottom: 39.25%;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 84.282px;
+    line-height: 108.2%;
+
+    /* or 91px */
+    letter-spacing: -0.03em;
+
+}
+
+.gc_down {
+    position: absolute;
+    width: 948.17px;
+    height: 177.78px;
+    left: 0px;
+    top: 386.51px;
+    background-color: black;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.gcard {
+    position: absolute;
+    width: 351.22px;
+    height: 349.64px;
+    left: 518.2px;
+    top: 140.91px;
+}
+
+.gcard_sail {
+    width: 150px;
+    height: 19px;
+    margin-top: 30px;
+    margin-left: 75px;
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15.8029px;
+    line-height: 19px;
+
+    /* identical to box height */
+    letter-spacing: 0.03em;
+
+    color: #FFE8B0;
+}
+
+.gcard_cc {
+    width: 300px;
+    height: 19px;
+    margin-top: -19px;
+    margin-left: 271px;
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15.8029px;
+    line-height: 19px;
+    /* identical to box height */
+    letter-spacing: 0.03em;
+    color: #FFE8B0;
+}
+
+.gcard1 {
+    position: absolute;
+    bottom: 65px;
+    left: 276px;
+}
+
+.gcard2 {
+    position: absolute;
+    bottom: 60px;
+    left: 78px;
+}
+
+.going_down {
+    width: 250px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #027F9B;
+    margin: 0 auto;
+    /* margin-left: calc(40vw - 100px); */
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 1%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.going_down:hover{
+    background-color: #025466;
+    transition: .2s ease-out;
+
+}

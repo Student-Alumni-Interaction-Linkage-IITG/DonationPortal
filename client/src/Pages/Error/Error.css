@@ -1,0 +1,76 @@
+.Error img {
+    position: absolute;
+    top: 20vh;
+    width: 50%;
+}
+
+.Error2 {
+    text-align: center;
+    padding-left: 50vw;
+    margin-top: 20vh;
+    z-index: 10;
+}
+
+.Error2a {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 120%;
+
+    /* or 86px */
+    text-align: center;
+    letter-spacing: -0.01em;
+
+    /* Sub Text */
+    color: #565656;
+}
+
+.Error2b {
+    /* font-family: 'Fraunces'; */
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 120%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* or 86px */
+    text-align: center;
+    letter-spacing: -0.01em;
+
+    /* Sub Text */
+    color: #565656;
+
+}
+
+.Error2c {
+    font-style: normal;
+    /* font-weight: 900; */
+    font-size: 20px;
+    line-height: 120%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* or 86px */
+    text-align: center;
+    letter-spacing: -0.01em;
+    padding-left: 25%;
+    padding-right: 25%;
+    /* max-width: 400px; */
+    /* Sub Text */
+    color: #565656;
+    margin-bottom: 10vh;
+}
+
+.Error2d {
+    /* position: absolute; */
+    color: white;
+    width: 292px;
+    height: 52px;
+    left: 901px;
+    top: 703px;
+
+    /* Teal */
+    background: #027F9B;
+    border-radius: 4px;
+    cursor: pointer;
+}
