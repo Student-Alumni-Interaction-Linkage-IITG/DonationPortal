@@ -3,6 +3,7 @@ require('dotenv').config()
 const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/authRoutes');
+const projectDetailsRoutes = require('./routes/projects.js');
 
 const app = express();
 const cors = require('cors');
@@ -12,7 +13,7 @@ app.use(cors());
 app.use(express.json())
 
 //db connection
-const dbURI = 'mongodb://localhost:27017/donation_portal';
+const dbURI = `mongodb+srv://admin:Enterpassword@crude-app.mpvvulz.mongodb.net/?retryWrites=true&w=majority`;
 mongoose.connect(dbURI)
     .then((result) => {
         app.listen(8000);
@@ -22,3 +23,4 @@ mongoose.connect(dbURI)
 
 //routes
 app.use('/api/user', userRoutes);
+app.use('/api/project',projectDetailsRoutes);

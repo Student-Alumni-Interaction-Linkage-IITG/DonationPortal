@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, useParams } from 'react-router-dom';
 import Navbar1 from '../../Components/Navbar1p2';
 import Navbar2 from '../../Components/Navbar2p2';
 import img1 from "../../assets/images/icon.png";
@@ -10,8 +10,69 @@ import Slideshow from '../../Components/slideshow';
 import NextNavbar from '../../Components/projects-page/Projects-Navbar/NextNavbar.js';
 // import Slider from '../../Components/ProjectDetailPage/Slider.js';
 // import Slider2 from '../../Components/ProjectDetailPage/slider2.jsx';
-import { useRef,useState } from 'react';
+import { useEffect, useRef,useState} from 'react';
+import axios from 'axios';
+import {getProjectDetails,getProject} from '../../hooks/api';
+
+
+// const defaultValue={
+//     name:'',
+//     subtitle:'',
+//     club:'',
+//     desc:'',
+//     image:'',
+//     video:''
+// }
+
 const Projectdetail = () => {
+    // const [project, setProject]=useState([]);
+    // // const [projectDetail,setProjectDetail]=useState([]);
+    // // const navigate=useNavigate();
+    // const {id}=useParams();
+    // useEffect(()=>{
+    //     loadDetails();
+    // },[])
+    // const loadDetails=async ()=>{
+    //     const response=await ProjectdetailsApi(id)
+    //     setProject(response.data);
+    // }
+//     const [project, setProject] = useState(null);
+//     const { projectID } = useParams();
+
+//      useEffect(() => {
+//         const fetchProject = async () => {
+//         const res = await axios.get(`/api/projects/${projectID}`);
+//         setProject(res.data.project);
+//     };
+//     fetchProject();
+//   }, [projectId]);
+// const [project, setProject] = useState({});
+//   const [projectDetails, setProjectDetails] = useState({});
+
+//   const handleClick = async (id) => {
+//     try {
+//       const response = await axios.get(`/api/projects/${id}`);
+//       setProject(response.data.project);
+//       setProjectDetails(response.data.projectDetails);
+//     } catch (error) {
+//       console.error(error.message);
+//     }
+//   };
+const { id } = useParams();
+  const [project, setProject] = useState(null);
+  const [projectDetails, setProjectDetails] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      //const projectData = await getProject(id);
+      const projectDetailsData = await getProjectDetails(id);
+      //setProject(projectData);
+      setProjectDetails(projectDetailsData);
+    };
+    fetchData();
+  }, [id]);
+
+
     const ref1= useRef()
     const [see,setSee]=useState("more")
     const clickhandle=()=>{
@@ -35,7 +96,7 @@ const Projectdetail = () => {
                         <img src={img1} className="" alt=""/>
                     </div>
                     <div className="linkstab">
-                        <a href="#">Projects</a> <img src={img2} className="arrowsmall"/> <a href="#">Technical Board </a> <img src={img2} className="arrowsmall" alt=""/> <a href="#">Campus Rush</a>
+                        <a href="#">Projects</a> <img src={img2} className="arrowsmall"/> <a href="#">Board</a> <img src={img2} className="arrowsmall" alt=""/> <a href="#">Campus Rush</a>
                     </div>    
                 </div>
                 <div className='buttoncontainer'>
@@ -45,7 +106,7 @@ const Projectdetail = () => {
                 </div>
                 <div className='projectcontainer'>
                     <div className='projectinfo'>
-                        <div className="Header4p2">Campus Rush</div>
+                        <div className="Header4p2">{projectDetails.name}</div>
                         <div className="Subtitle4p2">I'll give you a subtitle soon</div>
                         <div className="Header5p2"><p>About Project</p></div>
                         <div style={{display:'flex', flexDirection:'column'}}>

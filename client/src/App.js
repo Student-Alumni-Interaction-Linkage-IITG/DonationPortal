@@ -26,9 +26,7 @@ function App() {
             <Route exact path="/myprofile.js">
               <MyProfile />
             </Route>
-            <Route exact path="/projectdetail.js">
-              <Projectdetail/>
-            </Route>
+            <Route path="/projectdetails/:id" component={Projectdetail}/>
             <Route exact path="/login.js">
               <Login/>
             </Route>
