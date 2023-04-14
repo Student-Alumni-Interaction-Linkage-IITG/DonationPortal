@@ -34,7 +34,7 @@ function AboutCard(props) {
   const { token, user } = JSON.parse(localStorage.getItem('user'));
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/profile/${user._id}`, {
+    fetch(`http://localhost:8000/api/protected/profile/${user._id}`, {
       method: 'GET',
     })
       .then((res) => {
@@ -58,7 +58,7 @@ function AboutCard(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:8000/api/profile/${user._id}`, {
+    fetch(`http://localhost:8000/api/protected/profile/${user._id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, contact }),

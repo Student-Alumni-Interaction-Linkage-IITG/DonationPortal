@@ -15,7 +15,7 @@ const ProfileNavbar = () => {
   const { token, user } = JSON.parse(localStorage.getItem('user'));
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/profile/${user._id}`, {
+    fetch(`http://localhost:8000/api/protected/profile/${user._id}`, {
       method: "GET"
     })
       .then((res) => {

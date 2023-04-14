@@ -23,22 +23,28 @@ const userSchema = new Schema({
         required: true
     },
     rollno: {
-        type: Number
+        type: Number,
+        default: 0
     },
     phone: {
-        type: Number
+        type: Number,
+        default: 0
     },
     profilepic: {
-        type: String
+        type: String,
+        default: ""
     },
     batch: {
-        type: Number
+        type: Number,
+        default: 0
     },
     dept: {
-        type: String
+        type: String,
+        default: ""
     },
     address: {
-        type: String
+        type: String,
+        default: ""
     },
     amountInvested: {
         type: Number,
@@ -46,7 +52,8 @@ const userSchema = new Schema({
     },
     bookmarkedProjects: [{
         type: Schema.Types.ObjectId,
-        ref: 'Project'
+        ref: 'Project',
+        default: []
     }]
 })
 

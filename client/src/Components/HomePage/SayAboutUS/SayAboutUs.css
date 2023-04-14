@@ -8,36 +8,36 @@
 }
 
 .SayAboutUs_head {
-    width: 500px;
-    height: 32px;
+    /* width: 3.472vw; */
+    height: 2.22vw;
 
     /* Landing Subtitle */
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 2.22vw;
     line-height: 100%;
 
     /* identical to box height, or 32px */
     letter-spacing: -0.015em;
 
     /* Text */
-    margin-bottom: 25px;
+    margin-bottom: 1.736vw;
     color: #333333;
 }
 
 .SayAboutUs_body {
-    height: 48px;
-    width: 1024px;
+    height: 3.33vw;
+    width: 71.11vw;
     /* Landing Body */
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.11vw;
     line-height: 150%;
 
     /* or 24px */
-    letter-spacing: 0.1px;
+    letter-spacing: 0.0069vw;
 
     /* Text */
     color: #333333;
@@ -47,9 +47,9 @@
 
 .SayAboutUs_SlideShow {
     width: 100vw;
-    margin-top: 80px;
+    margin-top: 5.55vw;
     margin-left: -10vw;
-    height: 500px;
+    height: 34.72vw;
     position: relative;
     /* display: flex;
     justify-content: center; */
@@ -144,8 +144,8 @@
     transform: scale(1.2);
     /* left: calc(50vw - 500px); */
     z-index: 5;
-    width: 1001px;
-    height: 421px;
+    width: 69.51389vw;
+    height: 29.2361vw;
     background-color: white;
     position: absolute;
 }
@@ -155,19 +155,21 @@
 .SayAboutUs_card_c,
 .SayAboutUs_card_d {
     position: absolute;
-    left: 441px;
+    left: 30.625vw;
 }
 
 .SayAboutUs_card_img {
     position: absolute;
+    height: 29.2361vw;
+    width: 26.1878vw;
 }
 
 .SayAboutUs_card_a {
-    top: 64px;
+    top: 4.44vw;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.972vw;
     line-height: 150%;
 
     /* identical to box height, or 21px */
@@ -176,11 +178,11 @@
 }
 
 .SayAboutUs_card_b {
-    top: 117px;
+    top: 8.125vw;
     font-family: 'Fraunces';
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3.33vw;
     line-height: 100%;
 
     /* identical to box height, or 48px */
@@ -191,34 +193,34 @@
 }
 
 .SayAboutUs_card_c {
-    top: 181px;
+    top: 12.5694vw;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.11vw;
     line-height: 150%;
 
     /* or 24px */
     color: #333333;
-    letter-spacing: 0.1px;
-    padding-right: 60px;
+    letter-spacing: 0.007vw;
+    padding-right: 4.166vw;
 }
 
 .SayAboutUs_card_d {
-    top: 333px;
+    top: 23.125vw;
 
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.11vw;
     line-height: 150%;
 
     /* identical to box height, or 24px */
     text-align: right;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.007vw;
 
     /* Active */
     color: #233A3F;
-    right: 50px;
+    right: 3.472vw;
 
 }

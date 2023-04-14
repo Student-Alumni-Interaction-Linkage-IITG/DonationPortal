@@ -30,8 +30,8 @@ function NextNavbar()
                     <div><img className='nn_bell-img' src={bell}/></div>
                         <div className='nn_small'>
                             <Link to="/myprofile.js" className='nn_profile'>
-                                <img className='nn_cont' src={user.picture} />
-                                <span>{user.name}</span>
+                                <img className='nn_cont' src={user.user.picture} />
+                                <span>{user.user.name}</span>
                             </Link>
                         </div>
                     <div><button className='nn_btn-small' onClick={handleClick}>Log Out</button></div>
