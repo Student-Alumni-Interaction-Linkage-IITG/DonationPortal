@@ -5,12 +5,15 @@ import { EditorState } from 'draft-js';
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import Select from 'react-select';
 import "../gsdashboard/Gsproject_putiing.css"
+import { useLocation } from 'react-router-dom';
 
 import axios from 'axios';
 
 export default function Close_project() {
   
-  
+  const location = useLocation();
+  const data = location.state;
+
   const [selectedImages , setSelectedImages] = useState([]);
   const [emails , setEmails] = useState([""]);
   const [email,setEmail] = useState("");
