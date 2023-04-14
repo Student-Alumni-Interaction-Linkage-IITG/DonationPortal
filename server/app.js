@@ -7,6 +7,9 @@ const profileRoutes = require('./routes/profileRoutes');
 const indexRoutes = require('./routes/index');
 
 const sendMail = require('./controllers/sendemail');
+const {close_project} = require('./controllers/Close_Projects.js');
+
+// mongoose.connect('mongodb+srv://devjyoti598:54KOMu51DRKd5KAS@donationdata.y1cbqqs.mongodb.net/?retryWrites=true&w=majority');
 
 const app = express();
 const cors = require('cors');
@@ -24,6 +27,8 @@ mongoose.connect(dbURI)
     })
     .catch((err) => console.log(err));
 
+    const dbName = 'myproject';
+
 //routes
 app.use('/api/user', userRoutes);
 app.use('/api/profile', profileRoutes);
@@ -36,3 +41,6 @@ app.use('',indexRoutes.ongoingProjectsRoute);
 //send email
 //send email
 app.get('/sendmail',sendMail);
+
+//close_project
+app.put('/projects/:id/closed',close_project);

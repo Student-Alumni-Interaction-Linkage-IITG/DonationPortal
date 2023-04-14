@@ -18,6 +18,7 @@ import DatatablePage from "../../Components/gsprojectdetail/table.js";
 import { PieChartgs } from './piechartgs';
 import img4 from "../../assets/images/iconpdf2.png";
 import { useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 //import faker from "faker";
 
 
@@ -37,6 +38,20 @@ ChartJS.register(
 
 
 function GSProjectdetail() {
+
+    const history = useHistory();
+
+    const redirectToClose = () =>{
+
+        const data = {
+            "project_id": "1",
+            "project_title": "Project Title",
+            "project_description": "Project Description",
+        }
+
+        history.push('/closeproject',data);
+    }
+
     const chartOptions = {
         plugins: {
         // showScale: true,
@@ -208,7 +223,7 @@ function GSProjectdetail() {
                         <btn className="Buttonp15" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
                             <a href="#"><img src={img4} className="img3"/>   Details.pdf</a>
                         </btn>
-                        <btn className="Buttonp4" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
+                        <btn onClick = {()=> redirectToClose } className="Buttonp4" style={{width: '20vw',height: '80px',paddingLeft:'30px',justifyContent:'start',paddingTop:'0',paddingBottom:'0',paddingRight:'0'}}>
                             <a href="#">Close Event</a>
                         </btn> 
                     </div>
