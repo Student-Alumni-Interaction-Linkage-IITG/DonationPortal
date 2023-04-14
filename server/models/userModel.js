@@ -44,10 +44,16 @@ const userSchema = new Schema({
         type: Number,
         default: 0
     },
-    bookmarkedProjects: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Project'
-    }]
+    bookmarkedProjects: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Project',
+        default: ['6431268e70094dfccb04bf27', '64312714c119e199e83a1fe3', '6431276053876c2ca2d137dc']
+    },
+    investedProjects: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'Project',
+        default: ['6431268e70094dfccb04bf27', '64312714c119e199e83a1fe3', '6431276053876c2ca2d137dc']
+    }
 })
 
 //static signup method

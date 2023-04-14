@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { motion } from "framer-motion";
 import "./verify.css";
 import "./updateprofile.css";
 import ProfilePic from "../../assets/images/profile-images/profilepic.svg";
@@ -13,6 +15,141 @@ import SVIPBadge from "../../assets/images/profile-card/SVIPBadge.png";
 import SVIPLine from "../../assets/images/profile-card/SVIPLine.png";
 import VerifyIcon from "../../assets/images/profile-card/VerifyMobIcon.png";
 
+const container = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.4,
+      staggerChildren: 0.3,
+      duration: 0.3,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
+const Profile = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+`;
+
+const ProfileDetails = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+`;
+
+const EmailDetails = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .inline .icon {
+    height: 16px;
+    width: 16px;
+  }
+`;
+
+const NameLine = styled(motion.div)`
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  /* align-items: baseline; */
+
+  .Text {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    color: #333333;
+    opacity: 0.7;
+  }
+`;
+
+const Name = styled.div`
+  font-family: Open Sans;
+  font-size: 24px;
+  font-weight: 700;
+`;
+
+const Edit = styled(motion.button)`
+  background-color: #f6f7f7;
+  border-radius: 3px;
+  border: solid 0.5px black;
+  cursor: pointer;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+`;
+
+const Image = styled(motion.div)`
+  border: 1px solid white;
+  border-radius: 8px;
+  width: 300px;
+  height: 240px;
+  position: relative;
+
+  .img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  .overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+  }
+
+  .overlay:hover > * {
+    transform: translateY(0);
+  }
+
+  .overlay:hover {
+    opacity: 1;
+  }
+
+  .overlay--blur {
+    backdrop-filter: blur(5px);
+  }
+`;
+
+const Card = styled(motion.div)`
+  height: 240px;
+`;
+
 function AboutCard(props) {
   const [Uploaddp, setUploaddp] = useState(false);
   // const [BgFilter, setBgFilter] = useState(false);
@@ -22,38 +159,43 @@ function AboutCard(props) {
   const [verifyEmail, setVerifyEmail] = useState(false);
   const [updateProfile, setUpdateProfile] = useState(false);
   const [updated, setUpdated] = useState(false);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [contact, setContact] = useState("");
+  const [formData, setFormData] = useState({});
 
   const uploadProfilePic = () => {
     setUploaddp(true);
   };
   const [userData, setUserData] = useState({});
 
-  const { token, user } = JSON.parse(localStorage.getItem('user'));
+  const { token, user } = JSON.parse(localStorage.getItem("user"));
+  // const [update, setUpdate] = useState(0);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/profile/${user._id}`, {
-      method: 'GET',
-    })
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setUserData(data);
-      });
-  }, []);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    if (name === "name") {
-      setName(value);
-    } else if (name === "email") {
-      setEmail(value);
-    } else if (name === "contact") {
-      setContact(value);
+    if (props) {
+      setUserData(props.userData);
+      // console.log(userData);
     }
+
+  });
+
+  useEffect(() => {
+    if (props) {
+      setFormData({
+        name: userData.name,
+        email: userData.email,
+        rollno: userData.rollno,
+        phone: userData.phone,
+        batch: userData.batch,
+        dept: userData.dept,
+        address: userData.address
+      });
+    }
+  },[props]);
+
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
   };
 
   const handleSubmit = (e) => {
@@ -61,7 +203,7 @@ function AboutCard(props) {
     fetch(`http://localhost:8000/api/profile/${user._id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, contact }),
+      body: JSON.stringify(formData),
     })
       .then((response) => {
         if (response.ok) {
@@ -71,9 +213,15 @@ function AboutCard(props) {
         }
       })
       .then((data) => {
-        setUserData(data);
+        // console.log(data.data);
+        const updatedData = {
+          token: token,
+          user: data.data
+        };
+        console.log(updatedData);
+        localStorage.setItem('user', JSON.stringify(updatedData));
         setUpdated(!updated);
-        alert("Profile Updated Successfully :) ");
+        alert("Profile Updated Successfully :) \n Please Refresh page to see updated profile !!");
       })
       .catch((error) => {
         console.log(error.message);
@@ -92,7 +240,7 @@ function AboutCard(props) {
           />
         </div>
         <div className="aboutdata">
-          <div className="pp-profilename">
+          <div className="pp-profilename item">
             <h2 style={{ fontWeight: 900 }}>{userData.name}</h2>
             <button
               className="pp-editprofile"
@@ -110,7 +258,7 @@ function AboutCard(props) {
             </div>
             <div style={{ marginTop: "1.2vw" }}>
               <img src={PhoneIcon} alt="" className="cardicons" />
-              <span className="pp-mydetailtext">{userData.contact}</span>
+              <span className="pp-mydetailtext">{userData.phone}</span>
               {!isPhoneVerified && (
                 <span
                   className="pp-mydetailverify"
@@ -146,7 +294,7 @@ function AboutCard(props) {
 
         <div className="amountdetailscard">
           <img src={AmountCard} alt="" className="VIPCard" />
-          <h1 className="amount">&#8377; {userData.amountDonated}</h1>
+          <h1 className="amount">&#8377; {userData.amountInvested}</h1>
           <div className="amountpara">Total Investment</div>
           <img src={SVIPLine} alt="" className="svipline" />
           <img src={SVIPBadge} alt="" className="svipbadge" />
@@ -177,7 +325,7 @@ function AboutCard(props) {
                 Drop your image here, or <span>browse</span>
               </span>
             </div>
-            {/* <input type="file" className="pp-imginput"  accept=".jpg,.png,image/*" required placeholder="Some placeholder"/> */}
+            <input type="file" className="pp-imginput"  accept=".jpg,.png,image/*" required placeholder="Some placeholder"/>
             <div className="pp-uploaddpbtns">
               <button type="submit" className="pp-uploaddpbtn">
                 UPLOAD
@@ -263,7 +411,7 @@ function AboutCard(props) {
                   type="text"
                   id="name"
                   name="name"
-                  value={name}
+                  value={formData.name}
                   onChange={handleChange}
                 />
               </div>
@@ -273,7 +421,7 @@ function AboutCard(props) {
                   type="email"
                   id="email"
                   name="email"
-                  value={email}
+                  value={formData.email}
                   onChange={handleChange}
                 />
               </div>
@@ -281,9 +429,49 @@ function AboutCard(props) {
                 <label htmlFor="phone">Phone:</label>
                 <input
                   type="tel"
-                  id="contact"
-                  name="contact"
-                  value={contact}
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label htmlFor="dept">Department : </label>
+                <input
+                  type="text"
+                  id="dept"
+                  name="dept"
+                  value={formData.dept}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label htmlFor="address">Address : </label>
+                <input
+                  type="tel"
+                  id="address"
+                  name="address"
+                  value={formData.address}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label htmlFor="rollno">rollno:</label>
+                <input
+                  type="tel"
+                  id="rollno"
+                  name="rollno"
+                  value={formData.rollno}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label htmlFor="batch">Batch : </label>
+                <input
+                  type="tel"
+                  id="batch"
+                  name="batch"
+                  value={formData.batch}
                   onChange={handleChange}
                 />
               </div>
