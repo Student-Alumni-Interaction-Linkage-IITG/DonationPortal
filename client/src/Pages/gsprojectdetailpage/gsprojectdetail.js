@@ -20,6 +20,7 @@ import img4 from "../../assets/images/iconpdf2.png";
 import { useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 //import faker from "faker";
+import { useLocation } from 'react-router-dom';
 
 
 
@@ -39,12 +40,15 @@ ChartJS.register(
 
 function GSProjectdetail() {
 
+    const location = useLocation();
+    const id = location.pathname.split("/").pop();
+
     const history = useHistory();
 
     const redirectToClose = () =>{
 
         const data = {
-            "project_id": "1",
+            "project_id": id,
             "project_title": "Project Title",
             "project_description": "Project Description",
         }

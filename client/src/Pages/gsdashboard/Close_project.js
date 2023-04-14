@@ -25,13 +25,12 @@ export default function Close_project() {
   console.log({editorState});
 
   var closer = {
-    "project_id": "5f9f1b0b0b1b9c0b1c1c1c1c",
-    "project_title": "Project Title",
-    "project_description": "Project Description",
-    "project_status": "Closed",
+    "project_id": data.project_id,
+    "project_title": data.project_title,
+    "project_description": data.project_description,
     "to": emails,
     "body": {
-      "subject": "Project Title",
+      "subject": data.project_title,
       "text": editorState
     }
   }
