@@ -3,18 +3,19 @@ const router = express.Router();
 const Project = require('../models/projectModel.js');
 const ProjectDetails = require('../models/projectdetailsModel.js');
 const Transaction=require('../models/transactionModel.js');
+const ObjectId = require('mongodb').ObjectId; 
 
 router.get('/details/:id', async (req, res) => {
   try {
-    const projectId = req.params.id;
+    const projectId = req.params.id;    
     console.log(projectId);
-    const project = await Project.findById(projectId.toString());
+    const o_id= new ObjectId(projectId.toString());
+    const project = await Project.findById(o_id);
     const projectDetails = await ProjectDetails.findOne({ projectId: projectId });
-    const transaction=await Transaction.findOne({projectId:projectId});
+    const transaction=await Transaction.findOne({projectId:o_id});
     console.log(projectDetails);
     console.log(transaction);
     console.log(project);
-    // console.log(project.name);
     if (!project) {
       console.log("none");
       return res.status(404).json({ message: `Project not found/${projectId}` });
