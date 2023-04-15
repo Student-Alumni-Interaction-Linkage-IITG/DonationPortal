@@ -1,11 +1,18 @@
 require('dotenv').config()
-
+const bodyParser = require('body-parser')
 const express = require('express');
 const mongoose = require('mongoose');
+
 const userRoutes = require('./routes/authRoutes');
 const indexRoutes = require('./routes/index');
 const Razorpay = require('razorpay');
 const sendMail = require('./controllers/sendemail');
+const protectedRoutes = require('./routes/protectedRoutes')
+
+
+const {close_project} = require('./controllers/Close_Projects.js');
+
+// mongoose.connect('mongodb+srv://devjyoti598:54KOMu51DRKd5KAS@donationdata.y1cbqqs.mongodb.net/?retryWrites=true&w=majority');
 
 const app = express();
 const cors = require('cors');
@@ -13,9 +20,10 @@ const cors = require('cors');
 //middleware
 app.use(cors());
 app.use(express.json())
+app.use(bodyParser.json())
 
 //db connection
-const dbURI = 'mongodb+srv://devjyoti598:54KOMu51DRKd5KAS@donationdata.y1cbqqs.mongodb.net/?retryWrites=true&w=majority';
+const dbURI = process.env.DB;
 mongoose.connect(dbURI)
     .then((result) => {
         app.listen(8000);
@@ -23,13 +31,12 @@ mongoose.connect(dbURI)
     })
     .catch((err) => console.log(err));
 
+    const dbName = 'myproject';
+
 //routes
 app.use('/api/user', userRoutes);
-
-app.use('',indexRoutes.ProjectCreationRoute);
 app.use('',indexRoutes.allProjectsRouter);
-app.use('',indexRoutes.gsProjectRoute);
-app.use('',indexRoutes.ongoingProjectsRoute);
+app.use('/api/protected', protectedRoutes);
 
 //send email
 //send email
@@ -66,3 +73,5 @@ app.post("/api/payment/verify",(req,res)=>{
        
       //front end integration needed
 })
+//close_project
+app.put('/projects/:id/closed',close_project);

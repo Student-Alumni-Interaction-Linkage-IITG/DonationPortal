@@ -21,7 +21,40 @@ const userSchema = new Schema({
     designation: {
         type: String,
         required: true
-    }
+    },
+    rollno: {
+        type: Number,
+        default: 0
+    },
+    phone: {
+        type: Number,
+        default: 0
+    },
+    profilepic: {
+        type: String,
+        default: ""
+    },
+    batch: {
+        type: Number,
+        default: 0
+    },
+    dept: {
+        type: String,
+        default: ""
+    },
+    address: {
+        type: String,
+        default: ""
+    },
+    amountInvested: {
+        type: Number,
+        default: 0
+    },
+    bookmarkedProjects: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Project',
+        default: []
+    }]
 })
 
 //static signup method

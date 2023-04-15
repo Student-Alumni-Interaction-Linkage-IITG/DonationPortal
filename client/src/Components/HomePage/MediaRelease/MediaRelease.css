@@ -11,13 +11,13 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 2.22vw;
     line-height: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 1.66vw;
 }
 
 .MR_content {
-    background-image: url(../../../assets/Home/Making\ An\ Impact.png);
+    background-image: url(../../../assets/Home/Making\ An\ Impact.svg);
     /* width: 80vw; */
     background-position: center;
     background-repeat: no-repeat;
@@ -50,6 +50,10 @@
     padding-top: 0;
     background-color: white;
 }
+.MR_cards:hover{
+    transform: scale(1.02);
+    transition: .2s ease-out;
+}
 
 .MR_cards img{
     width: inherit;
@@ -60,11 +64,11 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 16.3997px;
-    line-height: 20px;
-    margin: 20px;
+    font-size: 1.138vw;
+    line-height: 1.388vw;
+    margin: 1.388vw;
     /* or 120% */
-    letter-spacing: 0.204997px;
+    letter-spacing: 0.0142vw;
 
     /* green */
     color: #025F74;
@@ -72,14 +76,14 @@
 
 .MR_cards_content {
     font-family: 'Open Sans';
-    margin: 20px;
+    margin: 1.388vw;
     /* padding-top: 20px; */
     font-style: normal;
     font-weight: 400;
-    font-size: 13.1198px;
-    line-height: 20px;
+    font-size: 0.91vw;
+    line-height: 1.388vw;
     /* or 150% */
-    letter-spacing: 0.122998px;
+    letter-spacing: 0.0085vw;
 }
 
 .MR_cards_link {
@@ -89,18 +93,18 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 11.4798px;
-    line-height: 33px;
+    font-size: 0.79721vw;
+    line-height: 2.2916vw;
 
     /* identical to box height, or 286% */
-    letter-spacing: 0.122998px;
+    letter-spacing: 0.0085vw;
 
     color: #2B6EF0;
 
 }
 .MR_cards_link:hover{
     text-decoration: underline;
-    text-underline-offset: 4px;
+    text-underline-offset: 0.277vw;
 }
 
 .MR_cards_show{

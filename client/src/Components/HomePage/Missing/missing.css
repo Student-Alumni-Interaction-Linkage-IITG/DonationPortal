@@ -6,17 +6,20 @@
     font-family: 'open sans';
 
 }
+.home-missing a{
+    text-decoration: none;
+}
 .home-title{
     font-weight: 700;
-    font-size: 32px;
+    font-size: 2.22vw;
     color: #333333;
 }
 .home-para{
     font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 0.1px;
-    line-height: 24px;
-    width: 1024px;
+    font-size: 1.11vw;
+    letter-spacing: 0.007vw;
+    line-height: 1.67vw;
+    width: 71.11vw;
     margin-top: 1%;
     color: #333333;
 }
@@ -32,13 +35,13 @@
 }
 .home-btn{
     background-color: #027F9B;
-    padding: 16px 24px;
-    border-radius: 4px;
+    padding: 1.11vw 1.67vw;
+    border-radius: 0.27vw;
     letter-spacing: 1%;
     color: #FFFFFF;
-    font-size: 14px;
+    font-size: 0.97vw;
     font-weight: 600;
-    width: 244px;
+    width: 16.94vw;
     text-align: center;
     cursor: pointer;
 }

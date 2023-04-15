@@ -1,7 +1,8 @@
 import "./login.css";
-import passclosed from "../../assets/images/login/passclosed.png";
-import passopen from "../../assets/images/login/passopen.png";
+import passclosed from "../../assets/images/login/passclosed.svg";
+import passopen from "../../assets/images/login/passopen.svg";
 import login from "../../assets/images/login/login.png";
+import person from '../../assets/images/login/person.svg'
 import name from "../../assets/images/login/name.png";
 import { BrowserRouter as Router } from "react-router-dom";
 import Radio from "@mui/material/Radio";
@@ -116,7 +117,7 @@ const Signup = () => {
                     type="text"
                     className="lfield1"
                     id="lusername"
-                    style={{ backgroundImage: `url(${name} )` }}
+                    style={{ backgroundImage: `url(${person} )` }}
                     value={name} 
                     onChange={(e) => setName(e.target.value)}
                   ></input>
@@ -231,7 +232,7 @@ const Signup = () => {
           </div>
           <div className="loginleft">
             <div className="loginbox">
-              <p className="ltext1">Welcome Back!</p>
+              <p className="ltext1">Welcome Back !</p>
               <p className="ltext2">
                 To keep connected with us please login with your details
               </p>
