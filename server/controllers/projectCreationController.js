@@ -1,6 +1,7 @@
 const Project = require("../models/projectCreation");
 const projectdetail = require("../models/projectDetail");
-const GSProject = require("../models/projectDetail");
+const GSProject = require("../models/gsProject")
+const { getGsDraftProjects } = require("./gsDraftCreation");
 const { newgsdetail } = require("./gsProjectController");
 exports.createproject = async (req, res) => {
     try {
@@ -11,6 +12,22 @@ exports.createproject = async (req, res) => {
         return;
       }
         // console.log(req);
+        const user = req.headers.user
+        //console.log(user)
+        //console.log(req.body.Status)
+        if(req.body.Status=="Draft"){
+            GSProject.find({GSID:`${user}`,Status:"Draft"}).then((data) => {
+              // console.log(data)
+              data.map(item=>{
+                //console.log(item.ProjectID,item.id)
+                Project.deleteOne({ _id:{ "$gte": item.ProjectID} })
+                //.then(e=>console.log(e))
+                GSProject.deleteOne({ _id:{ "$gte": item.id }})
+                //.then(e=>console.log(e))
+              })
+          });
+
+        }
         new Project({
         name: req.body.name,
         board: req.body.board,
@@ -23,8 +40,8 @@ exports.createproject = async (req, res) => {
         Video: req.body.Video,
         img: req.body.img 
       }).save().then((result) => {
-          console.log(result)
-          newgsdetail(result);
+          //console.log(user)
+          newgsdetail(result,user);
           if((result.Status.toLowerCase())=== "approved"){
                       new projectdetail({
                         ProjectId: result._id
