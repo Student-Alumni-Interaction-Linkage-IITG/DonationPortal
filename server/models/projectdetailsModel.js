@@ -7,7 +7,7 @@ const projectdetailsSchema=new Schema({
     transactions:{
         transaction: {
             userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-            transactionId: { type: String, required: true },
+            transactionId: { type: mongoose.Schema.Types.ObjectId, ref: 'transaction', required: true },
           },
     },
     collectedamount:{
@@ -20,7 +20,9 @@ const projectdetailsSchema=new Schema({
     video:{
         type:String,
     },
-    
+    detaildescription:{
+        type:String,
+    },
 
 })
 

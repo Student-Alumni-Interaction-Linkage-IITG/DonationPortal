@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json())
 
 //db connection
-const dbURI = `mongodb+srv://admin:Enterpassword@crude-app.mpvvulz.mongodb.net/?retryWrites=true&w=majority`;
+//const dbURI = `mongodb+srv://admin:Enterpassword@crude-app.mpvvulz.mongodb.net/?retryWrites=true&w=majority`;
 mongoose.connect(dbURI)
     .then((result) => {
         app.listen(8000);

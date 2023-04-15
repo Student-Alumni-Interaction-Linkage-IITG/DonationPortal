@@ -8,16 +8,14 @@ const ObjectId = require('mongodb').ObjectId;
 router.get('/details/:id', async (req, res) => {
   try {
     const projectId = req.params.id;    
-    console.log(projectId);
-    const o_id= new ObjectId(projectId.toString());
-    const project = await Project.findById(o_id);
+    const o_id= new ObjectId(projectId);
+    const project = await Project.findOne({ _id: o_id });
     const projectDetails = await ProjectDetails.findOne({ projectId: projectId });
     const transaction=await Transaction.findOne({projectId:o_id});
     console.log(projectDetails);
     console.log(transaction);
     console.log(project);
     if (!project) {
-      console.log("none");
       return res.status(404).json({ message: `Project not found/${projectId}` });
     }
 
@@ -33,14 +31,12 @@ router.get('/details/:id', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const projectId = req.params.id;
-    console.log(projectId);
-    const project = await Project.find({_id:projectId});
+    const project = await Project.findOne({_id:projectId});
     if (!project) {
       return res.status(404).json({ message: `Project not found/${projectId}` });
     }
    // return res.json({ project, projectDetails });
    const data = { ...project._doc};
-   console.log(data);
     res.json(data);
   } catch (err) {
     console.error(err.message);
