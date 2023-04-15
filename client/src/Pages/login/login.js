@@ -1,7 +1,7 @@
 import "./login.css";
-import passclosed from "../../assets/images/login/passclosed.png";
-import passopen from "../../assets/images/login/passopen.png";
-import login from "../../assets/images/login/login.png";
+import passclosed from "../../assets/images/login/passclosed.svg";
+import passopen from "../../assets/images/login/passopen.svg";
+import mail from "../../assets/images/login/login.png";
 import { BrowserRouter as Router } from "react-router-dom";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
@@ -64,13 +64,13 @@ const Login = () => {
             <form className="form" id="login" onSubmit={handleSubmit}>
               <div className="formlogininput">
                 <div className="lcontainer">
-                  <p className="ltextinside">Login email</p>
+                  <p className="ltextinside">Email</p>
                   <input
                     type="email"
                     className="lfield1"
                     id="lusername"
                     value={email}
-                    style={{ backgroundImage: `url(${login} )` }}
+                    style={{ backgroundImage: `url(${mail} )` }}
                     onChange={(e) => setEmail(e.target.value)}
                   ></input>
                 </div>

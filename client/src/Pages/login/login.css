@@ -86,6 +86,7 @@ flex-direction: column;
 gap:0.5vh;
 justify-content: center;
 align-items: center;
+font-family: 'Open sans';
 }
 .ltext3{
     position: relative;
@@ -230,11 +231,13 @@ background: #DCDFE0;
     font-size: 1vw;
     line-height: 20px;
     letter-spacing: 0.01em;
+    font-family: 'open sans';
 }
 .signoptions{
     display: flex;
     gap:0.2vw;
 }
 .loginpasswordimg{
-    filter: blur(1px) brightness(0.7) grayscale(100%) opacity(0.7);
+    /* filter: blur(1px) brightness(0.7) grayscale(100%) opacity(0.7); */
+    width: 25px;
 }

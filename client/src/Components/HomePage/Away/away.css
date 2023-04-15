@@ -4,43 +4,43 @@
     max-width: 1024px; */
     width: 90%;
     margin: 0 auto;
-    padding-top: 20vh;
+    padding-top: 13.88vw;
     /* padding-bottom: 10vw; */
 
 }
 
 .Away_head {
 
-    width: 330px;
-    height: 32px;
+    width: 22.916vw;
+    height: 2.22vw;
 
     /* Landing Subtitle */
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 2.22vw;
     line-height: 100%;
 
     /* identical to box height, or 32px */
     letter-spacing: -0.015em;
 
     /* Text */
-    margin-bottom: 25px;
+    margin-bottom: 1.736vw;
     color: #333333;
 }
 
 .Away_body {
-    height: 48px;
-    width: 1024px;
+    height: 3.33vw;
+    width: 71.11vw;
     /* Landing Body */
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.11vw;
     line-height: 150%;
 
     /* or 24px */
-    letter-spacing: 0.1px;
+    letter-spacing: 0.007vw;
 
     /* Text */
     color: #333333;
@@ -59,8 +59,8 @@
 
 .Away_vid {
     width: 100%;
-    height: 565px;
-    margin-bottom: 200px;
+    height: 39.236vw;
+    margin-bottom: 13.88vw;
     /* margin-left: -10vw; */
 }
 /* body{

@@ -23,37 +23,38 @@ const userSchema = new Schema({
         required: true
     },
     rollno: {
-        type: Number
+        type: Number,
+        default: 0
     },
     phone: {
-        type: Number
+        type: Number,
+        default: 0
     },
     profilepic: {
-        type: String
+        type: String,
+        default: ""
     },
     batch: {
-        type: Number
+        type: Number,
+        default: 0
     },
     dept: {
-        type: String
+        type: String,
+        default: ""
     },
     address: {
-        type: String
+        type: String,
+        default: ""
     },
     amountInvested: {
         type: Number,
         default: 0
     },
-    bookmarkedProjects: {
-        type: [mongoose.Schema.Types.ObjectId],
+    bookmarkedProjects: [{
+        type: Schema.Types.ObjectId,
         ref: 'Project',
-        default: ['6431268e70094dfccb04bf27', '64312714c119e199e83a1fe3', '6431276053876c2ca2d137dc']
-    },
-    investedProjects: {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: 'Project',
-        default: ['6431268e70094dfccb04bf27', '64312714c119e199e83a1fe3', '6431276053876c2ca2d137dc']
-    }
+        default: []
+    }]
 })
 
 //static signup method

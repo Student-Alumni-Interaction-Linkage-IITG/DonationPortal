@@ -8,32 +8,32 @@
 }
 
 .going_head {
-    width: 437px;
-    height: 32px;
+    width: 30.347vw;
+    height: 2.22vw;
 
     /* Landing Subtitle */
     font-family: 'roboto flex';
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 2.22vw;
     line-height: 100%;
     /* identical to box height, or 32px */
     letter-spacing: -0.015em;
-    margin-bottom: 25px;
+    margin-bottom: 2.8vh;
 }
 
 .going_body {
-    height: 48px;
-    width: 1024px;
+    height: 3.33vw;
+    width: 71.11vw;
     /* Landing Body */
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.11vw;
     line-height: 150%;
 
     /* or 24px */
-    letter-spacing: 0.1px;
+    letter-spacing: 0.007vw;
 
     /* Text */
     color: #333333;
@@ -43,13 +43,13 @@
     flex: none;
     order: 1;
     flex-grow: 0;
-    margin-bottom: 50px;
+    margin-bottom: 3.472vw;
 }
 
 .going_card {
 
-    width: 948.17px;
-    height: 564.29px;
+    width: 65.845vw;
+    height: 39.187vw;
 
     background: #FFFFFF;
     position: relative; 
@@ -57,8 +57,8 @@
     transform: translateX(-50%);
     /* left: calc(40vw - 475px); */
     /* Sub Text */
-    border: 12px solid #565656;
-    border-radius: 33px;
+    border: 0.833vw solid #565656;
+    border-radius: 2.3vw;
 
     /* Inside auto layout */
     flex: none;
@@ -76,7 +76,7 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 84.282px;
+    font-size: 5.853vw;
     line-height: 108.2%;
 
     /* or 91px */
@@ -96,7 +96,7 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 84.282px;
+    font-size: 5.853vw;
     line-height: 108.2%;
 
     /* or 91px */
@@ -106,33 +106,33 @@
 
 .gc_down {
     position: absolute;
-    width: 948.17px;
-    height: 177.78px;
+    width: 100%;
+    height: 12.346vw;
     left: 0px;
-    top: 386.51px;
+    top: 26.84vw;
     background-color: #333333;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 0px 0px 1.38vw 1.38vw;
     font-family: 'Open Sans';
 }
 
 .gcard {
     position: absolute;
-    width: 351.22px;
-    height: 349.64px;
-    left: 518.2px;
-    top: 140.91px;
+    width: 24.39vw;
+    height: 24.28vw;
+    left: 35.986vw;
+    top: 9.7854vw;
 }
 
 .gcard_sail {
-    width: 150px;
-    height: 19px;
-    margin-top: 30px;
-    margin-left: 75px;
+    width: 10.416vw;
+    height: 1.319vw;
+    margin-top: 2.083vw;
+    margin-left: 5.2083vw;
     font-family: 'Roboto Flex';
     font-style: normal;
     font-weight: 600;
-    font-size: 15.8029px;
-    line-height: 19px;
+    font-size: 1.0974vw;
+    line-height: 1.32vw;
 
     /* identical to box height */
     letter-spacing: 0.03em;
@@ -141,15 +141,15 @@
 }
 
 .gcard_cc {
-    width: 300px;
-    height: 19px;
-    margin-top: -19px;
-    margin-left: 271px;
+    width: 20.83vw;
+    height: 1.32vw;
+    margin-top: -1.32vw;
+    margin-left: 18.82vw;
     font-family: 'Roboto Flex';
     font-style: normal;
     font-weight: 600;
-    font-size: 15.8029px;
-    line-height: 19px;
+    font-size: 1.0974vw;
+    line-height: 1.32vw;
     /* identical to box height */
     letter-spacing: 0.03em;
     color: #FFE8B0;
@@ -157,33 +157,35 @@
 
 .gcard1 {
     position: absolute;
-    bottom: 65px;
-    left: 276px;
+    bottom: 4.514vw;
+    left: 19.16vw;
+    width: 9.145833vw;
 }
 
 .gcard2 {
     position: absolute;
-    bottom: 60px;
-    left: 78px;
+    bottom: 4.16vw;
+    left: 5.416vw;
+    width: 9.146vw;
 }
 
 .going_down {
-    width: 250px;
-    height: 50px;
-    border-radius: 4px;
+    width: 17.361vw;
+    height: 3.472vw;
+    border-radius: 0.27vw;
     background-color: #027F9B;
     margin: 0 auto;
     /* margin-left: calc(40vw - 100px); */
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 1.11vw;
     font-weight: 600;
-    line-height: 20px;
+    line-height: 1.388vw;
     letter-spacing: 1%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 3.472vw;
     cursor: pointer;
 }
 .going_down:hover{
