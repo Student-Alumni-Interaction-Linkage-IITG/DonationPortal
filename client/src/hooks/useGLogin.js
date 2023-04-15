@@ -2,12 +2,15 @@ import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useAuthContext } from "./useAuthContext";
+import { useHistory } from "react-router-dom";
+
 
 
 export const useGLogin = () => {
 
     const [user, setUser] = useState([]);
     const { dispatch } = useAuthContext()
+    const history = useHistory();
 
 
     const googleLogin = useGoogleLogin({
@@ -30,6 +33,7 @@ export const useGLogin = () => {
             .then((res) => {
               localStorage.setItem('user', JSON.stringify(res.data));
               dispatch({type: 'LOGIN', payload: res.data});
+              history.push('/');
             })
             .catch((err) => console.log(err));
         }

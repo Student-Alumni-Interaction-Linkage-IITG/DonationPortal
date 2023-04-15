@@ -2,27 +2,39 @@
 
 import { Link } from 'react-router-dom';
 import img from "../../../assets/images/projects-page/sort.png";
-import bell from "../../../assets/images/projects-page/bell.png";
+import bell from "../../../assets/images/projects-page/bell.svg";
 import emoji from "../../../assets/images/projects-page/emoji.png";
 import "./Next.css"
+import { useLogout } from '../../../hooks/useLogout';
 
 function NextNavbar()
 {
+    const {logout} = useLogout();
+
+    const handleClick = () => {
+        logout();
+    }
+
+    const user = JSON.parse(localStorage.getItem('user'));
+
     return(
         <div className='nn_navbar'>
             <nav>
-                <div className='nn_main-cont' >
-                    <div><a className='nn_link' href=''>Projects and Events</a></div>
-                    <div><a  className='nn_link'href=''>How to Donate</a></div>
-                    <div><a className='nn_link' href=''>Donor's Report</a></div>
+                <div className="nn_main-cont">
+                    <Link to="/projects.js" className='nn_link'>Projects & Events</Link>
+                    <Link to="#" className='nn_link'>How to Donate</Link>
+                    <Link to="#" className='nn_link'> Donors' Report</Link>
+                    {/* <Link to="/login.js" className='login'>Login</Link> */}
                 </div>
                 <div className='nn_side-cont' >
                     <div><img className='nn_bell-img' src={bell}/></div>
-                    <div className='nn_small'>
-                        <img className='nn_cont' src={emoji} />
-                        <span>Virushastra</span>
-                    </div>
-                    <div><button className='nn_btn-small'>Log Out</button></div>
+                        <div className='nn_small'>
+                            <Link to="/myprofile.js" className='nn_profile'>
+                                <img className='nn_cont' src={user.picture} />
+                                <span>{user.name}</span>
+                            </Link>
+                        </div>
+                    <div><button className='nn_btn-small' onClick={handleClick}>Log Out</button></div>
                 </div>
             </nav>
         </div>

@@ -4,7 +4,7 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import Select from 'react-select';
 import "../gsdashboard/Gsproject_putiing.css";
 import NewProject from '../../Components/gsdashboard/newproject';
-import Ongoingprojectspage from '../../Components/gsdashboard/Ongoingprojectspage';
+import Ongoingprojectspage from '../../Components/gsdashboard/GsStatusPages';
 import ApprovalPendingpage from '../../Components/gsdashboard/ApprovalPendingpage';
 
 export default function Gsproject_putiing() {

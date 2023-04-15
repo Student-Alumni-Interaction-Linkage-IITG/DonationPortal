@@ -1,15 +1,39 @@
 import React, { ChangeEvent,useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Editor } from "react-draft-wysiwyg";
+import { EditorState } from 'draft-js';
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import Select from 'react-select';
 import "../gsdashboard/Gsproject_putiing.css"
+import { useLocation } from 'react-router-dom';
+
+import axios from 'axios';
+
 export default function Close_project() {
   
-  
+  const location = useLocation();
+  const data = location.state;
+
   const [selectedImages , setSelectedImages] = useState([]);
   const [emails , setEmails] = useState([""]);
   const [email,setEmail] = useState("");
+
+  const [editorState, setEditorState] = useState(
+    () => EditorState.createEmpty(),
+  );
+
+  console.log({editorState});
+
+  var closer = {
+    "project_id": data.project_id,
+    "project_title": data.project_title,
+    "project_description": data.project_description,
+    "to": emails,
+    "body": {
+      "subject": data.project_title,
+      "text": editorState
+    }
+  }
 
 
   const handleClick= (e)=>{
@@ -112,6 +136,8 @@ export default function Close_project() {
             <br/>
             <div>
             <Editor 
+          editorState={editorState}
+          onEditorStateChange={setEditorState}
          toolbarClassName="toolbarClassName"
          wrapperClassName="wrapperClassName"
          editorClassName="editorClassName"
@@ -175,7 +201,29 @@ export default function Close_project() {
           <button className='bt'>Preview</button>
           <button className='bt'>Save Draft</button>
           <button className='bt'>Approval Request</button>
-          <button className='bt1'>Post</button>
+          {/* <button className='bt1'
+            onClick={()=>{
+              axios
+              .post(`${URL}`, {closer})
+              .then((res) => {
+                console.log(res);
+                if (res.status == 200)
+                {
+                  alert("success");
+                }
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+              setEmail = "";
+              setEmails = [""];
+              setSelectedImages = [];
+
+              }
+            }
+          >
+            Post
+          </button> */}
         </div>
 
 

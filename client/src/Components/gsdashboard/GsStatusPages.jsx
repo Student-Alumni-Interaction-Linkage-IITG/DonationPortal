@@ -1,6 +1,7 @@
 import React from 'react';
-import Ongoingprojects from './Ongoingprojectscard';
+import Ongoingprojects from './GsProjectCard';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const projects1=[
     {
@@ -9,6 +10,7 @@ const projects1=[
         subTitle: "",
         board: "technical",
         pstatus: ["ongoing","bookmarked","invested"],
+        pending: false,
         images: ["","",""],
         video: "",
         tags: ["","","",""],
@@ -33,6 +35,7 @@ const projects1=[
         subTitle: "",
         board: "technical",
         pstatus: ["ongoing","bookmarked","invested"],
+        pending: false,
         images: ["","",""],
         video: "",
         tags: ["","","",""],
@@ -57,6 +60,7 @@ const projects1=[
         subTitle: "",
         board: "technical",
         pstatus: ["ongoing","bookmarked","invested"],
+        pending: false,
         images: ["","",""],
         video: "",
         tags: ["","","",""],
@@ -81,6 +85,7 @@ const projects1=[
         subTitle: "",
         board: "technical",
         pstatus: ["ongoing","bookmarked","invested"],
+        pending: true,
         images: ["","",""],
         video: "",
         tags: ["","","",""],
@@ -105,6 +110,7 @@ const projects1=[
         subTitle: "",
         board: "technical",
         pstatus: ["ongoing","bookmarked","invested"],
+        pending: false,
         images: ["","",""],
         video: "",
         tags: ["","","",""],
@@ -129,6 +135,7 @@ const projects1=[
         subTitle: "",
         board: "technical",
         pstatus: ["ongoing","bookmarked","invested"],
+        pending: true,
         images: ["","",""],
         video: "",
         tags: ["","","",""],
@@ -173,7 +180,12 @@ const Ongoingprojectspage = (props) => {
         {
             
             projects1.map((element,index)=>
-                <><Ongoingprojects {...element} key={element.id} /><hr width="110%"></hr></>
+                <>
+                <Link to={`/gsprojectdetail/${element.id}`} >
+                <Ongoingprojects {...element} key={element.id} id={element.id}/>
+                </Link>
+                <hr width="110%"></hr>
+                </>
             )
 
         }
