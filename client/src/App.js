@@ -21,6 +21,7 @@ function App() {
             <Switch>
               <Route exact path='/'>
               <Home/>
+
               </Route>
               <Route exact path='/login'>
                 <Login />
@@ -69,7 +70,7 @@ function App() {
               <Route exact path="/myprofile">
                 <MyProfile />
               </Route>
-              <Route exact path="/projectdetail">
+              <Route exact path="/projectdetail/:projectId">
                 <Projectdetail/>
               </Route>
               <Route exact path="/login">

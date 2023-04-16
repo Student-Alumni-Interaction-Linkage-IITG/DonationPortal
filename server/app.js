@@ -4,6 +4,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const userRoutes = require('./routes/authRoutes');
+const projectDetailsRoutes = require('./routes/projectDetails.js');
+const profileRoutes = require('./routes/profileRoutes');
+const userProjectRoutes = require('./routes/userProjectRoutes');
 const indexRoutes = require('./routes/index');
 const protectedRoutes = require('./routes/protectedRoutes')
 
@@ -33,6 +36,11 @@ mongoose.connect(dbURI)
 
 //routes
 app.use('/api/user', userRoutes);
+app.use('/api/project',projectDetailsRoutes);
+app.use('/api/profile', profileRoutes);
+app.use('/api/projects', profileRoutes);
+
+app.use('',indexRoutes.ProjectCreationRoute);
 app.use('',indexRoutes.allProjectsRouter);
 app.use('/api/protected', protectedRoutes);
 
