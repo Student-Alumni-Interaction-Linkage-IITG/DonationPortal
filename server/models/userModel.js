@@ -47,7 +47,11 @@ const userSchema = new Schema({
     bookmarkedProjects: [{
         type: Schema.Types.ObjectId,
         ref: 'Project'
-    }]
+    }],
+    token:{
+        type:String,
+        default:''
+    }
 })
 
 //static signup method
