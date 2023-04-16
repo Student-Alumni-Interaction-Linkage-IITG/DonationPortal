@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/authRoutes');
-const projectDetailsRoutes = require('./routes/projects.js');
+const projectDetailsRoutes = require('./routes/projectDetails.js');
 const profileRoutes = require('./routes/profileRoutes');
 const userProjectRoutes = require('./routes/userProjectRoutes');
 const indexRoutes = require('./routes/index');

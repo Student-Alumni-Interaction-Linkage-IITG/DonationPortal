@@ -11,48 +11,36 @@ import NextNavbar from '../../Components/projects-page/Projects-Navbar/NextNavba
 // import Slider from '../../Components/ProjectDetailPage/Slider.js';
 // import Slider2 from '../../Components/ProjectDetailPage/slider2.jsx';
 import { useEffect, useRef,useState} from 'react';
-import axios from 'axios';
-import {getProjectDetails,getProject} from '../../hooks/api';
-
+import {getProjectDetails} from '../../hooks/api';
 
 
 const Projectdetail = () => {
-
 const { id } = useParams();
-  const [project, setProject] = useState(null);
-  const [projectDetails, setProjectDetails] = useState(null);
+const [projectDetails, setProjectDetails] = useState({});
+useEffect(()=>{
+    loadprojectDetails();
+},[])
+const loadprojectDetails=async ()=>{
+    const response=await getProjectDetails(id);
+    setProjectDetails(response);
+}
 
-  useEffect(() => {
-    const fetchData = async () => {
-      //const projectData = await getProject(id);
-      const projectDetailsData = await getProjectDetails(id);
-      //setProject(projectData);
-      setProjectDetails(projectDetailsData);
-    };
-    fetchData();
-  }, [id]);
-
-
-//import { useRef,useState } from 'react';
-//import Navbar from '../../Components/HomePage/Navbar/Navbar';
-//const Projectdetail = () => {
-  //  const user = JSON.parse(localStorage.getItem('user'));
     const ref1= useRef()
     const [see,setSee]=useState("more")
     const clickhandle=()=>{
-        if(ref1.current.style.height=='40vh'|| ref1.current.style.height==""){
+        if(ref1.current.style.height=='38vh'|| ref1.current.style.height==""){
             ref1.current.style.height='100%'
             setSee("less")
         }
         else{
-            ref1.current.style.height='40vh'
+            ref1.current.style.height='38vh'
             setSee("more")
         }
             
     }
     return(
         <Router>
-            {user? <NextNavbar/>:<Navbar/>}
+                <NextNavbar />
                 
                 <div className="main">
                 <div className="navigatorBar">
@@ -60,21 +48,21 @@ const { id } = useParams();
                         <img src={img1} className="" alt=""/>
                     </div>
                     <div className="linkstab">
-                        <a href="#">Projects</a> <img src={img2} className="arrowsmall"/> <a href="#">Board</a> <img src={img2} className="arrowsmall" alt=""/> <a href="#">Campus Rush</a>
+                        <a href="#">Projects</a> <img src={img2} className="arrowsmall"/> <a href="#">{projectDetails.board}</a> <img src={img2} className="arrowsmall" alt=""/> <a href="#">{projectDetails.name}</a>
                     </div>    
                 </div>
                 <div className='buttoncontainer'>
-                    <a href="#" style={{textDecoration: 'none'}}><button className="Buttonp3">Technical</button></a>
+                    <a href="#" style={{textDecoration: 'none'}}><button className="Buttonp3">{projectDetails.board}</button></a>
                     <a href="#" style={{textDecoration: 'none'}}><button className="Buttonp3">Coding</button></a>
                     <a href="#" style={{textDecoration: 'none'}}><button className="Buttonp3">Project</button></a>
                 </div>
                 <div className='projectcontainer'>
                     <div className='projectinfo'>
                         <div className="Header4p2">{projectDetails.name}</div>
-                        <div className="Subtitle4p2">I'll give you a subtitle soon</div>
+                        <div className="Subtitle4p2">{projectDetails.subtitle}</div>
                         <div className="Header5p2"><p>About Project</p></div>
                         <div style={{display:'flex', flexDirection:'column'}}>
-                        <div className="para3p2" ref={ref1}>Lorem ipsum dolor sit amet consectetur. Nunc et tincidunt dui vitae facilisi sed sed etiam. Vestibulum vel urna id vel nulla ullamcorper interdum viverra dictum. Facilisi urna gravida eget pretium a mi. Consectetur non dignissim in nam. Pharetra lectus purus cras dui magnis egestas leo quam adipiscing. Volutpat nascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condimentum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo  Volutpat nascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condimentum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo  Volutpat nascetur faucibus pharetra at eget eu lorem. Blandit velit condimentum condimentum et in quam pulvinar. Donec purus nisi tellus felis montes libero mauris. Morbi massa rhoncus malesuada quis ut. Purus leo </div>
+                        <div className="para3p2" ref={ref1}>{projectDetails.detaildescription}</div>
                         <div>
                         <button className="seemorebtn" onClick={clickhandle}>See {see}</button>
                         </div> 
@@ -127,7 +115,7 @@ const { id } = useParams();
                     paddingBottom:"5%",
                 }}>
                     <div className="Header5p2">Project Videos</div>
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/RzVvThhjAKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="100%" height="100%" src={projectDetails.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div className="infobarflexgrid">
                     <div>
