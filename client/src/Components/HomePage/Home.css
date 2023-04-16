@@ -7,8 +7,10 @@
 }
 .home-campus{
     margin-top: 11%;
+    width: 100%;
 }
 .purpose{
     /* width: fit-content; */
-    max-width: 100%;
+    width: 100%;
+    cursor: pointer;
 }

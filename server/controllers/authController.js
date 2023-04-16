@@ -38,4 +38,24 @@ const signupUser = async (req,res) => {
 
 }
 
-module.exports = {signupUser, loginUser}
+const googleLogin = async (req,res) => {
+    const {email, name} = req.body;
+    try{
+        const user = await User.findOne({ email })
+
+        if(!user){
+
+            const newUser = await User.create({
+                name: name,
+                email: email,
+                password: process.env.DEFAULT_GOOGLE_PSW,
+                designation: "Alumni"
+            })
+            
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+module.exports = {signupUser, loginUser, googleLogin}

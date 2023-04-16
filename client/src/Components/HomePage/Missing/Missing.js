@@ -1,7 +1,10 @@
 import './missing.css'
 import Card from '../Card/Card.js'
+import { Link, useHistory } from 'react-router-dom'
 
 const Missing = () => {
+    const history = useHistory()
+    
     return ( 
         <div className="home-missing">
             <div className="home-title">What are you missing?</div>
@@ -11,7 +14,9 @@ const Missing = () => {
                 <Card/>
                 <Card/>
             </div>
-            <div className="home-project-btn"><div className="home-btn">See all projects</div></div>
+            <Link to="/projects.js">
+                <div className="home-project-btn"><div className="home-btn">See all projects</div></div>
+            </Link>
         </div>
      );
 }
