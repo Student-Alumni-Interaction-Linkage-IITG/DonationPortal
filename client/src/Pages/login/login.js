@@ -198,7 +198,7 @@ const Login = () => {
                 </div>
                 <div style={{ display: "flex", padding: "20px" }}>
                   <a
-                    href="#"
+                    href="/forget.js"
                     style={{ color: "black", textDecoration: "none" }}
                   >
                     <p>forgot email or password?</p>
