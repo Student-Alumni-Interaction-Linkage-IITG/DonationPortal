@@ -2,6 +2,7 @@ const User = require('../models/userModel');
 const nodemailer = require('nodemailer');
 const randomstring = require('randomstring'); 
 const res = require("express/lib/response");
+const validator = require('validator');
 const sendResetPasswordMail = async(name ,email , token) =>{
     try{
         const transporter = nodemailer.createTransport({
@@ -37,11 +38,16 @@ const sendResetPasswordMail = async(name ,email , token) =>{
 }
 
 const forget_password = async(req,res)=>{
+    console.log("fsjhd");
     try{
         const email = req.body.email;
+        console.log(email);
+       
        const userData = await User.findOne({email : email});
+       console.log(userData);
        if(userData)
        {
+            
             const randomString = randomstring.generate();
             await User.updateOne({email: email} , {$set:{token:randomString}});
            
@@ -50,7 +56,15 @@ const forget_password = async(req,res)=>{
        }
        else
        {
+        if(!validator.isEmail(email))
+       {
+            res.status(200).send({success:true , msg:"Please write a valid email"});
+       }
+       else
+       {
         res.status(200).send({success:true,msg:"This Email does not exist"});
+       }
+        
        }
     }catch(error){
         res.status(400).send({success:false , msg:error.message});

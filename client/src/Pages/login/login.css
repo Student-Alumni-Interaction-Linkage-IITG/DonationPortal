@@ -210,3 +210,28 @@ background: #DCDFE0;
 .loginpasswordimg{
     filter: blur(1px) brightness(0.7) grayscale(100%) opacity(0.7);
 }
+.ltext4{
+    font-size: large;
+}
+
+.lfield10{
+    display: flex;
+    align-items: center;
+        padding-left: 5px;
+        background:no-repeat 5% 50%;
+        justify-content: space-around;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        font-size: medium;
+    width: 25vw;
+    height: 60px;
+    border: 2px solid #027F9B;
+    border-radius: 4px;
+    } 
+.mess{
+    display: flex;
+    justify-content:end;
+    color: red;
+    font-size: smaller;
+}

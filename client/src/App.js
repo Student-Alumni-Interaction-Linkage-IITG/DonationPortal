@@ -10,6 +10,7 @@ import GSProjectdetail from './Pages/gsprojectdetailpage/gsprojectdetail';
 import Login from './Pages/login/login';
 import Signup from './Pages/login/signup';
 import Close_project from './Pages/gsdashboard/Close_project';
+import Forget from './Pages/login/forget';
 
 function App() {
   const user = JSON.parse(localStorage.getItem('user'))
@@ -57,6 +58,9 @@ function App() {
               </Route>
               <Route exact path="/signup.js">
                 <Signup/>
+              </Route>
+              <Route exact path="/forget.js">
+                <Forget/>
               </Route>
               <Route exact path="/FAQs.js">
                 <FAQs/>
