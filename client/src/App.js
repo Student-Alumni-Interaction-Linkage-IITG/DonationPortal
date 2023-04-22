@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Pages/Home';
-import Projects from './Pages/projects-page/projects';
+import Projects from '../src/Pages/projects-page/projects';
 import Projectdetail from './Pages/projectdetailspage/projectdetail';
 import MyProfile from './Pages/profile/myProfile';
 import Error from'./Pages/Error/Error'

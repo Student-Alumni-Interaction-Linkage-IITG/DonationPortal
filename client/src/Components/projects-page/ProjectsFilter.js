@@ -44,7 +44,7 @@ function ProjectsFilter() {
     return (
         <Navbar>
             <Elements>Invested Projects</Elements>
-            <Elements>Bookmarked Projects Projects</Elements>
+            <Elements>Bookmarked Projects</Elements>
             <Elements>Recommended Projects</Elements>
             <Elements style={{paddingTop: "0.1%",paddingLeft: "5%"}}>
                 <div className="filter">

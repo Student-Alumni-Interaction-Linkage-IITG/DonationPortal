@@ -119,12 +119,12 @@ function GSProjectdetail() {
                 
                 <div className="main">
                 <div className="navigatorBar">
-                    <div>
+                    {/* <div>
                         <img src={img1} className="" alt=""/>
                     </div>
                     <div className="linkstab">
                         <a href="#">Projects</a> <img src={img2} className="arrowsmall"/> <a href="#">Technical Board </a> <img src={img2} className="arrowsmall" alt=""/> <a href="#">Campus Rush</a>
-                    </div>    
+                    </div>     */}
                 </div>
                 <div className='buttoncontainer'>
                     <a href="#" style={{textDecoration: 'none'}}><button className="Buttonp3">Technical</button></a>
@@ -211,7 +211,7 @@ function GSProjectdetail() {
                     paddingBottom:"5%",
                 }}>
                     <div className="Header5p2">Project Videos</div>
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/RzVvThhjAKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/brOVu8fyRcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div className="infobarflexgrid">
                     <div>

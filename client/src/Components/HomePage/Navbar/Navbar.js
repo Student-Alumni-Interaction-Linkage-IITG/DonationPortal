@@ -12,10 +12,10 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className="home-links">
-                <Link to="/projects.js">Projects & Events</Link>
+                <Link to="/projects">Projects & Events</Link>
                 <Link to="#">How to Donate</Link>
                 <Link to="#"> Donors' Report</Link>
-                <Link to="/login.js" className='login'>Login</Link>
+                <Link to="/login" className='login'>Login</Link>
             </div>
         </nav>
      );
