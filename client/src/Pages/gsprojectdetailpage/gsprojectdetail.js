@@ -119,12 +119,12 @@ function GSProjectdetail() {
                 
                 <div className="main">
                 <div className="navigatorBar">
-                    <div>
+                    {/* <div>
                         <img src={img1} className="" alt=""/>
                     </div>
                     <div className="linkstab">
                         <a href="#">Projects</a> <img src={img2} className="arrowsmall"/> <a href="#">Technical Board </a> <img src={img2} className="arrowsmall" alt=""/> <a href="#">Campus Rush</a>
-                    </div>    
+                    </div>     */}
                 </div>
                 <div className='buttoncontainer'>
                     <a href="#" style={{textDecoration: 'none'}}><button className="Buttonp3">Technical</button></a>
@@ -150,13 +150,13 @@ function GSProjectdetail() {
                 <div className='infocontainer'>
                     <div className='graphtablecontainer'>
                         <div className='Header4p2'>Inflow Record</div>
-                        <div className='elementbox' ><DatatablePage/></div>
+                        <div className='elementbox' style={{width:"50vw"}}><DatatablePage/></div>
                         <div className='Header4p2'>Inflow Graph</div>
-                        <div className='elementbox' ><div style={{ width: "100%" }}><Bar data={userData} options={chartOptions}/></div></div>
+                        <div className='elementbox'><div><Bar data={userData} options={chartOptions}/></div></div>
                         <div className='Header4p2'>Outflow Record</div>
-                        <div className='elementbox' ><DatatablePage/></div>
+                        <div className='elementbox' style={{width:"50vw"}}><DatatablePage/></div>
                         <div className='Header4p2'>Outflow Graph</div>
-                        <div className='elementbox' ><div style={{ width: "100%" }}><Bar data={userData} options={chartOptions}/></div></div>
+                        <div className='elementbox' ><div><Bar data={userData} options={chartOptions}/></div></div>
                     </div>
                     <div className='summary'>
                         <div className='elementbox'>
@@ -211,7 +211,7 @@ function GSProjectdetail() {
                     paddingBottom:"5%",
                 }}>
                     <div className="Header5p2">Project Videos</div>
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/RzVvThhjAKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/brOVu8fyRcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div className="infobarflexgrid">
                     <div>

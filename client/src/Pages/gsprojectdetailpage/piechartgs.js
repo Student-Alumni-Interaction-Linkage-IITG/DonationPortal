@@ -2,18 +2,18 @@ import React from "react";
 import { Chart } from "react-google-charts";
 
 export const data = [
-  ["Task", "Hours per Day"],
-  ["Work", 11],
-  ["Eat", 2],
-  ["Commute", 2],
-  ["Watch TV", 2],
-  ["Sleep", 7],
+  ["Task", "Money"],
+  ["Available", 2],
+  ["Needed", 27],
+  ["Design", 24],
+  ["Services", 72],
+  ["Technology", 100],
 ];
 
 export const options = {
   is3D: true,
   legend:'bottom',
-  chartArea:{top:0,width:'100%',height:'75%'}
+  chartArea:{top:0,width:'100%',height:'70%'}
 };
 
 export function PieChartgs() {

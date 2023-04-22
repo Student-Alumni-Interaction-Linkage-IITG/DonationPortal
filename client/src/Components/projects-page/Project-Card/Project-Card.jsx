@@ -1,5 +1,6 @@
 import './Project-Card.css'
 import { useState } from 'react'
+import { useHistory } from 'react-router'
 import card from '../../../assets/images/projects-page/Campus.png'
 import logo from '../../../assets/Home/logo.png'
 import arrow from '../../../assets/Home/arrow.png'
@@ -8,6 +9,7 @@ import share from '../../../assets/Home/share.png'
 
 const Card = () => {
     const [value, setValue] = useState(100);
+    const history = useHistory();
 
    //  const changeValue = (event) => {
    //      setValue(event.target.value);
@@ -20,7 +22,7 @@ const Card = () => {
                     <div className='p-club-logo'>
                         <img src={logo} alt="" />
                     </div>
-                    <div className="p-club-desc">
+                    <div className="p-club-desc" onClick={()=>history.push('/projectdetail')} >
                         <div className="p-proj-name">Campus Rush</div>
                         <div className="p-proj-desc">Campus Tour Game</div>
                     </div>

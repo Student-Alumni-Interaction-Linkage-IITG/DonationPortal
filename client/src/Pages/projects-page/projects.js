@@ -34,8 +34,8 @@ const Projects = () => {
        <div className="projects_mainbody">
             <NextNavbar/>
             <div className="projects_innerpage">
-                <ProfileCard/>
-                <hr></hr>
+                {/* <ProfileCard/>
+                <hr></hr> */}
                 <ProjectsFilter/>
                 <div className="projects_projectsmenu">
                     <div className="projects_clubprojects">

@@ -63,7 +63,7 @@ function DatatablePage() {
         columns={columns}
         data={data}
         defaultSortField="Slno"
-        pagination
+        
         onRowClicked={handleRowClicked}
         conditionalRowStyles={conditionalRowStyles}
       />

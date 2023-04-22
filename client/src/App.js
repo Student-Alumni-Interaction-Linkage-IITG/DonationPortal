@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Pages/Home';
-import Projects from './Pages/projects-page/projects';
+import Projects from '../src/Pages/projects-page/projects';
 import Projectdetail from './Pages/projectdetailspage/projectdetail';
 import MyProfile from './Pages/profile/myProfile';
 import Error from'./Pages/Error/Error'
@@ -42,7 +42,7 @@ function App() {
               <Route exact path='/'>
                 <Gsproject_putiing/>
               </Route>
-              <Route exact path='/gsprojectdetail/:projectId'>
+              <Route exact path='/gsprojectdetai'>
                 <GSProjectdetail />
               </Route>
               <Route exact path='/close_events'>
@@ -77,6 +77,9 @@ function App() {
               </Route>
               <Route exact path="/signup">
                 <Signup/>
+              </Route>
+              <Route exact path='/gsprojectdetail'>
+                <GSProjectdetail />
               </Route>
               <Route exact path="/FAQs">
                 <FAQs/>

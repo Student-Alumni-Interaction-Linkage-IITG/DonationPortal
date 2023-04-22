@@ -29,14 +29,14 @@ const Projects = () => {
                 </div>
                 <a href="#" className="anchor2p2">See all projects</a>
 
-                <div className="Header3p2">Coding Club</div>
+                {/* <div className="Header3p2">Coding Club</div>
                 <div className="Subtitle3p2">I'll give you a subtitle soon</div>
                 <div className="CC2p2">
                     <div className="para2p2">Fames pellentesque nulla ultrices purus. Ornare enim purus vitae placerat aliquam purus, consequat in aliquam. Nisl diam sem sit pharetra metus, magnis est. Dui, non aliquet suspendisse imperdiet lobortis sed mauris. Amet facilisis velit justo, magna elementum. Fringilla nisl sed imperdiet dolor nulla tortor viverra gravida venenatis. Pellentesque in scelerisque quam id bibendum. Et gravida sapien ut pretium ullamcorper non fringilla massa id. Pulvinar amet ut enim, interdum cursus.</div>
                     <Cards/>
                     <Cards/>
                 </div>
-                <a href="#" className="anchor3p2">See all projects</a>
+                <a href="#" className="anchor3p2">See all projects</a> */}
             </div>
         </Router>
     );

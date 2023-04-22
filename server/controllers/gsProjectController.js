@@ -5,12 +5,10 @@ exports.getGsProjects = (req,res)=>{
         res.json(data);
       });
 }
-exports.newgsdetail = async (req, res) =>{
+exports.newgsdetail = async (req,user) =>{
           new GSProject({
-          GSID:req.ClubId,
-          Project:{
-            ProjectID: req._id,
-            Status: req.Status,
-          }
+          GSID:user,
+          ProjectID: req._id,
+          Status: req.Status,
       }).save();
 }
