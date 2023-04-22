@@ -42,7 +42,7 @@ function App() {
               <Route exact path='/'>
                 <Gsproject_putiing/>
               </Route>
-              <Route exact path='/gsprojectdetail/:projectId'>
+              <Route exact path='/gsprojectdetai'>
                 <GSProjectdetail />
               </Route>
               <Route exact path='/close_events'>
@@ -77,6 +77,9 @@ function App() {
               </Route>
               <Route exact path="/signup">
                 <Signup/>
+              </Route>
+              <Route exact path='/gsprojectdetail'>
+                <GSProjectdetail />
               </Route>
               <Route exact path="/FAQs">
                 <FAQs/>

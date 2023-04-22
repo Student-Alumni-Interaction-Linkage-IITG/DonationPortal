@@ -150,13 +150,13 @@ function GSProjectdetail() {
                 <div className='infocontainer'>
                     <div className='graphtablecontainer'>
                         <div className='Header4p2'>Inflow Record</div>
-                        <div className='elementbox' ><DatatablePage/></div>
+                        <div className='elementbox' style={{width:"50vw"}}><DatatablePage/></div>
                         <div className='Header4p2'>Inflow Graph</div>
-                        <div className='elementbox' ><div style={{ width: "100%" }}><Bar data={userData} options={chartOptions}/></div></div>
+                        <div className='elementbox'><div><Bar data={userData} options={chartOptions}/></div></div>
                         <div className='Header4p2'>Outflow Record</div>
-                        <div className='elementbox' ><DatatablePage/></div>
+                        <div className='elementbox' style={{width:"50vw"}}><DatatablePage/></div>
                         <div className='Header4p2'>Outflow Graph</div>
-                        <div className='elementbox' ><div style={{ width: "100%" }}><Bar data={userData} options={chartOptions}/></div></div>
+                        <div className='elementbox' ><div><Bar data={userData} options={chartOptions}/></div></div>
                     </div>
                     <div className='summary'>
                         <div className='elementbox'>
