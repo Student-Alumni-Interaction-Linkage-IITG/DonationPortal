@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IITG Alum Donation</title>
+<style>
+    .don-Page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 70vh;
+    background-color: #f5f5f5;
+  }
+  
+  .don-Hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    width: 70vw;
+    padding: 10vw;
+    border-radius: 20px;
+    background-color: #000;
+    background-size: 100% 100%;
+  }
+  
+  .don-Title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #f5f5f5;
+  }
+  
+  .don-Subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #f5f5f5;
+  }
+  
+  .don-Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .don-Button {
+    min-width: 300px;
+    min-height: 30px;
+    font-family: "Nunito", sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #4fd1c5;
+    background: linear-gradient(
+      90deg,
+      rgba(129, 230, 217, 1) 0%,
+      rgba(79, 209, 197, 1) 100%
+    );
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+  }
+</style>
+<link ref="stylesheet" href="./standard.css">
+</head>
+<body >
+  <div class="don-Page">
+    <div class="don-Hero">
+      <div class="don-Title">Thank You!!!</div>
+      <div class="don-Subtitle">
+        Click on the donate now button to be redirected to payments
+      </div>
+    </div>
+    <div class="don-Content">
+    </div>  <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_LeWOhtBt9DT3xr" id="rzbutton" async> </script> </form>
+    </div>
+</body>
+</html>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+        var orderId ;
+      $(document).ready(function(){
+    var settings = {
+  "url": "/create/orderId",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "data": JSON.stringify({
+    "amount": "50000"
+  }),
+};
+
+//creates new orderId everytime
+$.ajax(settings).done(function (response) {
+  orderId=response.orderId;
+  console.log(orderId);
+  $("button").show();
+});
+});
+
+
+document.getElementById("rz-button" ).onclick = function(e){
+    var options = {
+    "key": "rzp_test_hS39rzOAkoUXur", // Enter the Key ID generated from the Dashboard
+    // "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    // "currency": "INR",
+    "name": "Acme Corp",
+    "description": "Test Transaction",
+    "image": "https://example.com/your_logo",
+    "order_id": orderId, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "handler": function (response){
+        alert(response.razorpay_payment_id);
+        alert(response.razorpay_order_id);
+        alert(response.razorpay_signature)
+        var settings = {
+        "url": "/api/payment/verify",
+        "method": "POST",
+        "timeout": 0,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "data": JSON.stringify({response}),
+        }
+    
+      }
+    // creates new orderId everytime
+    // $.ajax(settings).done(function (response){
+    //     alert(JSON.stringify(response))
+    // });
+    // },
+    // "theme": {
+    //     "color": "#3399cc"
+    // }
+};
+    var rzp1 = new Razorpay(options);
+    rzp1.on('payment.failed', function (response){
+            alert(response.error.code);
+            alert(response.error.description);
+            alert(response.error.source);
+            alert(response.error.step);
+            alert(response.error.reason);
+            alert(response.error.metadata.order_id);
+            alert(response.error.metadata.payment_id);
+    });
+    rzp1.open();
+    e.preventDefault();
+}
+</script>

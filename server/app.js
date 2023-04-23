@@ -37,13 +37,15 @@ mongoose.connect(dbURI)
 app.use('/api/user', userRoutes);
 app.use('',indexRoutes.allProjectsRouter);
 app.use('/api/protected', protectedRoutes);
-
+app.use('/donate',(req,res)=>{
+    res.sendFile('standard.html',{ root: __dirname})
+})
 //send email
 //send email
 app.get('/sendmail',sendMail);
 
 //payment
-var instance = new Razorpay({ key_id: 'YOUR_KEY_ID', key_secret: 'YOUR_SECRET' })
+var instance = new Razorpay({ key_id: 'rzp_test_hS39rzOAkoUXur', key_secret: 'YOUR_SECRET' })
 app.post('/create/orderId',(req,res)=>{
     console.log("create orderId requeested",req.body);
     var options = {
@@ -60,7 +62,7 @@ app.post("/api/payment/verify",(req,res)=>{
 
         let body=req.body.response.razorpay_order_id + "|" + req.body.response.razorpay_payment_id;
          var crypto = require("crypto");
-         var expectedSignature = crypto.createHmac('sha256', '<YOUR_API_SECRET>')
+         var expectedSignature = crypto.createHmac('sha256', 'XMEatNw15E8WJEKl6WnbnFs3')
                                          .update(body.toString())
                                          .digest('hex');
                                          console.log("sig received " ,req.body.response.razorpay_signature);

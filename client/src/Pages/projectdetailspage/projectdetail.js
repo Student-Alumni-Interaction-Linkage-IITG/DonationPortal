@@ -56,7 +56,7 @@ const Projectdetail = () => {
                         <button className="seemorebtn" onClick={clickhandle}>See {see}</button>
                         </div> 
                         </div>
-                        <button  className="Buttonp5"><a href="#" style={{textDecoration: 'none'}}>Donate Now</a></button>
+                        <a href='http://localhost:8000/donate' style={{textDecoration: 'none'}}><button  className="Buttonp5"><a href="#" style={{textDecoration: 'none'}}>Donate Now</a></button></a>
                     </div>
                     <div className="projectimage"><Slideshow/></div>
                 </div>

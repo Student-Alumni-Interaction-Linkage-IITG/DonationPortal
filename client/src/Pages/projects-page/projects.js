@@ -34,8 +34,6 @@ const Projects = () => {
        <div className="projects_mainbody">
             <NextNavbar/>
             <div className="projects_innerpage">
-                {/* <ProfileCard/>
-                <hr></hr> */}
                 <ProjectsFilter/>
                 <div className="projects_projectsmenu">
                     <div className="projects_clubprojects">
@@ -47,9 +45,9 @@ const Projects = () => {
                             initial="hidden"
                             animate="visible"
                         >
-                            <Cardone/>
-                            <Cardone/>
-                            <Cardone/>
+                            <Cardone name="Campus Rush" subtitle="Campus Tour Game" desc="Campus Rush is a virtual recreation of the entire campus for freshers and other to roam around and experience the rush" link='../../../assets/Home/CC.png'/>
+                            <Cardone name="AsterHF" subtitle="Health" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla dolor lorem, sed vehicula nibh consequat et. Donec id ultrices nunc" link=""/>
+                            <Cardone name="CourseHub" subtitle="Study" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla dolor lorem, sed vehicula nibh consequat et. Donec id ultrices nunc" link=""/>
                         </motion.div>
                         <motion.a href="#" className="projects_button" whileHover={{scale: 1.03}}>See all projects</motion.a>
                     </div>
@@ -62,9 +60,9 @@ const Projects = () => {
                             initial="hidden"
                             animate="visible"
                         >
-                            <Cardone/>
-                            <Cardone/>
-                            <Cardone/>
+                            <Cardone name="AsterHF" subtitle="Health" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla dolor lorem, sed vehicula nibh consequat et. Donec id ultrices nunc" link=""/>
+                            <Cardone name="CourseHub" subtitle="Study" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla dolor lorem, sed vehicula nibh consequat et. Donec id ultrices nunc" link=""/>
+                            <Cardone name="Campus Rush" subtitle="Campus Tour Game" desc="Campus Rush is a virtual recreation of the entire campus for freshers and other to roam around and experience the rush" link='../../../assets/Home/CC.png'/>
                         </div>
                         <motion.a href="#" className="projects_button" whileHover={{scale: 1.03}}>See all projects</motion.a>
                     </div>
@@ -77,9 +75,9 @@ const Projects = () => {
                             initial="hidden"
                             animate="visible"
                         >
-                            <Cardone/>
-                            <Cardone/>
-                            <Cardone/>
+                            <Cardone name="CourseHub" subtitle="Study" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla dolor lorem, sed vehicula nibh consequat et. Donec id ultrices nunc" link=""/>
+                            <Cardone name="Campus Rush" subtitle="Campus Tour Game" desc="Campus Rush is a virtual recreation of the entire campus for freshers and other to roam around and experience the rush" link='../../../assets/Home/CC.png'/>
+                            <Cardone name="AsterHF" subtitle="Health" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla dolor lorem, sed vehicula nibh consequat et. Donec id ultrices nunc" link=""/>
                         </div>
                         <motion.a href="#" className="projects_button" whileHover={{scale: 1.03}}>See all projects</motion.a>
                     </div>

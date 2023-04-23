@@ -137,12 +137,13 @@ const GsProjectCard = (props) => {
             </Paragraph>
             <Details>
                 <div style={{display:"flex" , gap:"6px"}}>
-                <div onClick={()=>history.push('./projectdetail.js')}><img src={details} alt="" style={{cursor:"pointer"}}/></div>
+                <div onClick={()=>history.push('./gsprojectdetail')}><img src={details} alt="" style={{cursor:"pointer"}}/></div>
                 <Details_text>Details</Details_text>
                 </div>
                 <Slider
                     disabled
-                    defaultValue={props.raisedAmount*100/props.targetvalue}
+                    // defaultValue={props.raisedAmount*100/props.targetvalue}
+                    defaultValue={30}
                     aria-label="Disabled slider"
                     valueLabelDisplay="on"
                 />

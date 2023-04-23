@@ -84,6 +84,9 @@ function App() {
               <Route exact path="/FAQs">
                 <FAQs/>
               </Route>
+              <Route exact path='/gsHome'>
+                <Gsproject_putiing/>
+              </Route>
               <Route exact path="*">
                 <Error/>
               </Route>

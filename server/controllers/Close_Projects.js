@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb+srv://devjyoti598:54KOMu51DRKd5KAS@donationdata.y1cbqqs.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true });
-const Project = mongoose.model('Project');
+const Project = require("../models/projectCreation")
 
 const close_project = async (req, res) =>  {
     const { id } = req.params;
